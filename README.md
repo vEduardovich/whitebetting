@@ -10,15 +10,14 @@
 </div>
 
 ## Screenshot
-https://docs.google.com/document/d/11rfleLIESCb6922asHuCbMHed4PP1uAC/edit?pli=1
-여기에 이미지
+![whitebetting_screenshot](./client/public/wb_marketing.jpg)
 ## 서비스
 1. 배당률에 맞게 전략을 세운 후, 원하는 경기에 이더리움을 베팅
 1. 경기가 끝나면 결과에 따라 스마트 컨트랙을 통해 자동 보상
 1. 모든 계정의 베팅 기록을 투명하게 공개
 
 ## 서비스 연혁
->2019.03.02 <span style='margin-left:10px;'>MVP 제작 </span>
+2019.03.02 <span style='margin-left:10px;'>MVP 제작 </span>
 2019.06.22 <span style='margin-left:10px;'>Ropsten 테스트넷 서비스 시작</span>
 2019.09.23 <span style='margin-left:10px;'>메인넷 실서비스 시작</span>
 2019.10.19 <span style='margin-left:10px;'>해킹 발생. 128ETH 탈취 당함</span>
