@@ -17,15 +17,16 @@
 1. 모든 계정의 베팅 기록을 투명하게 공개
 
 ## 서비스 연혁
-2019.03.02 <span style='margin-left:10px;'>MVP 제작 </span>
-2019.06.22 <span style='margin-left:10px;'>Ropsten 테스트넷 서비스 시작</span>
-2019.09.23 <span style='margin-left:10px;'>메인넷 실서비스 시작</span>
-2019.10.19 <span style='margin-left:10px;'>해킹 발생. 128ETH 탈취 당함</span>
-2019.11.03 <span style='margin-left:10px;'>첫 매출 발생. 마케팅 사기 당함. 2.5ETH 손실</span>
-2019.11.27 <span style='margin-left:10px;'>Dapp.com(Dapp포탈 2위) 메인 배너광고</span>
-2019.12.02 <span style='margin-left:10px;'>DappRadar(Dapp포탈 1위) 랭킹 광고</span>
-2020.03.12 <span style='margin-left:10px;'>코로나 발발 - 프리미어를 비롯한 세계 5대 축구 리그 중단으로 서비스 중단</span>
-
+<div>
+2019.03.02 <span style='margin-left:10px;'>MVP 제작 </span></br>
+2019.06.22 <span style='margin-left:10px;'>Ropsten 테스트넷 서비스 시작</span></br>
+2019.09.23 <span style='margin-left:10px;'>메인넷 실서비스 시작</span></br>
+2019.10.19 <span style='margin-left:10px;'>해킹 발생. 128ETH 탈취 당함</span></br>
+2019.11.03 <span style='margin-left:10px;'>첫 매출 발생. 마케팅 사기 당함. 2.5ETH 손실</span></br>
+2019.11.27 <span style='margin-left:10px;'>Dapp.com(Dapp포탈 2위) 메인 배너광고</span></br>
+2019.12.02 <span style='margin-left:10px;'>DappRadar(Dapp포탈 1위) 랭킹 광고</span></br>
+2020.03.12 <span style='margin-left:10px;'>코로나 발발 - 프리미어를 비롯한 세계 5대 축구 리그 중단으로 서비스 중단</span></br>
+</div>
 ## 사업후기
 한번도 도박을 해본적도 없으면서 시작했던 해외축구 베팅 서비스. 모든 것이 서툴고 힘들었다. 사업을 진행할수록 계속 이더리움을 잃었다. 이더리움을 딴 사람들은 계속 방문했고 잃은 사람들은 다시 오지 않았다. 
 
