@@ -1,0 +1,134 @@
+// https://api-football-v1.p.rapidapi.com/teams/league/10
+{
+  "api": {
+    "results": 18,
+    "teams": {
+      "193": {
+        "team_id": "193",
+        "name": "PEC Zwolle",
+        "name_kr": "즈볼레",
+        "code": "",
+        "logo": "https://www.api-football.com/public/teams/193.png"
+      },
+      "194": {
+        "team_id": "194",
+        "name": "Ajax",
+        "name_kr": "아약스 암스테르담",
+        "code": "",
+        "logo": "https://www.api-football.com/public/teams/194.png"
+      },
+      "195": {
+        "team_id": "195",
+        "name": "Willem II",
+        "name_kr": "빌렘 II 틸뷔르흐",
+        "code": "",
+        "logo": "https://www.api-football.com/public/teams/195.png"
+      },
+      "196": {
+        "team_id": "196",
+        "name": "Excelsior",
+        "name_kr": "엑셀시오르",
+        "code": "",
+        "logo": "https://www.api-football.com/public/teams/196.png"
+      },
+      "197": {
+        "team_id": "197",
+        "name": "PSV Eindhoven",
+        "name_kr": "PSV 아인트호벤",
+        "code": "",
+        "logo": "https://www.api-football.com/public/teams/197.png"
+      },
+      "198": {
+        "team_id": "198",
+        "name": "ADO Den Haag",
+        "name_kr": "ADO 덴 하그",
+        "code": "",
+        "logo": "https://www.api-football.com/public/teams/198.png"
+      },
+      "199": {
+        "team_id": "199",
+        "name": "De Graafschap",
+        "name_kr": "데 그라프샤프",
+        "code": "",
+        "logo": "https://www.api-football.com/public/teams/199.png"
+      },
+      "200": {
+        "team_id": "200",
+        "name": "Vitesse",
+        "name_kr": "비테세 아른헴",
+        "code": "",
+        "logo": "https://www.api-football.com/public/teams/200.png"
+      },
+      "201": {
+        "team_id": "201",
+        "name": "AZ Alkmaar",
+        "name_kr": "AZ 알크마르",
+        "code": "",
+        "logo": "https://www.api-football.com/public/teams/201.png"
+      },
+      "202": {
+        "team_id": "202",
+        "name": "Groningen",
+        "name_kr": "흐로닝언",
+        "code": "",
+        "logo": "https://www.api-football.com/public/teams/202.png"
+      },
+      "203": {
+        "team_id": "203",
+        "name": "NAC Breda",
+        "name_kr": "NAC 브레다",
+        "code": "",
+        "logo": "https://www.api-football.com/public/teams/203.png"
+      },
+      "204": {
+        "team_id": "204",
+        "name": "VVV Venlo",
+        "name_kr": "VVV 펜로",
+        "code": "",
+        "logo": "https://www.api-football.com/public/teams/204.png"
+      },
+      "205": {
+        "team_id": "205",
+        "name": "Fortuna Sittard",
+        "name_kr": "포르투나 시타르트",
+        "code": "",
+        "logo": "https://www.api-football.com/public/teams/205.png"
+      },
+      "206": {
+        "team_id": "206",
+        "name": "Heracles",
+        "name_kr": "헤라클레스 알메로",
+        "code": "",
+        "logo": "https://www.api-football.com/public/teams/206.png"
+      },
+      "207": {
+        "team_id": "207",
+        "name": "Utrecht",
+        "name_kr": "위트레흐트",
+        "code": "",
+        "logo": "https://www.api-football.com/public/teams/207.png"
+      },
+      "208": {
+        "team_id": "208",
+        "name": "Emmen",
+        "name_kr": "에먼",
+        "code": "",
+        "logo": "https://www.api-football.com/public/teams/208.png"
+      },
+      "209": {
+        "team_id": "209",
+        "name": "Feyenoord",
+        "name_kr": "페예노르트 로테르담",
+        "code": "",
+        "logo": "https://www.api-football.com/public/teams/209.svg"
+      },
+      "210": {
+        "team_id": "210",
+        "name": "Heerenveen",
+        "name_kr": "헤렌벤",
+        "code": "",
+        "logo": "https://www.api-football.com/public/teams/210.png"
+      }
+    }
+  }
+}

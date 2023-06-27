@@ -1,0 +1,403 @@
+// https://api-football-v1.p.rapidapi.com/teams/league/132
+{
+  "api": {
+    "results": 79,
+    "teams": {
+      "33": {
+        "team_id": "33",
+        "name": "Manchester United",
+        "logo": "https://www.api-football.com/public/teams/33.png"
+      },
+      "40": {
+        "team_id": "40",
+        "name": "Liverpool",
+        "logo": "https://www.api-football.com/public/teams/40.svg"
+      },
+      "47": {
+        "team_id": "47",
+        "name": "Tottenham",
+        "logo": "https://www.api-football.com/public/teams/47.png"
+      },
+      "50": {
+        "team_id": "50",
+        "name": "Manchester City",
+        "logo": "https://www.api-football.com/public/teams/50.png"
+      },
+      "80": {
+        "team_id": "80",
+        "name": "Lyon",
+        "logo": "https://www.api-football.com/public/teams/80.png"
+      },
+      "85": {
+        "team_id": "85",
+        "name": "Paris Saint Germain",
+        "logo": "https://www.api-football.com/public/teams/85.png"
+      },
+      "91": {
+        "team_id": "91",
+        "name": "Monaco",
+        "logo": "https://www.api-football.com/public/teams/91.png"
+      },
+      "157": {
+        "team_id": "157",
+        "name": "Bayern Munich",
+        "logo": "https://www.api-football.com/public/teams/157.png"
+      },
+      "165": {
+        "team_id": "165",
+        "name": "Borussia Dortmund",
+        "logo": "https://www.api-football.com/public/teams/165.png"
+      },
+      "167": {
+        "team_id": "167",
+        "name": "1899 Hoffenheim",
+        "logo": "https://www.api-football.com/public/teams/167.png"
+      },
+      "174": {
+        "team_id": "174",
+        "name": "FC Schalke 04",
+        "logo": "https://www.api-football.com/public/teams/174.png"
+      },
+      "194": {
+        "team_id": "194",
+        "name": "Ajax",
+        "logo": "https://www.api-football.com/public/teams/194.png"
+      },
+      "197": {
+        "team_id": "197",
+        "name": "PSV Eindhoven",
+        "logo": "https://www.api-football.com/public/teams/197.png"
+      },
+      "211": {
+        "team_id": "211",
+        "name": "Benfica",
+        "logo": "https://www.api-football.com/public/teams/211.png"
+      },
+      "212": {
+        "team_id": "212",
+        "name": "FC Porto",
+        "logo": "https://www.api-football.com/public/teams/212.png"
+      },
+      "247": {
+        "team_id": "247",
+        "name": "Celtic",
+        "logo": "https://www.api-football.com/public/teams/247.png"
+      },
+      "274": {
+        "team_id": "274",
+        "name": "Valur Reykjavik",
+        "logo": "https://www.api-football.com/public/teams/274.png"
+      },
+      "331": {
+        "team_id": "331",
+        "name": "Rosenborg",
+        "logo": "https://www.api-football.com/public/teams/331.png"
+      },
+      "339": {
+        "team_id": "339",
+        "name": "Legia Warszawa",
+        "logo": "https://www.api-football.com/public/teams/339.png"
+      },
+      "354": {
+        "team_id": "354",
+        "name": "The New Saints",
+        "logo": "https://www.api-football.com/public/teams/354.png"
+      },
+      "375": {
+        "team_id": "375",
+        "name": "Malmo FF",
+        "logo": "https://www.api-football.com/public/teams/375.svg"
+      },
+      "388": {
+        "team_id": "388",
+        "name": "Bate Borisov",
+        "logo": "https://www.api-football.com/public/teams/388.gif"
+      },
+      "397": {
+        "team_id": "397",
+        "name": "FC Midtjylland",
+        "logo": "https://www.api-football.com/public/teams/397.png"
+      },
+      "492": {
+        "team_id": "492",
+        "name": "Napoli",
+        "logo": "https://www.api-football.com/public/teams/492.png"
+      },
+      "496": {
+        "team_id": "496",
+        "name": "Juventus",
+        "logo": "https://www.api-football.com/public/teams/496.png"
+      },
+      "497": {
+        "team_id": "497",
+        "name": "AS Roma",
+        "logo": "https://www.api-football.com/public/teams/497.svg"
+      },
+      "505": {
+        "team_id": "505",
+        "name": "Inter",
+        "logo": "https://www.api-football.com/public/teams/505.png"
+      },
+      "529": {
+        "team_id": "529",
+        "name": "Barcelona",
+        "logo": "https://www.api-football.com/public/teams/529.svg"
+      },
+      "530": {
+        "team_id": "530",
+        "name": "Atletico Madrid",
+        "logo": "https://www.api-football.com/public/teams/530.png"
+      },
+      "532": {
+        "team_id": "532",
+        "name": "Valencia",
+        "logo": "https://www.api-football.com/public/teams/532.png"
+      },
+      "541": {
+        "team_id": "541",
+        "name": "Real Madrid",
+        "logo": "https://www.api-football.com/public/teams/541.png"
+      },
+      "550": {
+        "team_id": "550",
+        "name": "Shakhtar Donetsk",
+        "logo": "https://www.api-football.com/public/teams/550.png"
+      },
+      "551": {
+        "team_id": "551",
+        "name": "FC Basel 1893",
+        "logo": "https://www.api-football.com/public/teams/551.png"
+      },
+      "555": {
+        "team_id": "555",
+        "name": "CSKA Moscow",
+        "logo": "https://www.api-football.com/public/teams/555.jpg"
+      },
+      "556": {
+        "team_id": "556",
+        "name": "Qarabag",
+        "logo": "https://www.api-football.com/public/teams/556.png"
+      },
+      "558": {
+        "team_id": "558",
+        "name": "Spartak Moscow",
+        "logo": "https://www.api-football.com/public/teams/558.png"
+      },
+      "560": {
+        "team_id": "560",
+        "name": "Slavia Praha",
+        "logo": "https://www.api-football.com/public/teams/560.png"
+      },
+      "562": {
+        "team_id": "562",
+        "name": "FC Astana",
+        "logo": "https://www.api-football.com/public/teams/562.png"
+      },
+      "563": {
+        "team_id": "563",
+        "name": "Hapoel Beer Sheva",
+        "logo": "https://www.api-football.com/public/teams/563.png"
+      },
+      "565": {
+        "team_id": "565",
+        "name": "BSC Young Boys",
+        "logo": "https://www.api-football.com/public/teams/565.png"
+      },
+      "566": {
+        "team_id": "566",
+        "name": "Ludogorets",
+        "logo": "https://www.api-football.com/public/teams/566.png"
+      },
+      "567": {
+        "team_id": "567",
+        "name": "Plzen",
+        "logo": "https://www.api-football.com/public/teams/567.png"
+      },
+      "568": {
+        "team_id": "568",
+        "name": "Sheriff Tiraspol",
+        "logo": "https://www.api-football.com/public/teams/568.png"
+      },
+      "569": {
+        "team_id": "569",
+        "name": "Club Brugge KV",
+        "logo": "https://www.api-football.com/public/teams/569.png"
+      },
+      "571": {
+        "team_id": "571",
+        "name": "Red Bull Salzburg",
+        "logo": "https://www.api-football.com/public/teams/571.png"
+      },
+      "572": {
+        "team_id": "572",
+        "name": "Dynamo Kyiv",
+        "logo": "https://www.api-football.com/public/teams/572.png"
+      },
+      "575": {
+        "team_id": "575",
+        "name": "AEK Athens FC",
+        "logo": "https://www.api-football.com/public/teams/575.jpg"
+      },
+      "577": {
+        "team_id": "577",
+        "name": "FK Kukesi",
+        "logo": ""
+      },
+      "578": {
+        "team_id": "578",
+        "name": "F91 Dudelange",
+        "logo": "https://www.api-football.com/public/teams/578.png"
+      },
+      "580": {
+        "team_id": "580",
+        "name": "Vikingur Gota",
+        "logo": ""
+      },
+      "582": {
+        "team_id": "582",
+        "name": "Alashkert",
+        "logo": ""
+      },
+      "588": {
+        "team_id": "588",
+        "name": "Zrinjski",
+        "logo": ""
+      },
+      "589": {
+        "team_id": "589",
+        "name": "Spartaks Jurmala",
+        "logo": ""
+      },
+      "591": {
+        "team_id": "591",
+        "name": "FC Santa Coloma",
+        "logo": ""
+      },
+      "597": {
+        "team_id": "597",
+        "name": "Lokomotiv Moscow",
+        "logo": "https://www.api-football.com/public/teams/597.png"
+      },
+      "598": {
+        "team_id": "598",
+        "name": "FK Crvena Zvezda",
+        "logo": "https://www.api-football.com/public/teams/598.png"
+      },
+      "609": {
+        "team_id": "609",
+        "name": "Shkendija",
+        "logo": ""
+      },
+      "610": {
+        "team_id": "610",
+        "name": "Videoton FC",
+        "logo": "https://www.api-football.com/public/teams/610.png"
+      },
+      "611": {
+        "team_id": "611",
+        "name": "Fenerbahce",
+        "logo": "https://www.api-football.com/public/teams/611.png"
+      },
+      "612": {
+        "team_id": "612",
+        "name": "Suduva Marijampole",
+        "logo": ""
+      },
+      "619": {
+        "team_id": "619",
+        "name": "PAOK",
+        "logo": "https://www.api-football.com/public/teams/619.png"
+      },
+      "620": {
+        "team_id": "620",
+        "name": "Dinamo Zagreb",
+        "logo": "https://www.api-football.com/public/teams/620.png"
+      },
+      "637": {
+        "team_id": "637",
+        "name": "Sturm Graz",
+        "logo": "https://www.api-football.com/public/teams/637.png"
+      },
+      "645": {
+        "team_id": "645",
+        "name": "Galatasaray",
+        "logo": "https://www.api-football.com/public/teams/645.png"
+      },
+      "649": {
+        "team_id": "649",
+        "name": "HJK helsinki",
+        "logo": "https://www.api-football.com/public/teams/649.png"
+      },
+      "653": {
+        "team_id": "653",
+        "name": "Cork City",
+        "logo": ""
+      },
+      "659": {
+        "team_id": "659",
+        "name": "Valletta FC",
+        "logo": ""
+      },
+      "667": {
+        "team_id": "667",
+        "name": "Lincoln Red Imps FC",
+        "logo": ""
+      },
+      "673": {
+        "team_id": "673",
+        "name": "Sutjeska",
+        "logo": ""
+      },
+      "677": {
+        "team_id": "677",
+        "name": "Olimpija Ljubljana",
+        "logo": ""
+      },
+      "685": {
+        "team_id": "685",
+        "name": "Torpedo Kutaisi",
+        "logo": ""
+      },
+      "687": {
+        "team_id": "687",
+        "name": "Flora Tallinn",
+        "logo": ""
+      },
+      "697": {
+        "team_id": "697",
+        "name": "Crusaders FC",
+        "logo": ""
+      },
+      "733": {
+        "team_id": "733",
+        "name": "Standard Liege",
+        "logo": "https://www.api-football.com/public/teams/733.png"
+      },
+      "1120": {
+        "team_id": "1120",
+        "name": "Spartak Trnava",
+        "logo": "https://www.api-football.com/public/teams/1120.jpg"
+      },
+      "2246": {
+        "team_id": "2246",
+        "name": "CFR 1907 Cluj",
+        "logo": ""
+      },
+      "2247": {
+        "team_id": "2247",
+        "name": "Apoel Nicosia",
+        "logo": ""
+      },
+      "2248": {
+        "team_id": "2248",
+        "name": "Drita",
+        "logo": ""
+      },
+      "2249": {
+        "team_id": "2249",
+        "name": "La Fiorita",
+        "logo": ""
+      }
+    }
+  }
+}

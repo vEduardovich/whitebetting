@@ -1,0 +1,669 @@
+// 2018 EPL, 라리가, 각 팀정보
+{
+  // EPL
+  "33": {
+    "team_id": "33",
+    "name": "Manchester United",
+    "name_kr": "맨체스터 유나이티드",
+    "logo": "https://www.api-football.com/public/teams/33.png"
+  },
+  "34": {
+    "team_id": "34",
+    "name": "Newcastle",
+    "name_kr": "뉴캐슬",
+    "logo": "https://www.api-football.com/public/teams/34.png"
+  },
+  "35": {
+    "team_id": "35",
+    "name": "Bournemouth",
+    "name_kr": "본머스",
+    "logo": "https://www.api-football.com/public/teams/35.png"
+  },
+  "36": {
+    "team_id": "36",
+    "name": "Fulham",
+    "name_kr": "풀럼",
+    "logo": "https://www.api-football.com/public/teams/36.png"
+  },
+  "37": {
+    "team_id": "37",
+    "name": "Huddersfield",
+    "name_kr": "허더즈필드",
+    "logo": "https://www.api-football.com/public/teams/37.png"
+  },
+  "38": {
+    "team_id": "38",
+    "name": "Watford",
+    "name_kr": "왓포드",
+    "logo": "https://www.api-football.com/public/teams/38.png"
+  },
+  "39": {
+    "team_id": "39",
+    "name": "Wolves",
+    "name_kr": "울버햄튼",
+    "logo": "https://www.api-football.com/public/teams/39.svg"
+  },
+  "40": {
+    "team_id": "40",
+    "name": "Liverpool",
+    "name_kr": "리버풀",
+    "logo": "https://www.api-football.com/public/teams/40.svg"
+  },
+  "41": {
+    "team_id": "41",
+    "name": "Southampton",
+    "name_kr": "사우샘프턴",
+    "logo": "https://www.api-football.com/public/teams/41.svg"
+  },
+  "42": {
+    "team_id": "42",
+    "name": "Arsenal",
+    "name_kr": "허더즈필드",
+    "logo": "https://www.api-football.com/public/teams/42.svg"
+  },
+  "43": {
+    "team_id": "43",
+    "name": "Cardiff",
+    "name_kr": "허더즈필드",
+    "logo": "https://www.api-football.com/public/teams/43.png"
+  },
+  "44": {
+    "team_id": "44",
+    "name": "Burnley",
+    "name_kr": "번리",
+    "logo": "https://www.api-football.com/public/teams/44.png"
+  },
+  "45": {
+    "team_id": "45",
+    "name": "Everton",
+    "name_kr": "에버턴",
+    "logo": "https://www.api-football.com/public/teams/45.png"
+  },
+  "46": {
+    "team_id": "46",
+    "name": "Leicester",
+    "name_kr": "레스터시티",
+    "logo": "https://www.api-football.com/public/teams/46.svg"
+  },
+  "47": {
+    "team_id": "47",
+    "name": "Tottenham",
+    "name_kr": "허더즈필드",
+    "logo": "https://www.api-football.com/public/teams/47.png"
+  },
+  "48": {
+    "team_id": "48",
+    "name": "West Ham",
+    "name_kr": "허더즈필드",
+    "logo": "https://www.api-football.com/public/teams/48.png"
+  },
+  "49": {
+    "team_id": "49",
+    "name": "Chelsea",
+    "name_kr": "첼시",
+    "logo": "https://www.api-football.com/public/teams/49.png"
+  },
+  "50": {
+    "team_id": "50",
+    "name": "Manchester City",
+    "name_kr": "맨체스터 시티",
+    "logo": "https://www.api-football.com/public/teams/50.png"
+  },
+  "51": {
+    "team_id": "51",
+    "name": "Brighton",
+    "name_kr": "브라이튼",
+    "logo": "https://www.api-football.com/public/teams/51.png"
+  },
+  "52": {
+    "team_id": "52",
+    "name": "Crystal Palace",
+    "name_kr": "크리스탈 팰리스",
+    "logo": "https://www.api-football.com/public/teams/52.png"
+  },
+  // 라리가
+  "529": {
+    "team_id": "529",
+    "name": "Barcelona",
+    "name_kr": "바르셀로나",
+    "code": "",
+    "logo": "https://www.api-football.com/public/teams/529.svg"
+  },
+  "530": {
+    "team_id": "530",
+    "name": "Atletico Madrid",
+    "name_kr": "아틀레티코 마드리드",
+    "code": "",
+    "logo": "https://www.api-football.com/public/teams/530.png"
+  },
+  "531": {
+    "team_id": "531",
+    "name": "Athletic Club",
+    "name_kr": "아틀레틱 빌바오",
+    "code": "",
+    "logo": "https://www.api-football.com/public/teams/531.png"
+  },
+  "532": {
+    "team_id": "532",
+    "name": "Valencia",
+    "name_kr": "발렌시아",
+    "code": "",
+    "logo": "https://www.api-football.com/public/teams/532.png"
+  },
+  "533": {
+    "team_id": "533",
+    "name": "Villarreal",
+    "name_kr": "비야레알",
+    "code": "",
+    "logo": "https://www.api-football.com/public/teams/533.png"
+  },
+  "536": {
+    "team_id": "536",
+    "name": "Sevilla",
+    "name_kr": "세비야",
+    "code": "",
+    "logo": "https://www.api-football.com/public/teams/536.png"
+  },
+  "537": {
+    "team_id": "537",
+    "name": "Leganes",
+    "name_kr": "레가네스",
+    "code": "",
+    "logo": "https://www.api-football.com/public/teams/537.png"
+  },
+  "538": {
+    "team_id": "538",
+    "name": "Celta Vigo",
+    "name_kr": "셀타 비고",
+    "code": "",
+    "logo": "https://www.api-football.com/public/teams/538.png"
+  },
+  "539": {
+    "team_id": "539",
+    "name": "Levante",
+    "name_kr": "레반테",
+    "code": "",
+    "logo": "https://www.api-football.com/public/teams/539.png"
+  },
+  "540": {
+    "team_id": "540",
+    "name": "Espanyol",
+    "name_kr": "에스파뇰",
+    "code": "",
+    "logo": "https://www.api-football.com/public/teams/540.png"
+  },
+  "541": {
+    "team_id": "541",
+    "name": "Real Madrid",
+    "name_kr": "레알 마드리드",
+    "code": "",
+    "logo": "https://www.api-football.com/public/teams/541.png"
+  },
+  "542": {
+    "team_id": "542",
+    "name": "Alaves",
+    "name_kr": "데포르티보 알라베스",
+    "code": "",
+    "logo": "https://www.api-football.com/public/teams/542.png"
+  },
+  "543": {
+    "team_id": "543",
+    "name": "Real Betis",
+    "name_kr": "레알 베티스",
+    "code": "",
+    "logo": "https://www.api-football.com/public/teams/543.jpg"
+  },
+  "545": {
+    "team_id": "545",
+    "name": "Eibar",
+    "name_kr": "에이바르",
+    "code": "",
+    "logo": "https://www.api-football.com/public/teams/545.svg"
+  },
+  "546": {
+    "team_id": "546",
+    "name": "Getafe",
+    "name_kr": "헤타페",
+    "code": "",
+    "logo": "https://www.api-football.com/public/teams/546.png"
+  },
+  "547": {
+    "team_id": "547",
+    "name": "Girona",
+    "name_kr": "지로나",
+    "code": "",
+    "logo": "https://www.api-football.com/public/teams/547.png"
+  },
+  "548": {
+    "team_id": "548",
+    "name": "Real Sociedad",
+    "name_kr": "레알 소시에다드",
+    "code": "",
+    "logo": "https://www.api-football.com/public/teams/548.svg"
+  },
+  "720": {
+    "team_id": "720",
+    "name": "Valladolid",
+    "name_kr": "레알 바야돌리드",
+    "code": "",
+    "logo": "https://www.api-football.com/public/teams/720.gif"
+  },
+  "726": {
+    "team_id": "726",
+    "name": "Huesca",
+    "name_kr": "우에스카",
+    "code": "",
+    "logo": "https://www.api-football.com/public/teams/726.png"
+  },
+  "728": {
+    "team_id": "728",
+    "name": "Rayo Vallecano",
+    "name_kr": "라요 바예카노",
+    "code": "",
+    "logo": "https://www.api-football.com/public/teams/728.png"
+  },
+  // ETC + Champions
+    "80": {
+      "team_id": "80",
+      "name": "Lyon",
+      "name_kr": "리옹",
+      "logo": "https://www.api-football.com/public/teams/80.png"
+    },
+    "167": {
+      "team_id": "167",
+      "name": "1899 Hoffenheim",
+      "name_kr": "1899 호펜하임",
+      "logo": "https://www.api-football.com/public/teams/167.png"
+    },
+    "174": {
+      "team_id": "174",
+      "name": "FC Schalke 04",
+      "name_kr": "FC살케 04",
+      "logo": "https://www.api-football.com/public/teams/174.png"
+    },
+    "194": {
+      "team_id": "194",
+      "name": "Ajax",
+      "name_kr": "아약스",
+      "logo": "https://www.api-football.com/public/teams/194.png"
+    },
+    "197": {
+      "team_id": "197",
+      "name": "PSV Eindhoven",
+      "name_kr": "PSV 아인트호벤",
+      "logo": "https://www.api-football.com/public/teams/197.png"
+    },
+    "211": {
+      "team_id": "211",
+      "name": "Benfica",
+      "name_kr": "벤피카",
+      "logo": "https://www.api-football.com/public/teams/211.png"
+    },
+    "212": {
+      "team_id": "212",
+      "name": "FC Porto",
+      "name_kr": "포르투",
+      "logo": "https://www.api-football.com/public/teams/212.png"
+    },
+    "247": {
+      "team_id": "247",
+      "name": "Celtic",
+      "name_kr": "셀틱스",
+      "logo": "https://www.api-football.com/public/teams/247.png"
+    },
+    "274": {
+      "team_id": "274",
+      "name": "Valur Reykjavik",
+      "name_kr": "",
+      "logo": "https://www.api-football.com/public/teams/274.png"
+    },
+    "331": {
+      "team_id": "331",
+      "name": "Rosenborg",
+      "name_kr": "",
+      "logo": "https://www.api-football.com/public/teams/331.png"
+    },
+    "339": {
+      "team_id": "339",
+      "name": "Legia Warszawa",
+      "name_kr": "",
+      "logo": "https://www.api-football.com/public/teams/339.png"
+    },
+    "354": {
+      "team_id": "354",
+      "name": "The New Saints",
+      "name_kr": "",
+      "logo": "https://www.api-football.com/public/teams/354.png"
+    },
+    "375": {
+      "team_id": "375",
+      "name": "Malmo FF",
+      "name_kr": "",
+      "logo": "https://www.api-football.com/public/teams/375.svg"
+    },
+    "388": {
+      "team_id": "388",
+      "name": "Bate Borisov",
+      "name_kr": "",
+      "logo": "https://www.api-football.com/public/teams/388.gif"
+    },
+    "397": {
+      "team_id": "397",
+      "name": "FC Midtjylland",
+      "name_kr": "",
+      "logo": "https://www.api-football.com/public/teams/397.png"
+    },
+    "492": {
+      "team_id": "492",
+      "name": "Napoli",
+      "name_kr": "나폴리",
+      "logo": "https://www.api-football.com/public/teams/492.png"
+    },
+    "497": {
+      "team_id": "497",
+      "name": "AS Roma",
+      "name_kr": "AS로마",
+      "logo": "https://www.api-football.com/public/teams/497.svg"
+    },
+    "505": {
+      "team_id": "505",
+      "name": "Inter Milan",
+      "name_kr": "인터밀란",
+      "logo": "https://www.api-football.com/public/teams/505.png"
+    },
+    "550": {
+      "team_id": "550",
+      "name": "Shakhtar Donetsk",
+      "name_kr": "샤흐타르",
+      "logo": "https://www.api-football.com/public/teams/550.png"
+    },
+    "551": {
+      "team_id": "551",
+      "name": "FC Basel 1893",
+      "name_kr": "",
+      "logo": "https://www.api-football.com/public/teams/551.png"
+    },
+    "555": {
+      "team_id": "555",
+      "name": "CSKA Moscow",
+      "name_kr": "CSKA 모스크바",
+      "logo": "https://www.api-football.com/public/teams/555.jpg"
+    },
+    "556": {
+      "team_id": "556",
+      "name": "Qarabag",
+      "name_kr": "",
+      "logo": "https://www.api-football.com/public/teams/556.png"
+    },
+    "558": {
+      "team_id": "558",
+      "name": "Spartak Moscow",
+      "name_kr": "",
+      "logo": "https://www.api-football.com/public/teams/558.png"
+    },
+    "560": {
+      "team_id": "560",
+      "name": "Slavia Praha",
+      "name_kr": "",
+      "logo": "https://www.api-football.com/public/teams/560.png"
+    },
+    "562": {
+      "team_id": "562",
+      "name": "FC Astana",
+      "name_kr": "",
+      "logo": "https://www.api-football.com/public/teams/562.png"
+    },
+    "563": {
+      "team_id": "563",
+      "name": "Hapoel Beer Sheva",
+      "name_kr": "",
+      "logo": "https://www.api-football.com/public/teams/563.png"
+    },
+    "565": {
+      "team_id": "565",
+      "name": "BSC Young Boys",
+      "name_kr": "영 보이즈",
+      "logo": "https://www.api-football.com/public/teams/565.png"
+    },
+    "566": {
+      "team_id": "566",
+      "name": "Ludogorets",
+      "name_kr": "",
+      "logo": "https://www.api-football.com/public/teams/566.png"
+    },
+    "567": {
+      "team_id": "567",
+      "name": "Plzen",
+      "name_kr": "플젠",
+      "logo": "https://www.api-football.com/public/teams/567.png"
+    },
+    "568": {
+      "team_id": "568",
+      "name": "Sheriff Tiraspol",
+      "name_kr": "",
+      "logo": "https://www.api-football.com/public/teams/568.png"
+    },
+    "569": {
+      "team_id": "569",
+      "name": "Club Brugge KV",
+      "name_kr": "브뤼헤",
+      "logo": "https://www.api-football.com/public/teams/569.png"
+    },
+    "571": {
+      "team_id": "571",
+      "name": "Red Bull Salzburg",
+      "name_kr": "",
+      "logo": "https://www.api-football.com/public/teams/571.png"
+    },
+    "572": {
+      "team_id": "572",
+      "name": "Dynamo Kyiv",
+      "name_kr": "",
+      "logo": "https://www.api-football.com/public/teams/572.png"
+    },
+    "575": {
+      "team_id": "575",
+      "name": "AEK Athens FC",
+      "name_kr": "AEK 아테네",
+      "logo": "https://www.api-football.com/public/teams/575.jpg"
+    },
+    "577": {
+      "team_id": "577",
+      "name": "FK Kukesi",
+      "name_kr": "",
+      "logo": ""
+    },
+    "578": {
+      "team_id": "578",
+      "name": "F91 Dudelange",
+      "name_kr": "",
+      "logo": "https://www.api-football.com/public/teams/578.png"
+    },
+    "580": {
+      "team_id": "580",
+      "name_kr": "",
+      "name": "Vikingur Gota",
+      "logo": ""
+    },
+    "582": {
+      "team_id": "582",
+      "name_kr": "",
+      "name": "Alashkert",
+      "logo": ""
+    },
+    "588": {
+      "team_id": "588",
+      "name": "Zrinjski",
+      "name_kr": "",
+      "logo": ""
+    },
+    "589": {
+      "team_id": "589",
+      "name": "Spartaks Jurmala",
+      "name_kr": "",
+      "logo": ""
+    },
+    "591": {
+      "team_id": "591",
+      "name": "FC Santa Coloma",
+      "name_kr": "",
+      "logo": ""
+    },
+    "597": {
+      "team_id": "597",
+      "name": "Lokomotiv Moscow",
+      "name_kr": "로코모티브 모스크바",
+      "logo": "https://www.api-football.com/public/teams/597.png"
+    },
+    "598": {
+      "team_id": "598",
+      "name": "FK Crvena Zvezda",
+      "name_kr": "츠르베나 즈베즈다",
+      "logo": "https://www.api-football.com/public/teams/598.png"
+    },
+    "609": {
+      "team_id": "609",
+      "name": "Shkendija",
+      "name_kr": "",
+      "logo": ""
+    },
+    "610": {
+      "team_id": "610",
+      "name": "Videoton FC",
+      "name_kr": "",
+      "logo": "https://www.api-football.com/public/teams/610.png"
+    },
+    "611": {
+      "team_id": "611",
+      "name": "Fenerbahce",
+      "name_kr": "",
+      "logo": "https://www.api-football.com/public/teams/611.png"
+    },
+    "612": {
+      "team_id": "612",
+      "name": "Suduva Marijampole",
+      "name_kr": "",
+      "logo": ""
+    },
+    "619": {
+      "team_id": "619",
+      "name": "PAOK",
+      "name_kr": "",
+      "logo": "https://www.api-football.com/public/teams/619.png"
+    },
+    "620": {
+      "team_id": "620",
+      "name": "Dinamo Zagreb",
+      "name_kr": "",
+      "logo": "https://www.api-football.com/public/teams/620.png"
+    },
+    "637": {
+      "team_id": "637",
+      "name": "Sturm Graz",
+      "name_kr": "",
+      "logo": "https://www.api-football.com/public/teams/637.png"
+    },
+    "645": {
+      "team_id": "645",
+      "name": "Galatasaray",
+      "name_kr": "갈라타사라이",
+      "logo": "https://www.api-football.com/public/teams/645.png"
+    },
+    "649": {
+      "team_id": "649",
+      "name": "HJK helsinki",
+      "name_kr": "",
+      "logo": "https://www.api-football.com/public/teams/649.png"
+    },
+    "653": {
+      "team_id": "653",
+      "name": "Cork City",
+      "name_kr": "",
+      "logo": ""
+    },
+    "659": {
+      "team_id": "659",
+      "name": "Valletta FC",
+      "name_kr": "",
+      "logo": ""
+    },
+    "667": {
+      "team_id": "667",
+      "name": "Lincoln Red Imps FC",
+      "name_kr": "",
+      "logo": ""
+    },
+    "673": {
+      "team_id": "673",
+      "name": "Sutjeska",
+      "name_kr": "",
+      "logo": ""
+    },
+    "677": {
+      "team_id": "677",
+      "name": "Olimpija Ljubljana",
+      "name_kr": "",
+      "logo": ""
+    },
+    "685": {
+      "team_id": "685",
+      "name": "Torpedo Kutaisi",
+      "name_kr": "",
+      "logo": ""
+    },
+    "687": {
+      "team_id": "687",
+      "name": "Flora Tallinn",
+      "name_kr": "",
+      "logo": ""
+    },
+    "697": {
+      "team_id": "697",
+      "name": "Crusaders FC",
+      "name_kr": "",
+      "logo": ""
+    },
+    "733": {
+      "team_id": "733",
+      "name": "Standard Liege",
+      "name_kr": "",
+      "logo": "https://www.api-football.com/public/teams/733.png"
+    },
+    "1120": {
+      "team_id": "1120",
+      "name": "Spartak Trnava",
+      "name_kr": "",
+      "logo": "https://www.api-football.com/public/teams/1120.jpg"
+    },
+    "2246": {
+      "team_id": "2246",
+      "name": "CFR 1907 Cluj",
+      "name_kr": "",
+      "logo": ""
+    },
+    "2247": {
+      "team_id": "2247",
+      "name": "Apoel Nicosia",
+      "name_kr": "",
+      "logo": ""
+    },
+    "2248": {
+      "team_id": "2248",
+      "name": "Drita",
+      "name_kr": "",
+      "logo": ""
+    },
+    "2249": {
+      "team_id": "2249",
+      "name": "La Fiorita",
+      "name_kr": "",
+      "logo": ""
+    },
+    "91": {
+      "team_id": "91",
+      "name": "Monaco",
+      "code": "모나코",
+      "logo": "https://www.api-football.com/public/teams/91.png"
+    },
+}
+

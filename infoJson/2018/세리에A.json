@@ -1,0 +1,149 @@
+// https://api-football-v1.p.rapidapi.com/teams/league/94
+
+{
+  "api": {
+    "results": 20,
+    "teams": {
+      "487": {
+        "team_id": "487",
+        "name": "Lazio",
+        "name_kr": "라치오",
+        "code": "",
+        "logo": "https://www.api-football.com/public/teams/487.png"
+      },
+      "488": {
+        "team_id": "488",
+        "name": "Sassuolo",
+        "name_kr": "사수올로",
+        "code": "",
+        "logo": "https://www.api-football.com/public/teams/488.png"
+      },
+      "489": {
+        "team_id": "489",
+        "name": "AC Milan",
+        "name_kr": "AC밀란",
+        "code": "",
+        "logo": "https://www.api-football.com/public/teams/489.png"
+      },
+      "490": {
+        "team_id": "490",
+        "name": "Cagliari",
+        "name_kr": "갈리아리",
+        "code": "",
+        "logo": "https://www.api-football.com/public/teams/490.png"
+      },
+      "491": {
+        "team_id": "491",
+        "name": "Chievo",
+        "name_kr": "키에보베로나",
+        "code": "",
+        "logo": "https://www.api-football.com/public/teams/491.png"
+      },
+      "492": {
+        "team_id": "492",
+        "name": "Napoli",
+        "name_kr": "나폴리",
+        "code": "",
+        "logo": "https://www.api-football.com/public/teams/492.png"
+      },
+      "493": {
+        "team_id": "493",
+        "name": "Spal",
+        "name_kr": "스팔",
+        "code": "",
+        "logo": "https://www.api-football.com/public/teams/493.png"
+      },
+      "494": {
+        "team_id": "494",
+        "name": "Udinese",
+        "name_kr": "우디네세",
+        "code": "",
+        "logo": "https://www.api-football.com/public/teams/494.png"
+      },
+      "495": {
+        "team_id": "495",
+        "name": "Genoa",
+        "name_kr": "제노아",
+        "code": "",
+        "logo": "https://www.api-football.com/public/teams/495.png"
+      },
+      "496": {
+        "team_id": "496",
+        "name": "Juventus",
+        "name_kr": "유벤투스",
+        "code": "",
+        "logo": "https://www.api-football.com/public/teams/496.png"
+      },
+      "497": {
+        "team_id": "497",
+        "name": "AS Roma",
+        "name_kr": "AS로마",
+        "code": "",
+        "logo": "https://www.api-football.com/public/teams/497.svg"
+      },
+      "498": {
+        "team_id": "498",
+        "name": "Sampdoria",
+        "name_kr": "삼프도리아",
+        "code": "",
+        "logo": "https://www.api-football.com/public/teams/498.png"
+      },
+      "499": {
+        "team_id": "499",
+        "name": "Atalanta",
+        "name_kr": "아탈란타",
+        "code": "",
+        "logo": "https://www.api-football.com/public/teams/499.png"
+      },
+      "500": {
+        "team_id": "500",
+        "name": "Bologna",
+        "name_kr": "볼로냐",
+        "code": "",
+        "logo": "https://www.api-football.com/public/teams/500.png"
+      },
+      "502": {
+        "team_id": "502",
+        "name": "Fiorentina",
+        "name_kr": "피오렌티나",
+        "code": "",
+        "logo": "https://www.api-football.com/public/teams/502.png"
+      },
+      "503": {
+        "team_id": "503",
+        "name": "Torino",
+        "name_kr": "토리노",
+        "code": "",
+        "logo": "https://www.api-football.com/public/teams/503.png"
+      },
+      "505": {
+        "team_id": "505",
+        "name": "Inter",
+        "name_kr": "인터 밀란",
+        "code": "",
+        "logo": "https://www.api-football.com/public/teams/505.png"
+      },
+      "511": {
+        "team_id": "511",
+        "name": "Empoli",
+        "name_kr": "엠폴리",
+        "code": "",
+        "logo": "https://www.api-football.com/public/teams/511.png"
+      },
+      "512": {
+        "team_id": "512",
+        "name": "Frosinone",
+        "name_kr": "프로시노네",
+        "code": "",
+        "logo": "https://www.api-football.com/public/teams/512.png"
+      },
+      "523": {
+        "team_id": "523",
+        "name": "Parma",
+        "name_kr": "파르마",
+        "code": "",
+        "logo": "https://www.api-football.com/public/teams/523.png"
+      }
+    }
+  }
+}

@@ -1,0 +1,53 @@
+{ // 상세 골정보
+  "api": {
+    "results": 1,
+    "statistics": {
+      "matchs": {
+        "matchsPlayed": {
+          "home": 8,
+          "away": 8,
+          "total": 16
+        },
+        "wins": {
+          "home": 8,
+          "away": 7,
+          "total": 15
+        },
+        "draws": {
+          "home": 0,
+          "away": 1,
+          "total": 1
+        },
+        "loses": {
+          "home": 0,
+          "away": 0,
+          "total": 0
+        }
+      },
+      "goals": {
+        "goalsFor": {
+          "home": 24,
+          "away": 16,
+          "total": 40
+        },
+        "goalsAgainst": {
+          "home": 9,
+          "away": 5,
+          "total": 14
+        }
+      },
+      "goalsAvg": {
+        "goalsFor": {
+          "home": "3.0",
+          "away": "2.0",
+          "total": "2.5"
+        },
+        "goalsAgainst": {
+          "home": "1.1",
+          "away": "0.6",
+          "total": "0.9"
+        }
+      }
+    }
+  }
+}

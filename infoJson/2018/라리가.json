@@ -1,0 +1,128 @@
+// https://api-football-v1.p.rapidapi.com/teams/league/87
+{
+  "api": {
+    "results": 20,
+    "teams": {
+      "529": {
+        "team_id": "529",
+        "name": "Barcelona",
+        "code": "",
+        "logo": "https://www.api-football.com/public/teams/529.svg"
+      },
+      "530": {
+        "team_id": "530",
+        "name": "Atletico Madrid",
+        "code": "",
+        "logo": "https://www.api-football.com/public/teams/530.png"
+      },
+      "531": {
+        "team_id": "531",
+        "name": "Athletic Club",
+        "code": "",
+        "logo": "https://www.api-football.com/public/teams/531.png"
+      },
+      "532": {
+        "team_id": "532",
+        "name": "Valencia",
+        "code": "",
+        "logo": "https://www.api-football.com/public/teams/532.png"
+      },
+      "533": {
+        "team_id": "533",
+        "name": "Villarreal",
+        "code": "",
+        "logo": "https://www.api-football.com/public/teams/533.png"
+      },
+      "536": {
+        "team_id": "536",
+        "name": "Sevilla",
+        "code": "",
+        "logo": "https://www.api-football.com/public/teams/536.png"
+      },
+      "537": {
+        "team_id": "537",
+        "name": "Leganes",
+        "code": "",
+        "logo": "https://www.api-football.com/public/teams/537.png"
+      },
+      "538": {
+        "team_id": "538",
+        "name": "Celta Vigo",
+        "code": "",
+        "logo": "https://www.api-football.com/public/teams/538.png"
+      },
+      "539": {
+        "team_id": "539",
+        "name": "Levante",
+        "code": "",
+        "logo": "https://www.api-football.com/public/teams/539.png"
+      },
+      "540": {
+        "team_id": "540",
+        "name": "Espanyol",
+        "code": "",
+        "logo": "https://www.api-football.com/public/teams/540.png"
+      },
+      "541": {
+        "team_id": "541",
+        "name": "Real Madrid",
+        "code": "",
+        "logo": "https://www.api-football.com/public/teams/541.png"
+      },
+      "542": {
+        "team_id": "542",
+        "name": "Alaves",
+        "code": "",
+        "logo": "https://www.api-football.com/public/teams/542.png"
+      },
+      "543": {
+        "team_id": "543",
+        "name": "Real Betis",
+        "code": "",
+        "logo": "https://www.api-football.com/public/teams/543.jpg"
+      },
+      "545": {
+        "team_id": "545",
+        "name": "Eibar",
+        "code": "",
+        "logo": "https://www.api-football.com/public/teams/545.svg"
+      },
+      "546": {
+        "team_id": "546",
+        "name": "Getafe",
+        "code": "",
+        "logo": "https://www.api-football.com/public/teams/546.png"
+      },
+      "547": {
+        "team_id": "547",
+        "name": "Girona",
+        "code": "",
+        "logo": "https://www.api-football.com/public/teams/547.png"
+      },
+      "548": {
+        "team_id": "548",
+        "name": "Real Sociedad",
+        "code": "",
+        "logo": "https://www.api-football.com/public/teams/548.svg"
+      },
+      "720": {
+        "team_id": "720",
+        "name": "Valladolid",
+        "code": "",
+        "logo": "https://www.api-football.com/public/teams/720.gif"
+      },
+      "726": {
+        "team_id": "726",
+        "name": "Huesca",
+        "code": "",
+        "logo": "https://www.api-football.com/public/teams/726.png"
+      },
+      "728": {
+        "team_id": "728",
+        "name": "Rayo Vallecano",
+        "code": "",
+        "logo": "https://www.api-football.com/public/teams/728.png"
+      }
+    }
+  }
+}

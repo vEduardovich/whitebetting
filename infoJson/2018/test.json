@@ -1,0 +1,382 @@
+{
+  "gameInfo": {
+    "createdAt": "2018-12-15T11:50:25.626Z",
+    "_id": "5c14ea81f01c2111fe2800ce",
+    "fixture_id": 229,
+    "createdAt_local": "2018-12-15 20:50:25",
+    "event_timestamp": 1544976000,
+    "event_date": "2018-12-16T16:00:00.000Z",
+    "event_localDate": "2018-12-17 01:00:00",
+    "league_id": 2,
+    "round": "Premier League - 17",
+    "homeTeam_id": 40,
+    "awayTeam_id": 33,
+    "homeTeam": "Liverpool",
+    "awayTeam": "Manchester United",
+    "status": "Not Started",
+    "statusShort": "NS",
+    "goalsHomeTeam": null,
+    "goalsAwayTeam": null,
+    "halftime_score": "",
+    "final_score": "",
+    "penalty": "",
+    "elapsed": 0,
+    "firstHalfStart": 0,
+    "secondHalfStart": 0,
+    "gameInfo_num": 49,
+    "__v": 0,
+    "event_date_local": "2018년 12월 17일 월요일 오전 1:00",
+    "event_date_mlocal": "18일 전"
+  },
+  "oddInfo": {
+    "createdAt": "2018-12-15T11:50:25.025Z",
+    "_id": "5c14ea81f01c2111fe2800cd",
+    "fixture_id": 229,
+    "createdAt_local": "2018-12-15 20:50:25",
+    "homeTeam_odd": 1.51,
+    "awayTeam_odd": 6.1,
+    "drawTeam_odd": 4.1,
+    "homeTeamAndDraw_odd": 1.06,
+    "awayTeamAndDraw_odd": 2.35,
+    "hameAndAwayTeam_odd": 1.16,
+    "total_odd": {
+      "Win the match": {
+        "1": {
+          "label": "1",
+          "pos": "1",
+          "odd": "1.51"
+        },
+        "2": {
+          "label": "2",
+          "pos": "3",
+          "odd": "6.10"
+        },
+        "N": {
+          "label": "N",
+          "pos": "2",
+          "odd": "4.10"
+        }
+      },
+      "Handicap [0:1] (Temps Réglementaire)": {
+        "1": {
+          "label": "1",
+          "pos": "1",
+          "odd": "2.15"
+        },
+        "2": {
+          "label": "2",
+          "pos": "3",
+          "odd": "2.35"
+        },
+        "N": {
+          "label": "N",
+          "pos": "2",
+          "odd": "3.20"
+        }
+      },
+      "Half Time": {
+        "1": {
+          "label": "1",
+          "pos": "1",
+          "odd": "1.85"
+        },
+        "2": {
+          "label": "2",
+          "pos": "3",
+          "odd": "4.90"
+        },
+        "N": {
+          "label": "N",
+          "pos": "2",
+          "odd": "2.15"
+        }
+      },
+      "Exact score": {
+        "1 - 0": {
+          "label": "1 - 0",
+          "pos": "1",
+          "odd": "5.75"
+        },
+        "2 - 0": {
+          "label": "2 - 0",
+          "pos": "2",
+          "odd": "5.75"
+        },
+        "2 - 1": {
+          "label": "2 - 1",
+          "pos": "3",
+          "odd": "7.00"
+        },
+        "3 - 0": {
+          "label": "3 - 0",
+          "pos": "4",
+          "odd": "7.00"
+        },
+        "3 - 1": {
+          "label": "3 - 1",
+          "pos": "5",
+          "odd": "8.25"
+        },
+        "3 - 2": {
+          "label": "3 - 2",
+          "pos": "6",
+          "odd": "16.00"
+        },
+        "4 - 0": {
+          "label": "4 - 0",
+          "pos": "7",
+          "odd": "17.50"
+        },
+        "4 - 1": {
+          "label": "4 - 1",
+          "pos": "8",
+          "odd": "16.00"
+        },
+        "4 - 2": {
+          "label": "4 - 2",
+          "pos": "9",
+          "odd": "30.00"
+        },
+        "4 - 3": {
+          "label": "4 - 3",
+          "pos": "10",
+          "odd": "83.00"
+        },
+        "0 - 0": {
+          "label": "0 - 0",
+          "pos": "11",
+          "odd": "11.50"
+        },
+        "1 - 1": {
+          "label": "1 - 1",
+          "pos": "12",
+          "odd": "7.00"
+        },
+        "2 - 2": {
+          "label": "2 - 2",
+          "pos": "13",
+          "odd": "14.00"
+        },
+        "3 - 3": {
+          "label": "3 - 3",
+          "pos": "14",
+          "odd": "47.00"
+        },
+        "4 - 4": {
+          "label": "4 - 4",
+          "pos": "15",
+          "odd": "150.00"
+        },
+        "0 - 1": {
+          "label": "0 - 1",
+          "pos": "16",
+          "odd": "13.00"
+        },
+        "0 - 2": {
+          "label": "0 - 2",
+          "pos": "17",
+          "odd": "26.00"
+        },
+        "1 - 2": {
+          "label": "1 - 2",
+          "pos": "18",
+          "odd": "15.50"
+        },
+        "0 - 3": {
+          "label": "0 - 3",
+          "pos": "19",
+          "odd": "79.00"
+        },
+        "1 - 3": {
+          "label": "1 - 3",
+          "pos": "20",
+          "odd": "42.00"
+        },
+        "2 - 3": {
+          "label": "2 - 3",
+          "pos": "21",
+          "odd": "36.00"
+        },
+        "0 - 4": {
+          "label": "0 - 4",
+          "pos": "22",
+          "odd": "100.00"
+        },
+        "1 - 4": {
+          "label": "1 - 4",
+          "pos": "23",
+          "odd": "150.00"
+        },
+        "2 - 4": {
+          "label": "2 - 4",
+          "pos": "24",
+          "odd": "150.00"
+        },
+        "3 - 4": {
+          "label": "3 - 4",
+          "pos": "25",
+          "odd": "150.00"
+        },
+        "Other": {
+          "label": "Other",
+          "pos": "26",
+          "odd": "9.00"
+        }
+      },
+      "Double chance": {
+        "1/N": {
+          "label": "1/N",
+          "pos": "1",
+          "odd": "1.06"
+        },
+        "N/2": {
+          "label": "N/2",
+          "pos": "2",
+          "odd": "2.35"
+        },
+        "1/2": {
+          "label": "1/2",
+          "pos": "3",
+          "odd": "1.16"
+        }
+      },
+      "Résultat & les 2 marquent": {
+        "Liverpool / Yes": {
+          "label": "Liverpool / Yes",
+          "pos": "1",
+          "odd": "2.55"
+        },
+        "Liverpool / No": {
+          "label": "Liverpool / No",
+          "pos": "2",
+          "odd": "2.15"
+        },
+        "N / Yes": {
+          "label": "N / Yes",
+          "pos": "3",
+          "odd": "4.15"
+        },
+        "N / No": {
+          "label": "N / No",
+          "pos": "4",
+          "odd": "11.50"
+        },
+        "Manchester Utd / Yes": {
+          "label": "Manchester Utd / Yes",
+          "pos": "5",
+          "odd": "8.50"
+        },
+        "Manchester Utd / No": {
+          "label": "Manchester Utd / No",
+          "pos": "6",
+          "odd": "9.00"
+        }
+      },
+      "Both teams score": {
+        "Yes": {
+          "label": "Yes",
+          "pos": "1",
+          "odd": "1.70"
+        },
+        "No": {
+          "label": "No",
+          "pos": "2",
+          "odd": "1.85"
+        }
+      },
+      "Over/Under 2,5 goals (Temps Réglementaire)": {
+        "Over": {
+          "label": "Over",
+          "pos": "1",
+          "odd": "1.60"
+        },
+        "Under": {
+          "label": "Under",
+          "pos": "2",
+          "odd": "2.00"
+        }
+      },
+      "HT/FT": {
+        "1/1": {
+          "label": "1/1",
+          "pos": "1",
+          "odd": "1.95"
+        },
+        "1/N": {
+          "label": "1/N",
+          "pos": "2",
+          "odd": "15.00"
+        },
+        "1/2": {
+          "label": "1/2",
+          "pos": "3",
+          "odd": "30.00"
+        },
+        "N/1": {
+          "label": "N/1",
+          "pos": "4",
+          "odd": "3.85"
+        },
+        "N/N": {
+          "label": "N/N",
+          "pos": "5",
+          "odd": "6.00"
+        },
+        "N/2": {
+          "label": "N/2",
+          "pos": "6",
+          "odd": "12.00"
+        },
+        "2/1": {
+          "label": "2/1",
+          "pos": "7",
+          "odd": "18.50"
+        },
+        "2/N": {
+          "label": "2/N",
+          "pos": "8",
+          "odd": "16.50"
+        },
+        "2/2": {
+          "label": "2/2",
+          "pos": "9",
+          "odd": "9.25"
+        }
+      },
+      "Result & Over/Under": {
+        "Liverpool & over 3,5": {
+          "label": "Liverpool & over 3,5",
+          "pos": "1",
+          "odd": "3.00"
+        },
+        "Draw & over 3,5": {
+          "label": "Draw & over 3,5",
+          "pos": "2",
+          "odd": "9.25"
+        },
+        "Manchester Utd & over 3,": {
+          "label": "Manchester Utd & over 3,",
+          "pos": "3",
+          "odd": "14.50"
+        },
+        "Liverpool & under 3,5": {
+          "label": "Liverpool & under 3,5",
+          "pos": "4",
+          "odd": "2.20"
+        },
+        "Draw & under 3,5": {
+          "label": "Draw & under 3,5",
+          "pos": "5",
+          "odd": "4.30"
+        },
+        "Manchester Utd & under 3": {
+          "label": "Manchester Utd & under 3",
+          "pos": "6",
+          "odd": "7.00"
+        }
+      }
+    },
+    "oddInfo_num": 92,
+    "__v": 0
+  }
+}

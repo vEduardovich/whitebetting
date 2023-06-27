@@ -1,0 +1,769 @@
+{
+    "api": {
+        "results": 26,
+        "odds": {
+            "Win the match": {
+                "1": {
+                    "label": "1",
+                    "pos": "1",
+                    "odd": "2.05"
+                },
+                "2": {
+                    "label": "2",
+                    "pos": "3",
+                    "odd": "3.35"
+                },
+                "N": {
+                    "label": "N",
+                    "pos": "2",
+                    "odd": "3.65"
+                }
+            },
+            "Handicap [0:2] (Temps Réglementaire)": {
+                "1": {
+                    "label": "1",
+                    "pos": "1",
+                    "odd": "5.75"
+                },
+                "2": {
+                    "label": "2",
+                    "pos": "3",
+                    "odd": "1.21"
+                },
+                "N": {
+                    "label": "N",
+                    "pos": "2",
+                    "odd": "5.00"
+                }
+            },
+            "Handicap [0:1] (Temps Réglementaire)": {
+                "1": {
+                    "label": "1",
+                    "pos": "1",
+                    "odd": "3.10"
+                },
+                "2": {
+                    "label": "2",
+                    "pos": "3",
+                    "odd": "1.68"
+                },
+                "N": {
+                    "label": "N",
+                    "pos": "2",
+                    "odd": "3.50"
+                }
+            },
+            "Handicap [1:0] (Temps Réglementaire)": {
+                "1": {
+                    "label": "1",
+                    "pos": "1",
+                    "odd": "1.25"
+                },
+                "2": {
+                    "label": "2",
+                    "pos": "3",
+                    "odd": "5.75"
+                },
+                "N": {
+                    "label": "N",
+                    "pos": "2",
+                    "odd": "4.30"
+                }
+            },
+            "Half Time": {
+                "1": {
+                    "label": "1",
+                    "pos": "1",
+                    "odd": "2.40"
+                },
+                "2": {
+                    "label": "2",
+                    "pos": "3",
+                    "odd": "3.25"
+                },
+                "N": {
+                    "label": "N",
+                    "pos": "2",
+                    "odd": "2.10"
+                }
+            },
+            "Exact score": {
+                "1 - 0": {
+                    "label": "1 - 0",
+                    "pos": "1",
+                    "odd": "7.00"
+                },
+                "2 - 0": {
+                    "label": "2 - 0",
+                    "pos": "2",
+                    "odd": "8.25"
+                },
+                "2 - 1": {
+                    "label": "2 - 1",
+                    "pos": "3",
+                    "odd": "7.25"
+                },
+                "3 - 0": {
+                    "label": "3 - 0",
+                    "pos": "4",
+                    "odd": "11.50"
+                },
+                "3 - 1": {
+                    "label": "3 - 1",
+                    "pos": "5",
+                    "odd": "10.00"
+                },
+                "3 - 2": {
+                    "label": "3 - 2",
+                    "pos": "6",
+                    "odd": "14.50"
+                },
+                "4 - 0": {
+                    "label": "4 - 0",
+                    "pos": "7",
+                    "odd": "33.00"
+                },
+                "4 - 1": {
+                    "label": "4 - 1",
+                    "pos": "8",
+                    "odd": "22.00"
+                },
+                "4 - 2": {
+                    "label": "4 - 2",
+                    "pos": "9",
+                    "odd": "31.00"
+                },
+                "4 - 3": {
+                    "label": "4 - 3",
+                    "pos": "10",
+                    "odd": "65.00"
+                },
+                "0 - 0": {
+                    "label": "0 - 0",
+                    "pos": "11",
+                    "odd": "12.50"
+                },
+                "1 - 1": {
+                    "label": "1 - 1",
+                    "pos": "12",
+                    "odd": "6.50"
+                },
+                "2 - 2": {
+                    "label": "2 - 2",
+                    "pos": "13",
+                    "odd": "11.00"
+                },
+                "3 - 3": {
+                    "label": "3 - 3",
+                    "pos": "14",
+                    "odd": "32.00"
+                },
+                "4 - 4": {
+                    "label": "4 - 4",
+                    "pos": "15",
+                    "odd": "150.00"
+                },
+                "0 - 1": {
+                    "label": "0 - 1",
+                    "pos": "16",
+                    "odd": "10.00"
+                },
+                "0 - 2": {
+                    "label": "0 - 2",
+                    "pos": "17",
+                    "odd": "16.50"
+                },
+                "1 - 2": {
+                    "label": "1 - 2",
+                    "pos": "18",
+                    "odd": "10.50"
+                },
+                "0 - 3": {
+                    "label": "0 - 3",
+                    "pos": "19",
+                    "odd": "32.00"
+                },
+                "1 - 3": {
+                    "label": "1 - 3",
+                    "pos": "20",
+                    "odd": "20.00"
+                },
+                "2 - 3": {
+                    "label": "2 - 3",
+                    "pos": "21",
+                    "odd": "21.00"
+                },
+                "0 - 4": {
+                    "label": "0 - 4",
+                    "pos": "22",
+                    "odd": "100.00"
+                },
+                "1 - 4": {
+                    "label": "1 - 4",
+                    "pos": "23",
+                    "odd": "64.00"
+                },
+                "2 - 4": {
+                    "label": "2 - 4",
+                    "pos": "24",
+                    "odd": "63.00"
+                },
+                "3 - 4": {
+                    "label": "3 - 4",
+                    "pos": "25",
+                    "odd": "92.00"
+                },
+                "Other": {
+                    "label": "Other",
+                    "pos": "26",
+                    "odd": "11.50"
+                }
+            },
+            "Double chance": {
+                "1/N": {
+                    "label": "1/N",
+                    "pos": "1",
+                    "odd": "1.25"
+                },
+                "N/2": {
+                    "label": "N/2",
+                    "pos": "2",
+                    "odd": "1.68"
+                },
+                "1/2": {
+                    "label": "1/2",
+                    "pos": "3",
+                    "odd": "1.21"
+                }
+            },
+            "Résultat & les 2 marquent": {
+                "ManchesterCity / Yes": {
+                    "label": "ManchesterCity / Yes",
+                    "pos": "1",
+                    "odd": "2.90"
+                },
+                "ManchesterCity / No": {
+                    "label": "ManchesterCity / No",
+                    "pos": "2",
+                    "odd": "3.30"
+                },
+                "N / Yes": {
+                    "label": "N / Yes",
+                    "pos": "3",
+                    "odd": "3.50"
+                },
+                "N / No": {
+                    "label": "N / No",
+                    "pos": "4",
+                    "odd": "13.00"
+                },
+                "Liverpool / Yes": {
+                    "label": "Liverpool / Yes",
+                    "pos": "5",
+                    "odd": "4.40"
+                },
+                "Liverpool / No": {
+                    "label": "Liverpool / No",
+                    "pos": "6",
+                    "odd": "5.50"
+                }
+            },
+            "Both teams score": {
+                "Yes": {
+                    "label": "Yes",
+                    "pos": "1",
+                    "odd": "1.50"
+                },
+                "No": {
+                    "label": "No",
+                    "pos": "2",
+                    "odd": "2.20"
+                }
+            },
+            "Over/Under 4,5 goals (Temps Réglementaire)": {
+                "Over 4,5": {
+                    "label": "Over 4,5",
+                    "pos": "1",
+                    "odd": "3.45"
+                },
+                "Under 4,5": {
+                    "label": "Under 4,5",
+                    "pos": "2",
+                    "odd": "1.19"
+                }
+            },
+            "Over/Under 1,5 goal (Temps Réglementaire)": {
+                "Over 1,5": {
+                    "label": "Over 1,5",
+                    "pos": "1",
+                    "odd": "1.19"
+                },
+                "Under 1,5": {
+                    "label": "Under 1,5",
+                    "pos": "2",
+                    "odd": "3.45"
+                }
+            },
+            "Over/Under 5,5 goals (Temps Réglementaire)": {
+                "Over 5,5": {
+                    "label": "Over 5,5",
+                    "pos": "1",
+                    "odd": "5.25"
+                },
+                "Under 5,5": {
+                    "label": "Under 5,5",
+                    "pos": "2",
+                    "odd": "1.07"
+                }
+            },
+            "Over/Under 2,5 goals (Temps Réglementaire)": {
+                "Over 2,5": {
+                    "label": "Over 2,5",
+                    "pos": "1",
+                    "odd": "1.55"
+                },
+                "Under 2,5": {
+                    "label": "Under 2,5",
+                    "pos": "2",
+                    "odd": "2.05"
+                }
+            },
+            "Over/Under 6,5 goals (Temps Réglementaire)": {
+                "Over 6,5": {
+                    "label": "Over 6,5",
+                    "pos": "1",
+                    "odd": "7.25"
+                },
+                "Under 6,5": {
+                    "label": "Under 6,5",
+                    "pos": "2",
+                    "odd": "1.05"
+                }
+            },
+            "Over/Under 3,5 goals (Temps Réglementaire)": {
+                "Over 3,5": {
+                    "label": "Over 3,5",
+                    "pos": "1",
+                    "odd": "2.25"
+                },
+                "Under 3,5": {
+                    "label": "Under 3,5",
+                    "pos": "2",
+                    "odd": "1.45"
+                }
+            },
+            "Face à Face Remboursé si nul": {
+                "ManchesterCity": {
+                    "label": "ManchesterCity",
+                    "pos": "1",
+                    "odd": "1.45"
+                },
+                "Liverpool": {
+                    "label": "Liverpool",
+                    "pos": "2",
+                    "odd": "2.05"
+                }
+            },
+            "1st goal": {
+                "ManchesterCity": {
+                    "label": "ManchesterCity",
+                    "pos": "1",
+                    "odd": "1.60"
+                },
+                "Liverpool": {
+                    "label": "Liverpool",
+                    "pos": "2",
+                    "odd": "2.15"
+                },
+                "Pas de But": {
+                    "label": "Pas de But",
+                    "pos": "3",
+                    "odd": "12.50"
+                }
+            },
+            "HT/FT": {
+                "1/1": {
+                    "label": "1/1",
+                    "pos": "1",
+                    "odd": "2.80"
+                },
+                "1/N": {
+                    "label": "1/N",
+                    "pos": "2",
+                    "odd": "12.00"
+                },
+                "1/2": {
+                    "label": "1/2",
+                    "pos": "3",
+                    "odd": "24.00"
+                },
+                "N/1": {
+                    "label": "N/1",
+                    "pos": "4",
+                    "odd": "4.80"
+                },
+                "N/N": {
+                    "label": "N/N",
+                    "pos": "5",
+                    "odd": "5.75"
+                },
+                "N/2": {
+                    "label": "N/2",
+                    "pos": "6",
+                    "odd": "7.25"
+                },
+                "2/1": {
+                    "label": "2/1",
+                    "pos": "7",
+                    "odd": "19.00"
+                },
+                "2/N": {
+                    "label": "2/N",
+                    "pos": "8",
+                    "odd": "12.50"
+                },
+                "2/2": {
+                    "label": "2/2",
+                    "pos": "9",
+                    "odd": "5.00"
+                }
+            },
+            "Résultat & Over/Under": {
+                "ManchesterCity & over 2,": {
+                    "label": "ManchesterCity & over 2,",
+                    "pos": "1",
+                    "odd": "2.50"
+                },
+                "Draw & over 2,5": {
+                    "label": "Draw & over 2,5",
+                    "pos": "2",
+                    "odd": "7.00"
+                },
+                "Liverpool & over 2,5": {
+                    "label": "Liverpool & over 2,5",
+                    "pos": "3",
+                    "odd": "4.80"
+                },
+                "ManchesterCity & under 2": {
+                    "label": "ManchesterCity & under 2",
+                    "pos": "4",
+                    "odd": "4.20"
+                },
+                "Draw & under 2,5": {
+                    "label": "Draw & under 2,5",
+                    "pos": "5",
+                    "odd": "3.75"
+                },
+                "Liverpool & under 2,5": {
+                    "label": "Liverpool & under 2,5",
+                    "pos": "6",
+                    "odd": "6.75"
+                },
+                "ManchesterCity & over 1,": {
+                    "label": "ManchesterCity & over 1,",
+                    "pos": "1",
+                    "odd": "2.10"
+                },
+                "Draw & over 1,5": {
+                    "label": "Draw & over 1,5",
+                    "pos": "2",
+                    "odd": "3.75"
+                },
+                "Liverpool & over 1,5": {
+                    "label": "Liverpool & over 1,5",
+                    "pos": "3",
+                    "odd": "4.00"
+                },
+                "ManchesterCity & under 1": {
+                    "label": "ManchesterCity & under 1",
+                    "pos": "4",
+                    "odd": "7.00"
+                },
+                "Draw & under 1,5": {
+                    "label": "Draw & under 1,5",
+                    "pos": "5",
+                    "odd": "12.50"
+                },
+                "Liverpool & under 1,5": {
+                    "label": "Liverpool & under 1,5",
+                    "pos": "6",
+                    "odd": "10.00"
+                },
+                "ManchesterCity & over 3,": {
+                    "label": "ManchesterCity & over 3,",
+                    "pos": "1",
+                    "odd": "3.80"
+                },
+                "Draw & over 3,5": {
+                    "label": "Draw & over 3,5",
+                    "pos": "2",
+                    "odd": "7.00"
+                },
+                "Liverpool & over 3,5": {
+                    "label": "Liverpool & over 3,5",
+                    "pos": "3",
+                    "odd": "7.50"
+                },
+                "ManchesterCity & under 3": {
+                    "label": "ManchesterCity & under 3",
+                    "pos": "4",
+                    "odd": "2.80"
+                },
+                "Draw & under 3,5": {
+                    "label": "Draw & under 3,5",
+                    "pos": "5",
+                    "odd": "3.75"
+                },
+                "Liverpool & under 3,5": {
+                    "label": "Liverpool & under 3,5",
+                    "pos": "6",
+                    "odd": "4.70"
+                },
+                "ManchesterCity & over 4,": {
+                    "label": "ManchesterCity & over 4,",
+                    "pos": "1",
+                    "odd": "5.25"
+                },
+                "Draw & over 4,5": {
+                    "label": "Draw & over 4,5",
+                    "pos": "2",
+                    "odd": "13.00"
+                },
+                "Liverpool & over 4,5": {
+                    "label": "Liverpool & over 4,5",
+                    "pos": "3",
+                    "odd": "10.50"
+                },
+                "ManchesterCity & under 4": {
+                    "label": "ManchesterCity & under 4",
+                    "pos": "4",
+                    "odd": "2.30"
+                },
+                "Draw & under 4,5": {
+                    "label": "Draw & under 4,5",
+                    "pos": "5",
+                    "odd": "3.70"
+                },
+                "Liverpool & under 4,5": {
+                    "label": "Liverpool & under 4,5",
+                    "pos": "6",
+                    "odd": "4.00"
+                }
+            },
+            "Over/Under MT 2,5 goals": {
+                "Over 2,5": {
+                    "label": "Over 2,5",
+                    "pos": "1",
+                    "odd": "4.30"
+                },
+                "Under 2,5": {
+                    "label": "Under 2,5",
+                    "pos": "2",
+                    "odd": "1.11"
+                }
+            },
+            "Over/Under HT 1.5 goal": {
+                "Over 1,5": {
+                    "label": "Over 1,5",
+                    "pos": "1",
+                    "odd": "2.25"
+                },
+                "Under 1,5": {
+                    "label": "Under 1,5",
+                    "pos": "2",
+                    "odd": "1.45"
+                }
+            },
+            "Over/Under HT 0.5 goal": {
+                "Over 0,5": {
+                    "label": "Over 0,5",
+                    "pos": "1",
+                    "odd": "1.28"
+                },
+                "Under 0,5": {
+                    "label": "Under 0,5",
+                    "pos": "2",
+                    "odd": "2.85"
+                }
+            },
+            "Double Chance HT": {
+                "1/N": {
+                    "label": "1/N",
+                    "pos": "1",
+                    "odd": "1.21"
+                },
+                "N/2": {
+                    "label": "N/2",
+                    "pos": "2",
+                    "odd": "1.38"
+                },
+                "1/2": {
+                    "label": "1/2",
+                    "pos": "3",
+                    "odd": "1.50"
+                }
+            },
+            "Exact Score HT": {
+                "1 - 0": {
+                    "label": "1 - 0",
+                    "pos": "1",
+                    "odd": "3.60"
+                },
+                "2 - 0": {
+                    "label": "2 - 0",
+                    "pos": "2",
+                    "odd": "9.50"
+                },
+                "2 - 1": {
+                    "label": "2 - 1",
+                    "pos": "3",
+                    "odd": "9.50"
+                },
+                "3 - 0": {
+                    "label": "3 - 0",
+                    "pos": "4",
+                    "odd": "30.00"
+                },
+                "3 - 1": {
+                    "label": "3 - 1",
+                    "pos": "5",
+                    "odd": "24.00"
+                },
+                "3 - 2": {
+                    "label": "3 - 2",
+                    "pos": "6",
+                    "odd": "37.00"
+                },
+                "4 - 0": {
+                    "label": "4 - 0",
+                    "pos": "7",
+                    "odd": "100.00"
+                },
+                "4 - 1": {
+                    "label": "4 - 1",
+                    "pos": "8",
+                    "odd": "106.00"
+                },
+                "4 - 2": {
+                    "label": "4 - 2",
+                    "pos": "9",
+                    "odd": "131.00"
+                },
+                "4 - 3": {
+                    "label": "4 - 3",
+                    "pos": "10",
+                    "odd": "150.00"
+                },
+                "0 - 0": {
+                    "label": "0 - 0",
+                    "pos": "11",
+                    "odd": "2.70"
+                },
+                "1 - 1": {
+                    "label": "1 - 1",
+                    "pos": "12",
+                    "odd": "5.50"
+                },
+                "2 - 2": {
+                    "label": "2 - 2",
+                    "pos": "13",
+                    "odd": "19.00"
+                },
+                "3 - 3": {
+                    "label": "3 - 3",
+                    "pos": "14",
+                    "odd": "99.00"
+                },
+                "4 - 4": {
+                    "label": "4 - 4",
+                    "pos": "15",
+                    "odd": "150.00"
+                },
+                "0 - 1": {
+                    "label": "0 - 1",
+                    "pos": "16",
+                    "odd": "5.00"
+                },
+                "0 - 2": {
+                    "label": "0 - 2",
+                    "pos": "17",
+                    "odd": "19.00"
+                },
+                "1 - 2": {
+                    "label": "1 - 2",
+                    "pos": "18",
+                    "odd": "13.50"
+                },
+                "0 - 3": {
+                    "label": "0 - 3",
+                    "pos": "19",
+                    "odd": "80.00"
+                },
+                "1 - 3": {
+                    "label": "1 - 3",
+                    "pos": "20",
+                    "odd": "49.00"
+                },
+                "2 - 3": {
+                    "label": "2 - 3",
+                    "pos": "21",
+                    "odd": "53.00"
+                },
+                "0 - 4": {
+                    "label": "0 - 4",
+                    "pos": "22",
+                    "odd": "100.00"
+                },
+                "1 - 4": {
+                    "label": "1 - 4",
+                    "pos": "23",
+                    "odd": "150.00"
+                },
+                "2 - 4": {
+                    "label": "2 - 4",
+                    "pos": "24",
+                    "odd": "150.00"
+                },
+                "3 - 4": {
+                    "label": "3 - 4",
+                    "pos": "25",
+                    "odd": "150.00"
+                },
+                "Other": {
+                    "label": "Other",
+                    "pos": "26",
+                    "odd": "116.00"
+                }
+            },
+            "Both teams score HT": {
+                "Yes": {
+                    "label": "Yes",
+                    "pos": "1",
+                    "odd": "2.85"
+                },
+                "No": {
+                    "label": "No",
+                    "pos": "2",
+                    "odd": "1.18"
+                }
+            },
+            "1N2_2eMT": {
+                "1": {
+                    "label": "1",
+                    "pos": "1",
+                    "odd": "2.20"
+                },
+                "2": {
+                    "label": "2",
+                    "pos": "3",
+                    "odd": "2.85"
+                },
+                "N": {
+                    "label": "N",
+                    "pos": "2",
+                    "odd": "2.55"
+                }
+            }
+        }
+    }
+}

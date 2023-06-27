@@ -1,0 +1,150 @@
+;l,Blow my mind!,뿅가게 하라!
+tooltipCI,Hello! Virlit,안녕! Virlit
+signinWelcomeScrpt1,Blow my mind!,날 뿅가게 하라!
+signinWelcomeScrpt2,This is the very first project.,그 첫번째 프로젝트.
+signInSNS,We recommend signing in with your SNS account.,SNS 로그인을 추천합니다.
+rememberMe,Remember me,항상 로그인
+signinBtnNext,Next,다음
+tooltpGoogle,Sign in with Google account,구글로 로그인
+tooltpFaceBook,Sign in with Facebook account,페이스북으로 로그인
+createAccount,Create account,새로운 계정을 만듭니다.
+beAMember,Be a member,회원가입
+msgDefaultCategory,No Category,카테고리 없음
+gender,Gender,성별
+genderMale,Gentleman,남
+genderFemale,Lady,여
+msgEmail,Email,이메일
+msgPassword,Password,신중하게 입력해주세요.
+signup,Sign up,가입하기
+signupWelcomeScript1,"If you wanna remember to say,",당신의 기억에 대해 말하고 싶다면
+signupWelcomeScript2,Create your account.,계정을 생성하세요.
+email,Input your email,가입할 이메일 주소를 입력하세요.
+password,Create a password,비밀번호를 입력하세요.
+optionInformScript,These will help us to ensure you get the best experience on our website.,보다 개인화 된 서비스를 제공을 위해 입력해 주세요.
+birthYear,Birth Year,탄생연도
+birthYearPlaceholder,ex. 1988,"4자리, 예) 1988"
+signupPolicyClick,"By clicking Sign up, you agree to our Terms and that you have read our Data Use Policy, including our Cookie Use.","이용약관, 쿠키사용에 동의할 경우 가입하기 버튼을 눌러주세요."
+signupPolicyPwd,"The password is fully encrypted and we can't verify it. If you forget, we’ll send a random password to your email.","비밀번호는 완전히 암호화되어 저희도 확인할 수 없습니다. 잊어버린 경우, 가입 시 입력한 이메일 주소로 임의의 비밀번호를 전송합니다."
+signIn,Sign in,로그인
+signOut,Sign out,로그아웃
+signOutMsg,You should sign out at the end.,종료시 꼭 로그아웃하세요.
+profile,Profile,내 정보
+write,Write,글쓰기
+love,Love,좋아하는 문장
+save,Sayv,저장하기
+msgSelectCategory,Select the category,카테고리 선택
+category,Category,카테고리
+welcome,How do you do?,잘 지내시나요?
+forgotPwd,I forgot password.,비밀번호가 기억나지 않아요
+tooltipMsgLove, likes,명이 좋아합니다
+tooltipSorting,Sorting from newest to oldest,최신순
+tooltipSortingAlt,Sorting from oldest to newest,과거순
+tooltipSenModifyDelete,Modify & Delete,수정 및 삭제
+tooltipHideEng,Hide all I said,영문 전체 숨기기
+tooltipHideKor,Hide all translated sentences,번역 전체 숨기기
+sayEdit,Edit,편집
+sayTextboxPlaceholder,Say your sentence to remember,문장을 입력하세요
+sayCategroyPlaceholder,Make a new category,새로운 카테고리를 만드세요
+sayBtnSayv,Sayv,저장
+sayBtnModify,Modify,수정
+sayBtnDelete,Delete,삭제
+sayBtnCancel,Cancel,취소
+sayPopupDelete,Are you sure you want delete this?,정말로 영원히 지우겠습니까?
+sayCategoryPopupAll,All,모두보기
+sayCategoryPopupProfile,Profile,프로필
+msgNoSentence,There is no sentence.,문장이 한 개도 없네요
+msgMore,more ▽,더 보기 ▽
+githubTooltip, sentence(s),문장
+githubJan,Jan,1월
+githubFeb,Feb,2월
+githubMar,Mar,3월
+githubApr,Apr,4월
+githubMay,May,5월
+githubJun,Jun,6월
+githubJul,Jul,7월
+githubAug,Aug,8월
+githubSep,Sep,9월
+githubOct,Oct,10월
+githubNov,Nov,11월
+githubDec,Dec,12월
+githubSun,Sun,일
+githubWeb,Wed,수
+githubSat,Sat,토
+profileSummary,Summary,요약
+profileDetail,Detail Information,상세 정보
+profileCategory,Category Information,카테고리 정보
+profileMostPlayed,Most played sentences,가장 많이 재생된 문장
+profileMostBeloved,Most beloved sentences,가장 많이 사랑 받은 문장
+profileUsedStems,Most used stems of words,가장 많이 사용된 단어
+profileProperty,Property,특성
+profileScore,Score,점수
+profileRank,Rank,랭킹
+profileRecord,Record,기록
+profileAvg,Avg.,평균
+profileCount,Count,카운트
+profileSentence,Sentence,문장
+profileWord,Word,단어
+summaryTotal,Total,합계
+summaryGrit,Grit,근성
+summaryHonor,Honor,명예
+summaryIntellect,Intellect,지성
+detailInformDays,Days,학습 일수
+detailInformSentences,Sentences,문장수
+detailInformLetters,Letters,글자수
+detailInformPlayed,Played,재생수
+detailInformOtherPlayed,Other played,다른이 재생수
+detailInformLove,Love,Love
+detailInformBeloved,Beloved,Beloved
+tooltipRealtimeScore,Real-time score,실시간 점수
+tooltipProfileMidnight,Ranking is updated at midnight every day,순위는 매일 밤 12시에 갱신
+tooltipTotalScore,Total Score,전체 점수
+tooltipTotalRanking,Total Ranking,전체 순위
+tooltipGritRanking,Grit Ranking,근성 순위
+tooltipHonorRanking,Honor Ranking,명예 순위
+tooltipIntellectRanking,Intellect Ranking,지성 순위
+tooltipAvg,Real-time average,실시간 평균
+tooltipCount,Real-time count,실시간 카운트
+tooltipDaysAvg,"1, if you studied every day for a year",365일 매일 문장을 입력했다면 1
+tooltipDaysCount,Number of days,날짜 수
+tooltipDetailRank,Total Ranking / A rate compared to yesterday,전체순위 / 어제와 비교한 등락
+tooltipSentencesAvg,Average number of sentences per day,하루평균 입력한 문장수
+tooltipSentencesCount,Number of sentences,문장수
+tooltipLettersAvg,Average number of characters per sentence,한문장이 가지는 평균 글자수
+tooltipLettersCount,Number of letters,글자수
+tooltipPlayedAvg,Average number of playing per day,하루평균 play하는 횟수
+tooltipPlayedCount,Number of playing,play한 횟수
+tooltipLoveCount,Number of love,love한 문장수
+tooltipCategoryLove,Number of love,Love한 횟수
+tooltipCategoryBeloved,Number of beloved,Love받은 횟수
+tooltipCategoryName,Category,카테고리명
+tooltipCategoryDetailCount,Number of sentences,카테고리에 속한 문장수
+tooltipCategoryDetailBeloved,Number of beloved,카테고리안에 다른 사람들이 love한 문장수
+tooltipMostBelovedCount,Number of beloved,이 문장이 love를 받은 횟수
+tooltipMostWroteWordsCount,Number of words,이 단어가 사용된 횟수
+eggMsgConsole1,I know what you watched after locking the door last night.,난 어젯잠 네가 문을 잠그고 무얼 봤는지 알고 있어.
+jsNotFoundAccount,Couldn't find your SayToRemember Account,계정을 찾을 수가 없는데요!
+jsMsgWrongPwd,* Wrong password. Try again,* 비밀번호가 틀렸습니다.
+jsMsgOK,OK!,좋아요!
+jsMsgEmailTaken,* That username is taken. Try another.,* 이미 있는 이메일입니다. 다른 메일 주소가 필요합니다
+jsMsgNotValidFormat,Not valid email format.,이상한 형식의 메일입니다
+jsMsgChar,character: ,글자수: 
+jsMsgMoreChar,", Use 8 or more characters.",", 8글자 이상을 넣으세요."
+tooltipGrit,How persistent #{userNickname} was,얼마나 근성있게 지속했는가
+tooltipHonor,How much #{userNickname} was loved,얼마나 사랑 받았는가
+tooltipIntellect,How intelligent #{userNickname} was,얼마나 지성을 쌓았는가
+tooltipDaysRecord,"#{thisYear}, how many days #{userNickname} studied",#{thisYear}년 얼마나 매일 학습했나
+tooltipSentencesRecord,"#{thisYear}, how many sentences #{userNickname} wrote",#{thisYear}년 얼마나 많은 문장을 입력했나
+tooltipLettersRecord,"#{thisYear}, how many letters #{userNickname} wrote",#{thisYear}년 얼마나 많은 글자를 입력했나
+tooltipPlayedRecord,"#{thisYear}, how many #{userNickname} played",#{thisYear}년 얼마나 play했나
+tooltipOtherPlayedRecord,"#{thisYear}, how many people played #{userNickname} sentences",#{thisYear}년 다른 사람들에게 얼마나 많이 play되었나
+tooltipOtherPlayedAvg,Average number of playing per day,다른 사람들이 #{userNickname}님의 문장을 하루평균 play하는 횟수
+tooltipOtherPlayedCount,Number of playing,다른사람이 #{userNickname}님의 문장을 play한 횟수
+tooltipLoveRecord,"#{thisYear}, how many #{userNickname} loved",#{thisYear}년 얼마나 love했나
+tooltipLoveAvg,Average number of love per day,#{userNickname}님이 하루평균 love한 문장수
+tooltipBelovedRecord,"#{thisYear}, how many people loved #{userNickname} sentences",#{thisYear}년 얼마나 많은 사람에게 love되었나
+tooltipBelovedAvg,Average number of beloved per day,다른 사람들이 #{userNickname}님의 문장을 하루평균 love하는 횟수
+tooltipBelovedCount,Number of beloved,다른 사람이 #{userNickname}님의 문장을 love한 횟수
+tooltipCategoryDetailLove,Number of love,카테고리안에 #{userNickname}님이 love한 문장수
+tooltipMostPlayedSentences,"Sentences of most played, #{mostPlayed.length}",가장 많이 플레이된 문장 #{mostPlayed.length}개
+tooltipMostBelovedSentences,"Sentences of most beloved, #{mostBeloved.length}",가장 많이 Love를 받은 문장 #{mostBeloved.length}개
+tooltipMostWroteWords,"Sentences of most wrote, #{mostStems.length}",가장 많이 사용된 단어 #{mostStems.length}개

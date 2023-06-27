@@ -1,0 +1,1013 @@
+{ // https://api-football-v1.p.rapidapi.com/v2/predictions/{fixture_id}
+  "api": {
+    "results": 1,
+    "predictions": [
+      {
+        "match_winner": "1 N",
+        "under_over": null,
+        "goals_home": "-3.5",
+        "goals_away": "-3.5",
+        "advice": "Double chance : Barcelona or draws",
+        "winning_percent": {
+          "home": "45%",
+          "draws": "45%",
+          "away": "10%"
+        },
+        "teams": {
+          "home": {
+            "team_id": 529,
+            "team_name": "Barcelona",
+            "last_5_matches": {
+              "forme": "87%",
+              "att": "93%",
+              "def": "60%",
+              "goals": 14,
+              "goals_avg": 2.8,
+              "goals_against": 6,
+              "goals_against_avg": 1.2
+            },
+            "all_last_matches": {
+              "matchs": {
+                "matchsPlayed": {
+                  "home": 7,
+                  "away": 9,
+                  "total": 16
+                },
+                "wins": {
+                  "home": 7,
+                  "away": 4,
+                  "total": 11
+                },
+                "draws": {
+                  "home": 0,
+                  "away": 2,
+                  "total": 2
+                },
+                "loses": {
+                  "home": 0,
+                  "away": 3,
+                  "total": 3
+                }
+              },
+              "goals": {
+                "goalsFor": {
+                  "home": 30,
+                  "away": 13,
+                  "total": 43
+                },
+                "goalsAgainst": {
+                  "home": 9,
+                  "away": 11,
+                  "total": 20
+                }
+              },
+              "goalsAvg": {
+                "goalsFor": {
+                  "home": "4.3",
+                  "away": "1.4",
+                  "total": "2.7"
+                },
+                "goalsAgainst": {
+                  "home": "1.3",
+                  "away": "1.2",
+                  "total": "1.3"
+                }
+              }
+            },
+            "last_h2h": {
+              "played": {
+                "home": 10,
+                "away": 11,
+                "total": 21
+              },
+              "wins": {
+                "home": 4,
+                "away": 8,
+                "total": 12
+              },
+              "draws": {
+                "home": 4,
+                "away": 1,
+                "total": 5
+              },
+              "loses": {
+                "home": 2,
+                "away": 2,
+                "total": 4
+              }
+            }
+          },
+          "away": {
+            "team_id": 541,
+            "team_name": "Real Madrid",
+            "last_5_matches": {
+              "forme": "87%",
+              "att": "80%",
+              "def": "80%",
+              "goals": 12,
+              "goals_avg": 2.4,
+              "goals_against": 3,
+              "goals_against_avg": 0.6
+            },
+            "all_last_matches": {
+              "matchs": {
+                "matchsPlayed": {
+                  "home": 8,
+                  "away": 8,
+                  "total": 16
+                },
+                "wins": {
+                  "home": 6,
+                  "away": 4,
+                  "total": 10
+                },
+                "draws": {
+                  "home": 2,
+                  "away": 3,
+                  "total": 5
+                },
+                "loses": {
+                  "home": 0,
+                  "away": 1,
+                  "total": 1
+                }
+              },
+              "goals": {
+                "goalsFor": {
+                  "home": 20,
+                  "away": 13,
+                  "total": 33
+                },
+                "goalsAgainst": {
+                  "home": 6,
+                  "away": 6,
+                  "total": 12
+                }
+              },
+              "goalsAvg": {
+                "goalsFor": {
+                  "home": "2.5",
+                  "away": "1.6",
+                  "total": "2.1"
+                },
+                "goalsAgainst": {
+                  "home": "0.8",
+                  "away": "0.8",
+                  "total": "0.8"
+                }
+              }
+            },
+            "last_h2h": {
+              "played": {
+                "home": 11,
+                "away": 10,
+                "total": 21
+              },
+              "wins": {
+                "home": 2,
+                "away": 2,
+                "total": 4
+              },
+              "draws": {
+                "home": 1,
+                "away": 4,
+                "total": 5
+              },
+              "loses": {
+                "home": 8,
+                "away": 4,
+                "total": 12
+              }
+            }
+          }
+        },
+        "h2h": [
+          {
+            "fixture_id": 205353,
+            "league_id": 735,
+            "league": {
+              "name": "Primera Division",
+              "country": "Spain",
+              "logo": "https://media.api-football.com/leagues/64.png",
+              "flag": "https://media.api-football.com/flags/es.svg"
+            },
+            "event_date": "2010-11-29T20:00:00+00:00",
+            "event_timestamp": 1291060800,
+            "firstHalfStart": 1291060800,
+            "secondHalfStart": 1291064400,
+            "round": "Regular Season - 13",
+            "status": "Match Finished",
+            "statusShort": "FT",
+            "elapsed": 90,
+            "venue": "Camp Nou (Barcelona)",
+            "referee": null,
+            "homeTeam": {
+              "team_id": 529,
+              "team_name": "Barcelona",
+              "logo": "https://media.api-football.com/teams/529.png"
+            },
+            "awayTeam": {
+              "team_id": 541,
+              "team_name": "Real Madrid",
+              "logo": "https://media.api-football.com/teams/541.png"
+            },
+            "goalsHomeTeam": 5,
+            "goalsAwayTeam": 0,
+            "score": {
+              "halftime": "2-0",
+              "fulltime": "5-0",
+              "extratime": null,
+              "penalty": null
+            }
+          },
+          {
+            "fixture_id": 205519,
+            "league_id": 735,
+            "league": {
+              "name": "Primera Division",
+              "country": "Spain",
+              "logo": "https://media.api-football.com/leagues/64.png",
+              "flag": "https://media.api-football.com/flags/es.svg"
+            },
+            "event_date": "2011-04-16T20:00:00+00:00",
+            "event_timestamp": 1302984000,
+            "firstHalfStart": 1302984000,
+            "secondHalfStart": 1302987600,
+            "round": "Regular Season - 32",
+            "status": "Match Finished",
+            "statusShort": "FT",
+            "elapsed": 90,
+            "venue": "Estadio Santiago Bernabéu (Madrid)",
+            "referee": null,
+            "homeTeam": {
+              "team_id": 541,
+              "team_name": "Real Madrid",
+              "logo": "https://media.api-football.com/teams/541.png"
+            },
+            "awayTeam": {
+              "team_id": 529,
+              "team_name": "Barcelona",
+              "logo": "https://media.api-football.com/teams/529.png"
+            },
+            "goalsHomeTeam": 1,
+            "goalsAwayTeam": 1,
+            "score": {
+              "halftime": "0-0",
+              "fulltime": "1-1",
+              "extratime": null,
+              "penalty": null
+            }
+          },
+          {
+            "fixture_id": 205009,
+            "league_id": 734,
+            "league": {
+              "name": "Primera Division",
+              "country": "Spain",
+              "logo": "https://media.api-football.com/leagues/64.png",
+              "flag": "https://media.api-football.com/flags/es.svg"
+            },
+            "event_date": "2011-12-10T21:00:00+00:00",
+            "event_timestamp": 1323550800,
+            "firstHalfStart": 1323550800,
+            "secondHalfStart": 1323554400,
+            "round": "Regular Season - 16",
+            "status": "Match Finished",
+            "statusShort": "FT",
+            "elapsed": 90,
+            "venue": "Estadio Santiago Bernabéu (Madrid)",
+            "referee": null,
+            "homeTeam": {
+              "team_id": 541,
+              "team_name": "Real Madrid",
+              "logo": "https://media.api-football.com/teams/541.png"
+            },
+            "awayTeam": {
+              "team_id": 529,
+              "team_name": "Barcelona",
+              "logo": "https://media.api-football.com/teams/529.png"
+            },
+            "goalsHomeTeam": 1,
+            "goalsAwayTeam": 3,
+            "score": {
+              "halftime": "1-1",
+              "fulltime": "1-3",
+              "extratime": null,
+              "penalty": null
+            }
+          },
+          {
+            "fixture_id": 205199,
+            "league_id": 734,
+            "league": {
+              "name": "Primera Division",
+              "country": "Spain",
+              "logo": "https://media.api-football.com/leagues/64.png",
+              "flag": "https://media.api-football.com/flags/es.svg"
+            },
+            "event_date": "2012-04-21T18:00:00+00:00",
+            "event_timestamp": 1335031200,
+            "firstHalfStart": 1335031200,
+            "secondHalfStart": 1335034800,
+            "round": "Regular Season - 35",
+            "status": "Match Finished",
+            "statusShort": "FT",
+            "elapsed": 90,
+            "venue": "Camp Nou (Barcelona)",
+            "referee": null,
+            "homeTeam": {
+              "team_id": 529,
+              "team_name": "Barcelona",
+              "logo": "https://media.api-football.com/teams/529.png"
+            },
+            "awayTeam": {
+              "team_id": 541,
+              "team_name": "Real Madrid",
+              "logo": "https://media.api-football.com/teams/541.png"
+            },
+            "goalsHomeTeam": 1,
+            "goalsAwayTeam": 2,
+            "score": {
+              "halftime": "0-1",
+              "fulltime": "1-2",
+              "extratime": null,
+              "penalty": null
+            }
+          },
+          {
+            "fixture_id": 204545,
+            "league_id": 733,
+            "league": {
+              "name": "Primera Division",
+              "country": "Spain",
+              "logo": "https://media.api-football.com/leagues/64.png",
+              "flag": "https://media.api-football.com/flags/es.svg"
+            },
+            "event_date": "2012-10-07T17:50:00+00:00",
+            "event_timestamp": 1349632200,
+            "firstHalfStart": 1349632200,
+            "secondHalfStart": 1349635800,
+            "round": "Regular Season - 7",
+            "status": "Match Finished",
+            "statusShort": "FT",
+            "elapsed": 90,
+            "venue": "Camp Nou (Barcelona)",
+            "referee": null,
+            "homeTeam": {
+              "team_id": 529,
+              "team_name": "Barcelona",
+              "logo": "https://media.api-football.com/teams/529.png"
+            },
+            "awayTeam": {
+              "team_id": 541,
+              "team_name": "Real Madrid",
+              "logo": "https://media.api-football.com/teams/541.png"
+            },
+            "goalsHomeTeam": 2,
+            "goalsAwayTeam": 2,
+            "score": {
+              "halftime": "1-1",
+              "fulltime": "2-2",
+              "extratime": null,
+              "penalty": null
+            }
+          },
+          {
+            "fixture_id": 204728,
+            "league_id": 733,
+            "league": {
+              "name": "Primera Division",
+              "country": "Spain",
+              "logo": "https://media.api-football.com/leagues/64.png",
+              "flag": "https://media.api-football.com/flags/es.svg"
+            },
+            "event_date": "2013-03-02T15:00:00+00:00",
+            "event_timestamp": 1362236400,
+            "firstHalfStart": 1362236400,
+            "secondHalfStart": 1362240000,
+            "round": "Regular Season - 26",
+            "status": "Match Finished",
+            "statusShort": "FT",
+            "elapsed": 90,
+            "venue": "Estadio Santiago Bernabéu (Madrid)",
+            "referee": null,
+            "homeTeam": {
+              "team_id": 541,
+              "team_name": "Real Madrid",
+              "logo": "https://media.api-football.com/teams/541.png"
+            },
+            "awayTeam": {
+              "team_id": 529,
+              "team_name": "Barcelona",
+              "logo": "https://media.api-football.com/teams/529.png"
+            },
+            "goalsHomeTeam": 2,
+            "goalsAwayTeam": 1,
+            "score": {
+              "halftime": "1-1",
+              "fulltime": "2-1",
+              "extratime": null,
+              "penalty": null
+            }
+          },
+          {
+            "fixture_id": 204189,
+            "league_id": 732,
+            "league": {
+              "name": "Primera Division",
+              "country": "Spain",
+              "logo": "https://media.api-football.com/leagues/64.png",
+              "flag": "https://media.api-football.com/flags/es.svg"
+            },
+            "event_date": "2013-10-26T16:00:00+00:00",
+            "event_timestamp": 1382803200,
+            "firstHalfStart": 1382803200,
+            "secondHalfStart": 1382806800,
+            "round": "Regular Season - 10",
+            "status": "Match Finished",
+            "statusShort": "FT",
+            "elapsed": 90,
+            "venue": "Camp Nou (Barcelona)",
+            "referee": null,
+            "homeTeam": {
+              "team_id": 529,
+              "team_name": "Barcelona",
+              "logo": "https://media.api-football.com/teams/529.png"
+            },
+            "awayTeam": {
+              "team_id": 541,
+              "team_name": "Real Madrid",
+              "logo": "https://media.api-football.com/teams/541.png"
+            },
+            "goalsHomeTeam": 2,
+            "goalsAwayTeam": 1,
+            "score": {
+              "halftime": "1-0",
+              "fulltime": "2-1",
+              "extratime": null,
+              "penalty": null
+            }
+          },
+          {
+            "fixture_id": 204385,
+            "league_id": 732,
+            "league": {
+              "name": "Primera Division",
+              "country": "Spain",
+              "logo": "https://media.api-football.com/leagues/64.png",
+              "flag": "https://media.api-football.com/flags/es.svg"
+            },
+            "event_date": "2014-03-23T20:00:00+00:00",
+            "event_timestamp": 1395604800,
+            "firstHalfStart": 1395604800,
+            "secondHalfStart": 1395608400,
+            "round": "Regular Season - 29",
+            "status": "Match Finished",
+            "statusShort": "FT",
+            "elapsed": 90,
+            "venue": "Estadio Santiago Bernabéu (Madrid)",
+            "referee": null,
+            "homeTeam": {
+              "team_id": 541,
+              "team_name": "Real Madrid",
+              "logo": "https://media.api-football.com/teams/541.png"
+            },
+            "awayTeam": {
+              "team_id": 529,
+              "team_name": "Barcelona",
+              "logo": "https://media.api-football.com/teams/529.png"
+            },
+            "goalsHomeTeam": 3,
+            "goalsAwayTeam": 4,
+            "score": {
+              "halftime": "2-2",
+              "fulltime": "3-4",
+              "extratime": null,
+              "penalty": null
+            }
+          },
+          {
+            "fixture_id": 203799,
+            "league_id": 731,
+            "league": {
+              "name": "Primera Division",
+              "country": "Spain",
+              "logo": "https://media.api-football.com/leagues/64.png",
+              "flag": "https://media.api-football.com/flags/es.svg"
+            },
+            "event_date": "2014-10-25T16:00:00+00:00",
+            "event_timestamp": 1414252800,
+            "firstHalfStart": 1414252800,
+            "secondHalfStart": 1414256400,
+            "round": "Regular Season - 9",
+            "status": "Match Finished",
+            "statusShort": "FT",
+            "elapsed": 90,
+            "venue": "Estadio Santiago Bernabéu (Madrid)",
+            "referee": null,
+            "homeTeam": {
+              "team_id": 541,
+              "team_name": "Real Madrid",
+              "logo": "https://media.api-football.com/teams/541.png"
+            },
+            "awayTeam": {
+              "team_id": 529,
+              "team_name": "Barcelona",
+              "logo": "https://media.api-football.com/teams/529.png"
+            },
+            "goalsHomeTeam": 3,
+            "goalsAwayTeam": 1,
+            "score": {
+              "halftime": "1-1",
+              "fulltime": "3-1",
+              "extratime": null,
+              "penalty": null
+            }
+          },
+          {
+            "fixture_id": 203996,
+            "league_id": 731,
+            "league": {
+              "name": "Primera Division",
+              "country": "Spain",
+              "logo": "https://media.api-football.com/leagues/64.png",
+              "flag": "https://media.api-football.com/flags/es.svg"
+            },
+            "event_date": "2015-03-22T20:00:00+00:00",
+            "event_timestamp": 1427054400,
+            "firstHalfStart": 1427054400,
+            "secondHalfStart": 1427058000,
+            "round": "Regular Season - 28",
+            "status": "Match Finished",
+            "statusShort": "FT",
+            "elapsed": 90,
+            "venue": "Camp Nou (Barcelona)",
+            "referee": null,
+            "homeTeam": {
+              "team_id": 529,
+              "team_name": "Barcelona",
+              "logo": "https://media.api-football.com/teams/529.png"
+            },
+            "awayTeam": {
+              "team_id": 541,
+              "team_name": "Real Madrid",
+              "logo": "https://media.api-football.com/teams/541.png"
+            },
+            "goalsHomeTeam": 2,
+            "goalsAwayTeam": 1,
+            "score": {
+              "halftime": "1-1",
+              "fulltime": "2-1",
+              "extratime": null,
+              "penalty": null
+            }
+          },
+          {
+            "fixture_id": 203448,
+            "league_id": 730,
+            "league": {
+              "name": "Primera Division",
+              "country": "Spain",
+              "logo": "https://media.api-football.com/leagues/64.png",
+              "flag": "https://media.api-football.com/flags/es.svg"
+            },
+            "event_date": "2015-11-21T17:15:00+00:00",
+            "event_timestamp": 1448126100,
+            "firstHalfStart": 1448126100,
+            "secondHalfStart": 1448129700,
+            "round": "Regular Season - 12",
+            "status": "Match Finished",
+            "statusShort": "FT",
+            "elapsed": 90,
+            "venue": "Estadio Santiago Bernabéu (Madrid)",
+            "referee": null,
+            "homeTeam": {
+              "team_id": 541,
+              "team_name": "Real Madrid",
+              "logo": "https://media.api-football.com/teams/541.png"
+            },
+            "awayTeam": {
+              "team_id": 529,
+              "team_name": "Barcelona",
+              "logo": "https://media.api-football.com/teams/529.png"
+            },
+            "goalsHomeTeam": 0,
+            "goalsAwayTeam": 4,
+            "score": {
+              "halftime": "0-2",
+              "fulltime": "0-4",
+              "extratime": null,
+              "penalty": null
+            }
+          },
+          {
+            "fixture_id": 203640,
+            "league_id": 730,
+            "league": {
+              "name": "Primera Division",
+              "country": "Spain",
+              "logo": "https://media.api-football.com/leagues/64.png",
+              "flag": "https://media.api-football.com/flags/es.svg"
+            },
+            "event_date": "2016-04-02T18:30:00+00:00",
+            "event_timestamp": 1459621800,
+            "firstHalfStart": 1459621800,
+            "secondHalfStart": 1459625400,
+            "round": "Regular Season - 31",
+            "status": "Match Finished",
+            "statusShort": "FT",
+            "elapsed": 90,
+            "venue": "Camp Nou (Barcelona)",
+            "referee": null,
+            "homeTeam": {
+              "team_id": 529,
+              "team_name": "Barcelona",
+              "logo": "https://media.api-football.com/teams/529.png"
+            },
+            "awayTeam": {
+              "team_id": 541,
+              "team_name": "Real Madrid",
+              "logo": "https://media.api-football.com/teams/541.png"
+            },
+            "goalsHomeTeam": 1,
+            "goalsAwayTeam": 2,
+            "score": {
+              "halftime": "0-0",
+              "fulltime": "1-2",
+              "extratime": null,
+              "penalty": null
+            }
+          },
+          {
+            "fixture_id": 20692,
+            "league_id": 64,
+            "league": {
+              "name": "Primera Division",
+              "country": "Spain",
+              "logo": "https://media.api-football.com/leagues/64.png",
+              "flag": "https://media.api-football.com/flags/es.svg"
+            },
+            "event_date": "2016-12-03T15:15:00+00:00",
+            "event_timestamp": 1480778100,
+            "firstHalfStart": 1480778100,
+            "secondHalfStart": 1480781700,
+            "round": "Regular Season - 14",
+            "status": "Match Finished",
+            "statusShort": "FT",
+            "elapsed": 90,
+            "venue": "Camp Nou (Barcelona)",
+            "referee": null,
+            "homeTeam": {
+              "team_id": 529,
+              "team_name": "Barcelona",
+              "logo": "https://media.api-football.com/teams/529.png"
+            },
+            "awayTeam": {
+              "team_id": 541,
+              "team_name": "Real Madrid",
+              "logo": "https://media.api-football.com/teams/541.png"
+            },
+            "goalsHomeTeam": 1,
+            "goalsAwayTeam": 1,
+            "score": {
+              "halftime": "0-0",
+              "fulltime": "1-1",
+              "extratime": null,
+              "penalty": null
+            }
+          },
+          {
+            "fixture_id": 20496,
+            "league_id": 64,
+            "league": {
+              "name": "Primera Division",
+              "country": "Spain",
+              "logo": "https://media.api-football.com/leagues/64.png",
+              "flag": "https://media.api-football.com/flags/es.svg"
+            },
+            "event_date": "2017-04-23T18:45:00+00:00",
+            "event_timestamp": 1492973100,
+            "firstHalfStart": 1492973100,
+            "secondHalfStart": 1492976700,
+            "round": "Regular Season - 33",
+            "status": "Match Finished",
+            "statusShort": "FT",
+            "elapsed": 90,
+            "venue": "Estadio Santiago Bernabéu (Madrid)",
+            "referee": null,
+            "homeTeam": {
+              "team_id": 541,
+              "team_name": "Real Madrid",
+              "logo": "https://media.api-football.com/teams/541.png"
+            },
+            "awayTeam": {
+              "team_id": 529,
+              "team_name": "Barcelona",
+              "logo": "https://media.api-football.com/teams/529.png"
+            },
+            "goalsHomeTeam": 2,
+            "goalsAwayTeam": 3,
+            "score": {
+              "halftime": "1-1",
+              "fulltime": "2-3",
+              "extratime": null,
+              "penalty": null
+            }
+          },
+          {
+            "fixture_id": 255681,
+            "league_id": 1053,
+            "league": {
+              "name": "International Champions Cup",
+              "country": "World",
+              "logo": null,
+              "flag": null
+            },
+            "event_date": "2017-07-30T00:05:00+00:00",
+            "event_timestamp": 1501373100,
+            "firstHalfStart": 1501373100,
+            "secondHalfStart": 1501376700,
+            "round": "North America - 2",
+            "status": "Match Finished",
+            "statusShort": "FT",
+            "elapsed": 90,
+            "venue": "Hard Rock Stadium (Miami Gardens, Florida)",
+            "referee": null,
+            "homeTeam": {
+              "team_id": 541,
+              "team_name": "Real Madrid",
+              "logo": "https://media.api-football.com/teams/541.png"
+            },
+            "awayTeam": {
+              "team_id": 529,
+              "team_name": "Barcelona",
+              "logo": "https://media.api-football.com/teams/529.png"
+            },
+            "goalsHomeTeam": 2,
+            "goalsAwayTeam": 3,
+            "score": {
+              "halftime": "2-2",
+              "fulltime": "2-3",
+              "extratime": null,
+              "penalty": null
+            }
+          },
+          {
+            "fixture_id": 9721,
+            "league_id": 30,
+            "league": {
+              "name": "Primera Division",
+              "country": "Spain",
+              "logo": "https://media.api-football.com/leagues/30.png",
+              "flag": "https://media.api-football.com/flags/es.svg"
+            },
+            "event_date": "2017-12-23T12:00:00+00:00",
+            "event_timestamp": 1514030400,
+            "firstHalfStart": 1514030400,
+            "secondHalfStart": 1514034000,
+            "round": "Regular Season - 17",
+            "status": "Match Finished",
+            "statusShort": "FT",
+            "elapsed": 90,
+            "venue": "Estadio Santiago Bernabéu (Madrid)",
+            "referee": "José Sánchez",
+            "homeTeam": {
+              "team_id": 541,
+              "team_name": "Real Madrid",
+              "logo": "https://media.api-football.com/teams/541.png"
+            },
+            "awayTeam": {
+              "team_id": 529,
+              "team_name": "Barcelona",
+              "logo": "https://media.api-football.com/teams/529.png"
+            },
+            "goalsHomeTeam": 0,
+            "goalsAwayTeam": 3,
+            "score": {
+              "halftime": "0-0",
+              "fulltime": "0-3",
+              "extratime": null,
+              "penalty": null
+            }
+          },
+          {
+            "fixture_id": 9531,
+            "league_id": 30,
+            "league": {
+              "name": "Primera Division",
+              "country": "Spain",
+              "logo": "https://media.api-football.com/leagues/30.png",
+              "flag": "https://media.api-football.com/flags/es.svg"
+            },
+            "event_date": "2018-05-06T18:45:00+00:00",
+            "event_timestamp": 1525632300,
+            "firstHalfStart": 1525632300,
+            "secondHalfStart": 1525635900,
+            "round": "Regular Season - 36",
+            "status": "Match Finished",
+            "statusShort": "FT",
+            "elapsed": 90,
+            "venue": "Camp Nou (Barcelona)",
+            "referee": null,
+            "homeTeam": {
+              "team_id": 529,
+              "team_name": "Barcelona",
+              "logo": "https://media.api-football.com/teams/529.png"
+            },
+            "awayTeam": {
+              "team_id": 541,
+              "team_name": "Real Madrid",
+              "logo": "https://media.api-football.com/teams/541.png"
+            },
+            "goalsHomeTeam": 2,
+            "goalsAwayTeam": 2,
+            "score": {
+              "halftime": "1-1",
+              "fulltime": "2-2",
+              "extratime": null,
+              "penalty": null
+            }
+          },
+          {
+            "fixture_id": 27232,
+            "league_id": 87,
+            "league": {
+              "name": "Primera Division",
+              "country": "Spain",
+              "logo": "https://media.api-football.com/leagues/87.png",
+              "flag": "https://media.api-football.com/flags/es.svg"
+            },
+            "event_date": "2018-10-28T15:15:00+00:00",
+            "event_timestamp": 1540739700,
+            "firstHalfStart": 1540739700,
+            "secondHalfStart": 1540743300,
+            "round": "Regular Season - 10",
+            "status": "Match Finished",
+            "statusShort": "FT",
+            "elapsed": 90,
+            "venue": "Camp Nou, Barcelona",
+            "referee": "Jose Maria Sanchez Martinez, Spain",
+            "homeTeam": {
+              "team_id": 529,
+              "team_name": "Barcelona",
+              "logo": "https://media.api-football.com/teams/529.png"
+            },
+            "awayTeam": {
+              "team_id": 541,
+              "team_name": "Real Madrid",
+              "logo": "https://media.api-football.com/teams/541.png"
+            },
+            "goalsHomeTeam": 5,
+            "goalsAwayTeam": 1,
+            "score": {
+              "halftime": "2-0",
+              "fulltime": "5-1",
+              "extratime": null,
+              "penalty": null
+            }
+          },
+          {
+            "fixture_id": 219162,
+            "league_id": 808,
+            "league": {
+              "name": "Copa del Rey",
+              "country": "Spain",
+              "logo": null,
+              "flag": "https://media.api-football.com/flags/es.svg"
+            },
+            "event_date": "2019-02-06T20:00:00+00:00",
+            "event_timestamp": 1549483200,
+            "firstHalfStart": 1549483200,
+            "secondHalfStart": 1549486800,
+            "round": "Semi-finals",
+            "status": "Match Finished",
+            "statusShort": "FT",
+            "elapsed": 90,
+            "venue": "Camp Nou, Barcelona",
+            "referee": "Antonio Mateu, Spain",
+            "homeTeam": {
+              "team_id": 529,
+              "team_name": "Barcelona",
+              "logo": "https://media.api-football.com/teams/529.png"
+            },
+            "awayTeam": {
+              "team_id": 541,
+              "team_name": "Real Madrid",
+              "logo": "https://media.api-football.com/teams/541.png"
+            },
+            "goalsHomeTeam": 1,
+            "goalsAwayTeam": 1,
+            "score": {
+              "halftime": "0-1",
+              "fulltime": "1-1",
+              "extratime": null,
+              "penalty": null
+            }
+          },
+          {
+            "fixture_id": 219163,
+            "league_id": 808,
+            "league": {
+              "name": "Copa del Rey",
+              "country": "Spain",
+              "logo": null,
+              "flag": "https://media.api-football.com/flags/es.svg"
+            },
+            "event_date": "2019-02-27T20:00:00+00:00",
+            "event_timestamp": 1551297600,
+            "firstHalfStart": 1551297600,
+            "secondHalfStart": 1551301200,
+            "round": "Semi-finals",
+            "status": "Match Finished",
+            "statusShort": "FT",
+            "elapsed": 90,
+            "venue": "Santiago Bernabéu, Madrid",
+            "referee": "Jose Maria Sanchez Martinez, Spain",
+            "homeTeam": {
+              "team_id": 541,
+              "team_name": "Real Madrid",
+              "logo": "https://media.api-football.com/teams/541.png"
+            },
+            "awayTeam": {
+              "team_id": 529,
+              "team_name": "Barcelona",
+              "logo": "https://media.api-football.com/teams/529.png"
+            },
+            "goalsHomeTeam": 0,
+            "goalsAwayTeam": 3,
+            "score": {
+              "halftime": "0-0",
+              "fulltime": "0-3",
+              "extratime": null,
+              "penalty": null
+            }
+          },
+          {
+            "fixture_id": 27395,
+            "league_id": 87,
+            "league": {
+              "name": "Primera Division",
+              "country": "Spain",
+              "logo": "https://media.api-football.com/leagues/87.png",
+              "flag": "https://media.api-football.com/flags/es.svg"
+            },
+            "event_date": "2019-03-02T19:45:00+00:00",
+            "event_timestamp": 1551555900,
+            "firstHalfStart": 1551555900,
+            "secondHalfStart": 1551559500,
+            "round": "Regular Season - 26",
+            "status": "Match Finished",
+            "statusShort": "FT",
+            "elapsed": 90,
+            "venue": "Santiago Bernabéu, Madrid",
+            "referee": "Alberto Undiano, Spain",
+            "homeTeam": {
+              "team_id": 541,
+              "team_name": "Real Madrid",
+              "logo": "https://media.api-football.com/teams/541.png"
+            },
+            "awayTeam": {
+              "team_id": 529,
+              "team_name": "Barcelona",
+              "logo": "https://media.api-football.com/teams/529.png"
+            },
+            "goalsHomeTeam": 0,
+            "goalsAwayTeam": 1,
+            "score": {
+              "halftime": "0-1",
+              "fulltime": "0-1",
+              "extratime": null,
+              "penalty": null
+            }
+          }
+        ],
+        "comparison": {
+          "forme": {
+            "home": "50%",
+            "away": "50%"
+          },
+          "att": {
+            "home": "54%",
+            "away": "46%"
+          },
+          "def": {
+            "home": "33%",
+            "away": "67%"
+          },
+          "fish_law": {
+            "home": "51%",
+            "away": "49%"
+          },
+          "h2h": {
+            "home": "85%",
+            "away": "15%"
+          },
+          "goals_h2h": {
+            "home": "75%",
+            "away": "25%"
+          }
+        }
+      }
+    ]
+  }
+}

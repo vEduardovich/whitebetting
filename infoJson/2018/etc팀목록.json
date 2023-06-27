@@ -1,0 +1,31 @@
+{
+  "api": {
+    "results": 20,
+    "teams": {
+      "85": {
+        "team_id": "85",
+        "name": "Paris Saint Germain",
+        "code": "",
+        "logo": "https://www.api-football.com/public/teams/85.png"
+      },
+      "496": {
+        "team_id": "496",
+        "name": "Juventus",
+        "code": "",
+        "logo": "https://www.api-football.com/public/teams/496.png"
+      },
+      "157": {
+        "team_id": "157",
+        "name": "Bayern Munich",
+        "code": "",
+        "logo": "https://www.api-football.com/public/teams/157.png"
+      },      
+      "165": {
+        "team_id": "165",
+        "name": "Borussia Dortmund",
+        "code": "",
+        "logo": "https://www.api-football.com/public/teams/165.png"
+      }
+    }
+  }
+}

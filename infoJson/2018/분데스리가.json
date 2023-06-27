@@ -1,0 +1,128 @@
+// https://api-football-v1.p.rapidapi.com/teams/league/8
+{
+  "api": {
+    "results": 18,
+    "teams": {
+      "157": {
+        "team_id": "157",
+        "name": "Bayern Munich",
+        "name_kr": "바이에른 뮌헨",
+        "code": "",
+        "logo": "https://www.api-football.com/public/teams/157.png"
+      },
+      "158": {
+        "team_id": "158",
+        "name": "Fortuna Dusseldorf",
+        "name_kr": "포르투나 뒤셀도르프",
+        "code": "",
+        "logo": "https://www.api-football.com/public/teams/158.png"
+      },
+      "159": {
+        "team_id": "159",
+        "name": "Hertha Berlin",
+        "name_kr": "헤르타 베를린",
+        "code": "",
+        "logo": "https://www.api-football.com/public/teams/159.png"
+      },
+      "160": {
+        "team_id": "160",
+        "name": "SC Freiburg",
+        "name_kr": "SC 프라이부르크",
+        "code": "",
+        "logo": "https://www.api-football.com/public/teams/160.png"
+      },
+      "161": {
+        "team_id": "161",
+        "name": "VfL Wolfsburg",
+        "name_kr": "VfL 볼프스부르크",
+        "code": "",
+        "logo": "https://www.api-football.com/public/teams/161.svg"
+      },
+      "162": {
+        "team_id": "162",
+        "name": "Werder Bremen",
+        "name_kr": "베르더 브레멘",
+        "code": "",
+        "logo": "https://www.api-football.com/public/teams/162.png"
+      },
+      "163": {
+        "team_id": "163",
+        "name": "Borussia Monchengladbach",
+        "name_kr": "보루시아 묀헨글라드바흐",
+        "code": "",
+        "logo": "https://www.api-football.com/public/teams/163.png"
+      },
+      "164": {
+        "team_id": "164",
+        "name": "FSV Mainz 05",
+        "name_kr": "FSV 마인츠 05",
+        "code": "",
+        "logo": "https://www.api-football.com/public/teams/164.png"
+      },
+      "165": {
+        "team_id": "165",
+        "name": "Borussia Dortmund",
+        "name_kr": "보루시아 도르트문트",
+        "code": "",
+        "logo": "https://www.api-football.com/public/teams/165.png"
+      },
+      "166": {
+        "team_id": "166",
+        "name": "Hannover 96",
+        "name_kr": "하노버 96",
+        "code": "",
+        "logo": "https://www.api-football.com/public/teams/166.png"
+      },
+      "167": {
+        "team_id": "167",
+        "name": "1899 Hoffenheim",
+        "name_kr": "1899 호펜하임",
+        "code": "",
+        "logo": "https://www.api-football.com/public/teams/167.png"
+      },
+      "168": {
+        "team_id": "168",
+        "name": "Bayer Leverkusen",
+        "name_kr": "바이어 레버쿠젠",
+        "code": "",
+        "logo": "https://www.api-football.com/public/teams/168.png"
+      },
+      "169": {
+        "team_id": "169",
+        "name": "Eintracht Frankfurt",
+        "code": "아인트라흐트 프랑크푸르트",
+        "logo": "https://www.api-football.com/public/teams/169.png"
+      },
+      "170": {
+        "team_id": "170",
+        "name": "FC Augsburg",
+        "code": "FC 아우크스부르크",
+        "logo": "https://www.api-football.com/public/teams/170.png"
+      },
+      "171": {
+        "team_id": "171",
+        "name": "FC Nurnberg",
+        "code": "FC 뉘른베르크",
+        "logo": "https://www.api-football.com/public/teams/171.png"
+      },
+      "172": {
+        "team_id": "172",
+        "name": "VfB Stuttgart",
+        "code": "VfB 슈투트가르트",
+        "logo": "https://www.api-football.com/public/teams/172.png"
+      },
+      "173": {
+        "team_id": "173",
+        "name": "RB Leipzig",
+        "code": "RB 라이프치히",
+        "logo": "https://www.api-football.com/public/teams/173.png"
+      },
+      "174": {
+        "team_id": "174",
+        "name": "FC Schalke 04",
+        "code": "FC 살케 04",
+        "logo": "https://www.api-football.com/public/teams/174.png"
+      }
+    }
+  }
+}

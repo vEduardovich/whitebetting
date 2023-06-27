@@ -1,0 +1,585 @@
+// https://api-football-v1.p.rapidapi.com/v2/fixtures/league/311 // 코파 아메리카 게임정보
+
+{
+  "api": {
+    "results": 18,
+    "fixtures": [
+      {
+        "fixture_id": 83260,
+        "league_id": 311,
+        "event_date": "2019-06-15T00:30:00+00:00",
+        "event_timestamp": 1560558600,
+        "firstHalfStart": null,
+        "secondHalfStart": null,
+        "round": "Group Stage - 1",
+        "status": "Not Started",
+        "statusShort": "NS",
+        "elapsed": 0,
+        "venue": "Estádio Cícero Pompeu de Toledo (Morumbi) (São Paulo, São Paulo)",
+        "referee": null,
+        "homeTeam": {
+          "team_id": 6,
+          "team_name": "Brazil",
+          "logo": "https://www.api-football.com/public/teams/6.png"
+        },
+        "awayTeam": {
+          "team_id": 2381,
+          "team_name": "Bolivia",
+          "logo": "https://www.api-football.com/public/teams/2381.png"
+        },
+        "goalsHomeTeam": null,
+        "goalsAwayTeam": null,
+        "score": {
+          "halftime": null,
+          "fulltime": null,
+          "extratime": null,
+          "penalty": null
+        }
+      },
+      {
+        "fixture_id": 83261,
+        "league_id": 311,
+        "event_date": "2019-06-15T19:00:00+00:00",
+        "event_timestamp": 1560625200,
+        "firstHalfStart": null,
+        "secondHalfStart": null,
+        "round": "Group Stage - 1",
+        "status": "Not Started",
+        "statusShort": "NS",
+        "elapsed": 0,
+        "venue": "Arena do Grêmio (Porto Alegre, Rio Grande do Sul)",
+        "referee": null,
+        "homeTeam": {
+          "team_id": 2379,
+          "team_name": "Venezuela",
+          "logo": "https://www.api-football.com/public/teams/2379.png"
+        },
+        "awayTeam": {
+          "team_id": 30,
+          "team_name": "Peru",
+          "logo": "https://www.api-football.com/public/teams/30.png"
+        },
+        "goalsHomeTeam": null,
+        "goalsAwayTeam": null,
+        "score": {
+          "halftime": null,
+          "fulltime": null,
+          "extratime": null,
+          "penalty": null
+        }
+      },
+      {
+        "fixture_id": 83262,
+        "league_id": 311,
+        "event_date": "2019-06-15T22:00:00+00:00",
+        "event_timestamp": 1560636000,
+        "firstHalfStart": null,
+        "secondHalfStart": null,
+        "round": "Group Stage - 1",
+        "status": "Not Started",
+        "statusShort": "NS",
+        "elapsed": 0,
+        "venue": "Arena Fonte Nova (Salvador, Bahia)",
+        "referee": null,
+        "homeTeam": {
+          "team_id": 26,
+          "team_name": "Argentina",
+          "logo": "https://www.api-football.com/public/teams/26.png"
+        },
+        "awayTeam": {
+          "team_id": 8,
+          "team_name": "Colombia",
+          "logo": "https://www.api-football.com/public/teams/8.png"
+        },
+        "goalsHomeTeam": null,
+        "goalsAwayTeam": null,
+        "score": {
+          "halftime": null,
+          "fulltime": null,
+          "extratime": null,
+          "penalty": null
+        }
+      },
+      {
+        "fixture_id": 83263,
+        "league_id": 311,
+        "event_date": "2019-06-16T19:00:00+00:00",
+        "event_timestamp": 1560711600,
+        "firstHalfStart": null,
+        "secondHalfStart": null,
+        "round": "Group Stage - 1",
+        "status": "Not Started",
+        "statusShort": "NS",
+        "elapsed": 0,
+        "venue": "Estadio Jornalista Mário Filho (Maracanã) (Rio de Janeiro, Rio de Janeiro)",
+        "referee": null,
+        "homeTeam": {
+          "team_id": 2380,
+          "team_name": "Paraguay",
+          "logo": "https://www.api-football.com/public/teams/2380.png"
+        },
+        "awayTeam": {
+          "team_id": 1569,
+          "team_name": "Qatar",
+          "logo": "https://www.api-football.com/public/teams/1569.png"
+        },
+        "goalsHomeTeam": null,
+        "goalsAwayTeam": null,
+        "score": {
+          "halftime": null,
+          "fulltime": null,
+          "extratime": null,
+          "penalty": null
+        }
+      },
+      {
+        "fixture_id": 83264,
+        "league_id": 311,
+        "event_date": "2019-06-16T22:00:00+00:00",
+        "event_timestamp": 1560722400,
+        "firstHalfStart": null,
+        "secondHalfStart": null,
+        "round": "Group Stage - 1",
+        "status": "Not Started",
+        "statusShort": "NS",
+        "elapsed": 0,
+        "venue": "Estádio Governador Magalhães Pinto (Belo Horizonte, Minas Gerais)",
+        "referee": null,
+        "homeTeam": {
+          "team_id": 7,
+          "team_name": "Uruguay",
+          "logo": "https://www.api-football.com/public/teams/7.png"
+        },
+        "awayTeam": {
+          "team_id": 2382,
+          "team_name": "Ecuador",
+          "logo": "https://www.api-football.com/public/teams/2382.png"
+        },
+        "goalsHomeTeam": null,
+        "goalsAwayTeam": null,
+        "score": {
+          "halftime": null,
+          "fulltime": null,
+          "extratime": null,
+          "penalty": null
+        }
+      },
+      {
+        "fixture_id": 83265,
+        "league_id": 311,
+        "event_date": "2019-06-17T23:00:00+00:00",
+        "event_timestamp": 1560812400,
+        "firstHalfStart": null,
+        "secondHalfStart": null,
+        "round": "Group Stage - 1",
+        "status": "Not Started",
+        "statusShort": "NS",
+        "elapsed": 0,
+        "venue": "Estádio Cícero Pompeu de Toledo (Morumbi) (São Paulo, São Paulo)",
+        "referee": null,
+        "homeTeam": {
+          "team_id": 12,
+          "team_name": "Japan",
+          "logo": "https://www.api-football.com/public/teams/12.png"
+        },
+        "awayTeam": {
+          "team_id": 2383,
+          "team_name": "Chile",
+          "logo": "https://www.api-football.com/public/teams/2383.png"
+        },
+        "goalsHomeTeam": null,
+        "goalsAwayTeam": null,
+        "score": {
+          "halftime": null,
+          "fulltime": null,
+          "extratime": null,
+          "penalty": null
+        }
+      },
+      {
+        "fixture_id": 83266,
+        "league_id": 311,
+        "event_date": "2019-06-18T21:30:00+00:00",
+        "event_timestamp": 1560893400,
+        "firstHalfStart": null,
+        "secondHalfStart": null,
+        "round": "Group Stage - 2",
+        "status": "Not Started",
+        "statusShort": "NS",
+        "elapsed": 0,
+        "venue": "Estadio Jornalista Mário Filho (Maracanã) (Rio de Janeiro, Rio de Janeiro)",
+        "referee": null,
+        "homeTeam": {
+          "team_id": 2381,
+          "team_name": "Bolivia",
+          "logo": "https://www.api-football.com/public/teams/2381.png"
+        },
+        "awayTeam": {
+          "team_id": 30,
+          "team_name": "Peru",
+          "logo": "https://www.api-football.com/public/teams/30.png"
+        },
+        "goalsHomeTeam": null,
+        "goalsAwayTeam": null,
+        "score": {
+          "halftime": null,
+          "fulltime": null,
+          "extratime": null,
+          "penalty": null
+        }
+      },
+      {
+        "fixture_id": 83267,
+        "league_id": 311,
+        "event_date": "2019-06-19T00:30:00+00:00",
+        "event_timestamp": 1560904200,
+        "firstHalfStart": null,
+        "secondHalfStart": null,
+        "round": "Group Stage - 2",
+        "status": "Not Started",
+        "statusShort": "NS",
+        "elapsed": 0,
+        "venue": "Arena Fonte Nova (Salvador, Bahia)",
+        "referee": null,
+        "homeTeam": {
+          "team_id": 6,
+          "team_name": "Brazil",
+          "logo": "https://www.api-football.com/public/teams/6.png"
+        },
+        "awayTeam": {
+          "team_id": 2379,
+          "team_name": "Venezuela",
+          "logo": "https://www.api-football.com/public/teams/2379.png"
+        },
+        "goalsHomeTeam": null,
+        "goalsAwayTeam": null,
+        "score": {
+          "halftime": null,
+          "fulltime": null,
+          "extratime": null,
+          "penalty": null
+        }
+      },
+      {
+        "fixture_id": 83268,
+        "league_id": 311,
+        "event_date": "2019-06-19T21:30:00+00:00",
+        "event_timestamp": 1560979800,
+        "firstHalfStart": null,
+        "secondHalfStart": null,
+        "round": "Group Stage - 2",
+        "status": "Not Started",
+        "statusShort": "NS",
+        "elapsed": 0,
+        "venue": "Estádio Cícero Pompeu de Toledo (Morumbi) (São Paulo, São Paulo)",
+        "referee": null,
+        "homeTeam": {
+          "team_id": 8,
+          "team_name": "Colombia",
+          "logo": "https://www.api-football.com/public/teams/8.png"
+        },
+        "awayTeam": {
+          "team_id": 1569,
+          "team_name": "Qatar",
+          "logo": "https://www.api-football.com/public/teams/1569.png"
+        },
+        "goalsHomeTeam": null,
+        "goalsAwayTeam": null,
+        "score": {
+          "halftime": null,
+          "fulltime": null,
+          "extratime": null,
+          "penalty": null
+        }
+      },
+      {
+        "fixture_id": 83269,
+        "league_id": 311,
+        "event_date": "2019-06-20T00:30:00+00:00",
+        "event_timestamp": 1560990600,
+        "firstHalfStart": null,
+        "secondHalfStart": null,
+        "round": "Group Stage - 2",
+        "status": "Not Started",
+        "statusShort": "NS",
+        "elapsed": 0,
+        "venue": "Estádio Governador Magalhães Pinto (Belo Horizonte, Minas Gerais)",
+        "referee": null,
+        "homeTeam": {
+          "team_id": 26,
+          "team_name": "Argentina",
+          "logo": "https://www.api-football.com/public/teams/26.png"
+        },
+        "awayTeam": {
+          "team_id": 2380,
+          "team_name": "Paraguay",
+          "logo": "https://www.api-football.com/public/teams/2380.png"
+        },
+        "goalsHomeTeam": null,
+        "goalsAwayTeam": null,
+        "score": {
+          "halftime": null,
+          "fulltime": null,
+          "extratime": null,
+          "penalty": null
+        }
+      },
+      {
+        "fixture_id": 83270,
+        "league_id": 311,
+        "event_date": "2019-06-20T23:00:00+00:00",
+        "event_timestamp": 1561071600,
+        "firstHalfStart": null,
+        "secondHalfStart": null,
+        "round": "Group Stage - 2",
+        "status": "Not Started",
+        "statusShort": "NS",
+        "elapsed": 0,
+        "venue": "Arena do Grêmio (Porto Alegre, Rio Grande do Sul)",
+        "referee": null,
+        "homeTeam": {
+          "team_id": 7,
+          "team_name": "Uruguay",
+          "logo": "https://www.api-football.com/public/teams/7.png"
+        },
+        "awayTeam": {
+          "team_id": 12,
+          "team_name": "Japan",
+          "logo": "https://www.api-football.com/public/teams/12.png"
+        },
+        "goalsHomeTeam": null,
+        "goalsAwayTeam": null,
+        "score": {
+          "halftime": null,
+          "fulltime": null,
+          "extratime": null,
+          "penalty": null
+        }
+      },
+      {
+        "fixture_id": 83271,
+        "league_id": 311,
+        "event_date": "2019-06-21T23:00:00+00:00",
+        "event_timestamp": 1561158000,
+        "firstHalfStart": null,
+        "secondHalfStart": null,
+        "round": "Group Stage - 2",
+        "status": "Not Started",
+        "statusShort": "NS",
+        "elapsed": 0,
+        "venue": "Arena Fonte Nova (Salvador, Bahia)",
+        "referee": null,
+        "homeTeam": {
+          "team_id": 2382,
+          "team_name": "Ecuador",
+          "logo": "https://www.api-football.com/public/teams/2382.png"
+        },
+        "awayTeam": {
+          "team_id": 2383,
+          "team_name": "Chile",
+          "logo": "https://www.api-football.com/public/teams/2383.png"
+        },
+        "goalsHomeTeam": null,
+        "goalsAwayTeam": null,
+        "score": {
+          "halftime": null,
+          "fulltime": null,
+          "extratime": null,
+          "penalty": null
+        }
+      },
+      {
+        "fixture_id": 83272,
+        "league_id": 311,
+        "event_date": "2019-06-22T19:00:00+00:00",
+        "event_timestamp": 1561230000,
+        "firstHalfStart": null,
+        "secondHalfStart": null,
+        "round": "Group Stage - 3",
+        "status": "Not Started",
+        "statusShort": "NS",
+        "elapsed": 0,
+        "venue": "Estádio Governador Magalhães Pinto (Belo Horizonte, Minas Gerais)",
+        "referee": null,
+        "homeTeam": {
+          "team_id": 2381,
+          "team_name": "Bolivia",
+          "logo": "https://www.api-football.com/public/teams/2381.png"
+        },
+        "awayTeam": {
+          "team_id": 2379,
+          "team_name": "Venezuela",
+          "logo": "https://www.api-football.com/public/teams/2379.png"
+        },
+        "goalsHomeTeam": null,
+        "goalsAwayTeam": null,
+        "score": {
+          "halftime": null,
+          "fulltime": null,
+          "extratime": null,
+          "penalty": null
+        }
+      },
+      {
+        "fixture_id": 83273,
+        "league_id": 311,
+        "event_date": "2019-06-22T19:00:00+00:00",
+        "event_timestamp": 1561230000,
+        "firstHalfStart": null,
+        "secondHalfStart": null,
+        "round": "Group Stage - 3",
+        "status": "Not Started",
+        "statusShort": "NS",
+        "elapsed": 0,
+        "venue": "Arena Corinthians (São Paulo, São Paulo)",
+        "referee": null,
+        "homeTeam": {
+          "team_id": 30,
+          "team_name": "Peru",
+          "logo": "https://www.api-football.com/public/teams/30.png"
+        },
+        "awayTeam": {
+          "team_id": 6,
+          "team_name": "Brazil",
+          "logo": "https://www.api-football.com/public/teams/6.png"
+        },
+        "goalsHomeTeam": null,
+        "goalsAwayTeam": null,
+        "score": {
+          "halftime": null,
+          "fulltime": null,
+          "extratime": null,
+          "penalty": null
+        }
+      },
+      {
+        "fixture_id": 83274,
+        "league_id": 311,
+        "event_date": "2019-06-23T19:00:00+00:00",
+        "event_timestamp": 1561316400,
+        "firstHalfStart": null,
+        "secondHalfStart": null,
+        "round": "Group Stage - 3",
+        "status": "Not Started",
+        "statusShort": "NS",
+        "elapsed": 0,
+        "venue": "Arena Fonte Nova (Salvador, Bahia)",
+        "referee": null,
+        "homeTeam": {
+          "team_id": 8,
+          "team_name": "Colombia",
+          "logo": "https://www.api-football.com/public/teams/8.png"
+        },
+        "awayTeam": {
+          "team_id": 2380,
+          "team_name": "Paraguay",
+          "logo": "https://www.api-football.com/public/teams/2380.png"
+        },
+        "goalsHomeTeam": null,
+        "goalsAwayTeam": null,
+        "score": {
+          "halftime": null,
+          "fulltime": null,
+          "extratime": null,
+          "penalty": null
+        }
+      },
+      {
+        "fixture_id": 83275,
+        "league_id": 311,
+        "event_date": "2019-06-23T19:00:00+00:00",
+        "event_timestamp": 1561316400,
+        "firstHalfStart": null,
+        "secondHalfStart": null,
+        "round": "Group Stage - 3",
+        "status": "Not Started",
+        "statusShort": "NS",
+        "elapsed": 0,
+        "venue": "Arena do Grêmio (Porto Alegre, Rio Grande do Sul)",
+        "referee": null,
+        "homeTeam": {
+          "team_id": 1569,
+          "team_name": "Qatar",
+          "logo": "https://www.api-football.com/public/teams/1569.png"
+        },
+        "awayTeam": {
+          "team_id": 26,
+          "team_name": "Argentina",
+          "logo": "https://www.api-football.com/public/teams/26.png"
+        },
+        "goalsHomeTeam": null,
+        "goalsAwayTeam": null,
+        "score": {
+          "halftime": null,
+          "fulltime": null,
+          "extratime": null,
+          "penalty": null
+        }
+      },
+      {
+        "fixture_id": 83276,
+        "league_id": 311,
+        "event_date": "2019-06-24T23:00:00+00:00",
+        "event_timestamp": 1561417200,
+        "firstHalfStart": null,
+        "secondHalfStart": null,
+        "round": "Group Stage - 3",
+        "status": "Not Started",
+        "statusShort": "NS",
+        "elapsed": 0,
+        "venue": "Estadio Jornalista Mário Filho (Maracanã) (Rio de Janeiro, Rio de Janeiro)",
+        "referee": null,
+        "homeTeam": {
+          "team_id": 2383,
+          "team_name": "Chile",
+          "logo": "https://www.api-football.com/public/teams/2383.png"
+        },
+        "awayTeam": {
+          "team_id": 7,
+          "team_name": "Uruguay",
+          "logo": "https://www.api-football.com/public/teams/7.png"
+        },
+        "goalsHomeTeam": null,
+        "goalsAwayTeam": null,
+        "score": {
+          "halftime": null,
+          "fulltime": null,
+          "extratime": null,
+          "penalty": null
+        }
+      },
+      {
+        "fixture_id": 83277,
+        "league_id": 311,
+        "event_date": "2019-06-24T23:00:00+00:00",
+        "event_timestamp": 1561417200,
+        "firstHalfStart": null,
+        "secondHalfStart": null,
+        "round": "Group Stage - 3",
+        "status": "Not Started",
+        "statusShort": "NS",
+        "elapsed": 0,
+        "venue": "Estádio Governador Magalhães Pinto (Belo Horizonte, Minas Gerais)",
+        "referee": null,
+        "homeTeam": {
+          "team_id": 2382,
+          "team_name": "Ecuador",
+          "logo": "https://www.api-football.com/public/teams/2382.png"
+        },
+        "awayTeam": {
+          "team_id": 12,
+          "team_name": "Japan",
+          "logo": "https://www.api-football.com/public/teams/12.png"
+        },
+        "goalsHomeTeam": null,
+        "goalsAwayTeam": null,
+        "score": {
+          "halftime": null,
+          "fulltime": null,
+          "extratime": null,
+          "penalty": null
+        }
+      }
+    ]
+  }
+}

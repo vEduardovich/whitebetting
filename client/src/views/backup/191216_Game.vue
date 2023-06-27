@@ -1,0 +1,1624 @@
+<template>
+<!-- Match Statistics UI 변경전 백업 19.12.16 -->
+  <div class='gamePage' >
+    <v-snackbar v-model='snackbar' bottom color='success' vertical>
+      <span>Awesome! </span>
+      <v-btn flat color="white" v-on:click='snackbar = false'>Close</v-btn>
+    </v-snackbar>
+
+    <v-layout wrap class='gameItem'>
+      <v-flex xs8 lg7>
+        <h3 class="mt-4 ml-1 mb-2 gameListTxt " v-bind:class="{'mt-4 ml-4': $vuetify.breakpoint.mdAndUp}"  >
+        <v-icon class='fa fa-soccer-ball-o'></v-icon>
+        Match Information
+        </h3>
+      </v-flex>
+      <v-flex xs4 lg3>
+        <v-layout row wrap class='mt-4'>
+          <!-- Telegram -->
+          <div class='mr-3'>
+            <a target="_blank" v-bind:href="sns.telegram" class="" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" ><v-icon class='fab fa-telegram-plane' style='color:#2196F3;'></v-icon></a>
+          </div>
+
+          <!-- Tweeter -->
+          <div class='mr-3'>
+            <a target="_blank" v-bind:href="sns.twitter" class="" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" ><v-icon class='fa fa-twitter' style='color:#2196F3;'></v-icon></a>
+          </div>
+          <!-- FaceBook -->
+          <a>
+            <social-sharing v-bind:url="sns.facebook.href"
+            v-bind:quote="sns.facebook.description"
+            hashtags="WhiteBetting"
+            twitter-user="@BettingWhite"
+            inline-template>
+
+              <network network="facebook">
+                <i class='fa fa-facebook-official' style='color:#3F51B5;font-size:25px;'></i>
+              </network>
+            </social-sharing>
+          </a>
+
+        </v-layout>
+      </v-flex>
+
+      <v-flex xs12 lg3>
+        <p class='teal--text text--lighten-2 scoreNotice' v-if='gameStatusId == 4 ||  gameStatusId == 6'>The score is updated every 1 minute <v-icon size=20 class='grey--text text--darken-1 mr-1' v-on:click='_fetchData()'>refresh</v-icon> </p>
+      </v-flex>
+    </v-layout>
+
+    <!-- <h4>{{ gameInfo }}</h4>
+    <h4>{{ oddInfo }}</h4> -->
+
+    <v-layout column wrap class='gameItem'>
+      <v-layout row wrap >
+        <v-flex xs12 lg8>
+          <div class='grey--text mb-1 gameCard open' v-bind:class="[{'ml-4': $vuetify.breakpoint.lgAndUp }, {'mb-2': $vuetify.breakpoint.lgAndUp } ]"   >
+
+          <!-- Score -->
+            <div v-if='gameStatusId == 4 || gameStatusId == 5 || gameStatusId == 6'>
+              <v-layout row wrap>
+                <v-flex >
+                  <!-- <div class="text-xs-center pa-1"  v-bind:class="[ {'teal lighten-2 white--text' : gameStatusId == 5}, {'grey darken-3 white--text' : gameStatusId == 6} ]" ><strong>Score</strong></div> -->
+
+                  <div class="text-xs-center pa-1"  v-bind:class="[ {'teal lighten-2 white--text' : gameStatusId == 4}, {'grey darken-3 white--text' : gameStatusId == 5 || gameStatusId == 6} ]" ><strong>{{gameInfo.status}}</strong></div>
+                </v-flex>
+
+              </v-layout>
+              <v-layout row justify-center >
+                <!-- 홈팀 -->
+                <v-flex xs4 >
+                  <v-layout column wrap>
+                    <p class='text-xs-center scoreNum mt-4 mb-4' v-bind:class="[ {'teal--text white--text' : gameStatusId == 4}, {'grey--text text--darken-3 ' : gameStatusId == 5 || gameStatusId == 6} ]"><strong>{{gameInfo.goalsHomeTeam}}</strong></p>
+                  </v-layout>
+                </v-flex>
+                <!-- 무승부 -->
+                <v-flex xs4 >
+                  <v-layout column wrap>
+                    <p class='grey--text text--darken-3 text-xs-center scoreNum mt-4 mb-4'>-</p>
+                  </v-layout>
+                </v-flex>
+
+                <!-- 원정팀 -->
+                <v-flex xs4>
+                  <v-layout column wrap>
+                    <p class='text-xs-center scoreNum mt-4 mb-4' v-bind:class="[ {'teal--text white--text' : gameStatusId == 4}, {'grey--text text--darken-3 ' : gameStatusId == 5 || gameStatusId == 6} ]"><strong>{{gameInfo.goalsAwayTeam}}</strong></p>
+                  </v-layout>
+                </v-flex>
+              </v-layout>
+            </div>
+
+          <!-- team selecting  -->
+            <v-layout row >
+              <v-flex >
+                <div v-if='gameStatusId != 4 && gameStatusId != 5 && gameStatusId != 11' class="pink lighten-2 white--text text-xs-center pa-1" ><strong>{{ gameInfo.event_date_local }}, {{gameInfo.event_date_mlocal}}</strong></div>
+                <div v-if='gameStatusId == 4 || gameStatusId == 5 || gameStatusId == 6' class="grey lighten-2 grey--text text--darken-2 text-xs-center pa-1" >{{gameInfo.event_date_local}}</div>
+              </v-flex>
+            </v-layout>
+            <v-layout row justify-center >
+              <!-- <v-flex xs4 sm9 md6 > -->
+              <!-- 홈팀 -->
+              <v-flex xs4 >
+                <v-btn  class="white ma-0 pa-0 gameBtn"  v-on:click='selectTeam(1, gameInfo.homeTeam, gameInfo.odd && gameInfo.odd.homeTeam)' v-bind:class="[{'light-blue lighten-5': gameResult.fullTime == 1 && gameInfo.open_status != 5}, {'light-blue lighten-5': gameResult.fullTime == 1 && gameInfo.open_status == 5 }]">
+                  <v-layout column wrap >
+                    <p class='where mt-2'>Home</p>
+                    <div class='teamImgBox'>
+                      <!-- 이미지가 없을경우 apiFootball에서 가져온다 -->
+                      <img v-bind:src="`https://whitebetting.s3.amazonaws.com/allTeam/${gameInfo.homeTeam_id}.png`" @error="apiFootballImg($event, gameInfo.homeTeam_id)" alt='home team flag' class='teamLogo'/>
+                    </div>
+                    <p class='teamNameTxt mt-3'>{{gameInfo.homeTeam}}</p>
+                    <p class='betOdd mt-2 mb-3 '>
+                      {{gameInfo.odd && gameInfo.odd.homeTeam}}
+                    </p>
+                  </v-layout>
+                </v-btn>
+              </v-flex>
+
+              <!-- 무승부 -->
+              <v-flex xs4 >
+                <v-btn class="ma-0 pa-0 gameBtn drawBtn"  v-on:click='selectTeam(2, "Draw", gameInfo.odd && gameInfo.odd.drawTeam)' v-bind:class="[{'light-blue lighten-5': gameResult.fullTime == 2 && gameInfo.open_status != 5}, {'light-blue lighten-5': gameResult.fullTime == 2 && gameInfo.open_status == 5 }]">
+                  <v-layout column wrap>
+                    <p class='where mt-2'>&nbsp;</p>
+                    <div class='teamImgBox'>
+                      <p class='teamLogo drawBtn' style='line-height:100px;'>Vs</p>
+                    </div>
+                    <p class='teamNameTxt mt-3'>Draw</p>
+                    <p class='betOdd mt-2 mb-3'>
+                      {{gameInfo.odd && gameInfo.odd.drawTeam}}
+                    </p>
+                  </v-layout>
+                </v-btn>
+              </v-flex>
+
+              <!-- 원정팀 -->
+              <v-flex xs4>
+                <v-btn class="white ma-0 pa-0 gameBtn " v-on:click='selectTeam(3, gameInfo.awayTeam, gameInfo.odd && gameInfo.odd.awayTeam)' >
+                  <v-layout column wrap v-bind:class="[{'light-blue lighten-5': gameResult.fullTime == 3 && gameInfo.open_status != 5}, {'light-blue lighten-5': gameResult.fullTime == 3 && gameInfo.open_status == 5 }]">
+                    <p class='where mt-2'>Away</p>
+                    <div class='teamImgBox'>
+                      <img v-bind:src="`https://whitebetting.s3.amazonaws.com/allTeam/${gameInfo.awayTeam_id}.png`" @error="apiFootballImg($event, gameInfo.awayTeam_id)" alt='away team flag' class='teamLogo'/>
+                      <!-- <img v-bind:src="`https://www.api-football.com/public/teams/${gameInfo.awayTeam_id}.png`" alt='away team flag' class='teamLogo'/> -->
+                    </div>
+                    <p class='teamNameTxt mt-3'>{{gameInfo.awayTeam}}<p>
+                    <p class='betOdd mt-2 mb-3' >
+                      {{gameInfo.odd && gameInfo.odd.awayTeam}}
+                    </p>
+                  </v-layout>
+                </v-btn>
+              </v-flex>
+
+            </v-layout>
+
+          <!-- Double Chance 자리 -->
+            <v-layout row justify-center wrap>
+              <v-flex xs12 >
+                <div class="pink lighten-4 white--text text-xs-center pa-1" ><strong>Double Chance</strong></div>
+              </v-flex>
+              <!-- Draw&Home -->
+              <v-flex xs4 >
+                <v-btn  class="white ma-0 pa-0 gameBtn  text-capitalize"  v-on:click='selectTeam(6, `${gameInfo.homeTeam} or Draw`, gameInfo.odd && gameInfo.odd.homeTeamAndDraw)' v-bind:class="[{'light-blue lighten-5': (gameResult.fullTime == 1 || gameResult.fullTime == 2) && gameInfo.open_status != 5}, {'light-blue lighten-5': (gameResult.fullTime == 1 || gameResult.fullTime == 2) && gameInfo.open_status == 5 }]">
+                  <v-layout column wrap >
+                    <p class=' mt-3 '><strong>{{gameInfo.homeTeam}}<br/><span class='text-lowercase'>or </span>Draw</strong></p>
+                    <p class='betOdd mt-2 mb-3' >
+                      {{gameInfo.odd && gameInfo.odd.homeTeamAndDraw}}
+                    </p>
+                  </v-layout>
+                </v-btn>
+              </v-flex>
+
+              <!-- Home&Away -->
+              <v-flex xs4 >
+                <v-btn class=" ma-0 pa-0 gameBtn text-capitalize"  v-on:click='selectTeam(7, `${gameInfo.homeTeam} or ${gameInfo.awayTeam}`, gameInfo.odd && gameInfo.odd.homeAndAwayTeam)' v-bind:class="[{'light-blue lighten-5': (gameResult.fullTime == 1 || gameResult.fullTime == 3) && gameInfo.open_status != 5}, {'light-blue lighten-5': (gameResult.fullTime == 1 || gameResult.fullTime == 3) && gameInfo.open_status == 5 }]" >
+                  <v-layout column wrap >
+                    <p class=' mt-3' ><strong>{{gameInfo.homeTeam}}<br/><span class='text-lowercase'>or </span>{{gameInfo.awayTeam}}</strong></p>
+                    <p class='betOdd mt-2 mb-3'>
+                      {{gameInfo.odd && gameInfo.odd.homeAndAwayTeam}}
+                    </p>
+                  </v-layout>
+                </v-btn>
+              </v-flex>
+
+              <!-- Draw&Away -->
+              <v-flex xs4>
+                <v-btn class="white ma-0 pa-0 gameBtn  text-capitalize" v-on:click='selectTeam(8, `${gameInfo.awayTeam} or Draw`, gameInfo.odd && gameInfo.odd.awayTeamAndDraw)'  v-bind:class="[{'light-blue lighten-5': (gameResult.fullTime == 3 || gameResult.fullTime == 2) && gameInfo.open_status != 5}, {'light-blue lighten-5': (gameResult.fullTime == 3 || gameResult.fullTime == 2) && gameInfo.open_status == 5 }]" >
+                  <v-layout column wrap>
+                    <p class='mt-3'><strong>{{gameInfo.awayTeam}}<br/><span class='text-lowercase'>or </span>Draw</strong></p>
+                    <p class='betOdd mt-2 mb-3' >
+                      {{gameInfo.odd && gameInfo.odd.awayTeamAndDraw}}
+                    </p>
+                  </v-layout>
+                </v-btn>
+              </v-flex>
+
+            </v-layout>
+
+          <!-- 언더오버 자리 -->
+            <v-layout row justify-center wrap v-if='gameInfo.odd && gameInfo.odd.over' >
+              <v-flex xs12 >
+                <div class="pink lighten-4 white--text text-xs-center pa-1" ><strong>Goals Over/Under</strong></div>
+              </v-flex>
+              <v-flex xs5>
+                <v-btn class="white ma-0 pa-3 underOverBtn " v-on:click='selectTeam(4, "Over" ,gameInfo.odd && gameInfo.odd.over)' v-bind:class="[{'light-blue lighten-5': gameResult.overUnder == 1 && gameInfo.open_status != 5}, {'light-blue lighten-5': gameResult.overUnder == 1 && gameInfo.open_status == 5 }]" >
+                  <v-layout column wrap>
+                    <p class="text-xs-center" ><strong>Over</strong></p>
+                    <p class='betOdd my-1' >
+                      {{gameInfo.odd && gameInfo.odd.over}}
+                    </p>
+                  </v-layout>
+                </v-btn>
+              </v-flex>
+              <v-flex xs2 class='grey lighten-4'>
+                  <v-layout column justify-center >
+                    <p class="text-xs-center mt-2 pt-2 grey--text text--darken-3 " >GOALS</p>
+                    <p class="text-xs-center grey--text text--darken-3 subheading" >2.5</p>
+                  </v-layout>
+              </v-flex>
+              <v-flex xs5>
+                  <v-btn class="white ma-0 pa-3 underOverBtn " v-on:click='selectTeam(5, "Under" ,gameInfo.odd && gameInfo.odd.under)' v-bind:class="[{'light-blue lighten-5': gameResult.overUnder == 2 && gameInfo.open_status != 5}, {'light-blue lighten-5': gameResult.overUnder == 2 && gameInfo.open_status == 5 }]">
+                    <v-layout column wrap >
+                      <p class="text-xs-center" ><strong>Under</strong></p>
+                      <p class='betOdd my-1'>
+                        {{gameInfo.odd && gameInfo.odd.under}}
+                      </p>
+                    </v-layout>
+                  </v-btn>
+              </v-flex>
+            </v-layout>
+
+            <v-layout column >
+              <v-flex>
+                <!-- 진행중일때는 blue lighten-4, 닫혔을 때는 grey darken-3 -->
+                <div class="blue lighten-2 white--text pa-1 text-xs-center" ><strong>{{gameStatus}}</strong></div>
+                <!-- <div class="grey darken-3 white--text pa-2 text-xs-center" ><strong>베팅 진행 중..</strong></div> -->
+              </v-flex>
+            </v-layout>
+
+          </div>
+
+          <v-layout row wrap >
+            <v-flex>
+              <div class="grey lighten-5 text-xs-right" v-if='isWalletLogin' ><span class='myEthTxt'>Account Balance </span> <span class="myEthNum" >{{myETH}}</span><span class='myEthTxt'> ETH </span><span>[ </span><span class='myWhiteNum'>{{white}} W </span><span>]</span><span v-if='contractInfo.name != "mainnet"'>&nbsp;({{contractInfo.name}})</span></div>
+
+              <div class="grey lighten-5 text-xs-right" v-if='isShowWallet.trust' >
+                  <a v-bind:href="'https://link.trustwallet.com/open_url?coin_id=60&url=https%3A%2F%2Fwhitebetting.com%2Fgame%2F'+ gameInfo.fixture_id" class='metamaskTxt'>
+                    Open in <img src="https://whitebetting.s3.amazonaws.com/game/inGame/trustWallet.png" alt='Open in Trust Wallet' class='walletImg'/> <span class='trustWalletTxt'>Trust Wallet</span>
+                  </a>
+              </div>
+
+
+              <div class="grey lighten-5 text-xs-right" v-if='isShowWallet.metaMask' > <span class='metamaskTxt'>Please log in to </span><img src="https://whitebetting.s3.amazonaws.com/game/inGame/metamask.png" alt='Please log in to MetaMask' class='walletImg'/><span class='metamaskTxt'>MetaMask</span></div>
+              <div class="grey lighten-5 text-xs-right" v-if='isShowWallet.getMetamask' > <a href ='https://metamask.io/' target='_blank' class=''>Get Metamask</a></div>
+            </v-flex>
+          </v-layout>
+
+
+          <!-- 경기 예측 -->
+          <v-layout column wrap class='my-4 mb-2' style='max-width:100%;' v-bind:class="[{'mt-4 ml-4': $vuetify.breakpoint.mdAndUp} ]" v-if=homeStatInfo >
+            <v-layout align-end wrap>
+                <span class="betHistoryTxt " v-bind:class="{'ml-1': $vuetify.breakpoint.mdAndDown}" >
+                  <v-icon style='line-height:15px;font-size:18px;' class='fas fa-certificate' ></v-icon>
+                  Match Statistics
+                </span>
+            </v-layout>
+
+            <v-layout row justify-center wrap >
+              <v-flex xs12 v-if=league.name >
+                <div class="black--text text-xs-center pa-1" >
+                  <p>{{league.name}}, {{league.country}}</p>
+                  <p>{{gameInfo.venue}}</p>
+                </div>
+              </v-flex>
+              <v-flex xs5 class='my-3'>
+                <v-layout column wrap>
+                  <p class="text-xs-center" ><strong>{{gameInfo.homeTeam}}</strong></p>
+                  <p class='betOdd my-1' >
+                    Rank {{homeStatInfo.rank}}
+                  </p>
+                  <p v-if=homeStatInfo.all>{{homeStatInfo.all.win}}W, {{homeStatInfo.all.draw}}D, {{homeStatInfo.all.lose}}L, {{homeStatInfo.points}}P</p>
+                  <p>{{homeStatInfo.forme}}<v-icon style='font-size:20px;font-weight:bold;'>arrow_forward</v-icon></p>
+                </v-layout>
+              </v-flex>
+              <v-flex xs2 class='grey lighten-4 my-3'>
+                <v-layout column wrap >
+                  <p class="text-xs-center" ><strong></strong></p>
+                  <p class='betOdd my-1'>
+                    
+                  </p>
+                  <p v-if=awayStatInfo.all>Total</p>
+
+                  <p>Last 5</p>
+
+                </v-layout>
+              </v-flex>
+              <v-flex xs5 class='mt-3'>
+                <v-layout column wrap >
+                  <p class="text-xs-center" ><strong>{{gameInfo.awayTeam}}</strong></p>
+                  <p class='betOdd my-1'>
+                    Rank {{awayStatInfo.rank}}
+                  </p>
+                  <p v-if=awayStatInfo.all>{{awayStatInfo.all.win}}W, {{awayStatInfo.all.draw}}D, {{awayStatInfo.all.lose}}L, {{awayStatInfo.points}}P</p>
+                  <p><v-icon style='font-size:20px;font-weight:bold;'>arrow_back</v-icon>{{awayStatInfo.forme}}</p>
+
+                </v-layout>
+              </v-flex>
+            </v-layout>
+
+          </v-layout>
+
+
+          <!-- 개인 베팅 통계 -->
+          <div class='my-4 mb-2' style='max-width:100%;' v-bind:class="[{'mt-4 ml-4': $vuetify.breakpoint.mdAndUp} ]" >
+            <v-layout align-end wrap>
+                <span class="betHistoryTxt " v-bind:class="{'ml-1': $vuetify.breakpoint.mdAndDown}" >
+                  <v-icon style='line-height:15px;font-size:18px;' class='fas fa-certificate' ></v-icon>
+                  Betting statistics
+                </span>
+            </v-layout>
+
+            <v-data-table
+              class='gameBetInfo'
+              v-bind:class="[{'mx-1': $vuetify.breakpoint.mdAndDown}]"
+              v-bind:headers="betHeaders"
+              v-bind:items="betInfoGames"
+              v-bind:loading="loader.gameBetInfo"
+              v-bind:pagination.sync="pagination.stats"
+              item-key="bet"
+            >
+              <template slot="items" slot-scope="props" >
+                <tr >
+                  <td>{{ props.item.bet }}</td>
+                  <td class="text-xs-center">{{ props.item.count }}</td>
+                  <td class="text-xs-center">{{ props.item.stake }} Eth</td>
+                </tr>
+              </template>
+
+            </v-data-table>
+          </div>
+          <!-- 개인 베팅 통계 끝-->
+
+          <!-- 베팅 history -->
+          <div class='mt-3 mb-2' style='max-width:100%;' v-bind:class="{'mt-4 ml-4': $vuetify.breakpoint.mdAndUp}">
+            <v-layout align-end justify-space-between  >
+              <div>
+                <span class="betHistoryTxt " v-bind:class="{'ml-1': $vuetify.breakpoint.mdAndDown}" >
+                  <v-icon style='line-height:15px;font-size:18px;' class='fas fa-book-open' ></v-icon>
+                  Betting History
+                </span>
+              </div>
+              <div>
+                <v-btn color="pink lighten-3" style='top:10px;' dark v-on:click="showBetHistory(true)" >
+                  All
+                </v-btn>
+                <v-btn color="blue lighten-2" style='top:10px;' dark v-on:click="showBetHistory(false)" >
+                  My bets
+                </v-btn>
+              </div>
+            </v-layout>
+
+            <!-- item을 선택하면 item-key가 같은 것들이 함께 expand되어 골치아프다. 그래서 중복될 수 없는 transaction을 key로 잡는다. 이제 클릭할때 해당 item만 열린다.-->
+            <v-data-table
+              style='cursor:pointer;'
+              v-bind:class="{'mx-1': $vuetify.breakpoint.mdAndDown}"
+              v-bind:headers="computedHeaders"
+              v-bind:expand="expand"
+              v-bind:items="betHistory"
+              v-bind:pagination.sync="pagination.history"
+              item-key="number"
+              disable-initial-sort
+            >
+              <template slot="items" slot-scope="props" >
+                <tr v-on:click="props.expanded = !props.expanded" class='newAppendedBet' >
+                  <td class='betHistoryNum'>{{ props.item.number }}</td>
+                  <td class='betHistoryUser' >{{ props.item.user }}</td>
+                  <td class="betHistoryBet" >{{ props.item.teamName }}</td>
+                  <td >{{ props.item.stake }}</td>
+                  <td >{{ props.item.odd }}</td>
+                  <td class=" betHistoryGame" v-if="!$vuetify.breakpoint.xs">{{ props.item.market }}</td>
+                  <!-- <td class="betHistoryReturns" >{{ props.item.returnEth || 'Not yet' }}</td>                   -->
+                  <td class="betHistoryReturns" >{{ calReturnETh(props.item.returnEth) }}</td>
+                </tr>
+              </template>
+
+              <template slot="expand" slot-scope="props">
+                <!-- 테이블로 만들었더니 모바일 레이아웃을 도저히 설정할 수 없어 아래와 같이 만든다 -->
+                <v-layout row v-if='props.item.createdAt_moment' class='expandedList'>
+                  <v-flex xs2 >
+                    <div class='betExpandDesc betExpandFirst'>Created</div>
+                  </v-flex>
+                  <v-flex xs10>
+                    <div class='betExpandValue betExpandFirst' >{{props.item.createdAt_moment}}</div>
+                  </v-flex>
+                </v-layout>
+
+                <v-layout row v-if='props.item.user' class='expandedList'>
+                  <v-flex xs2 >
+                    <div class='betExpandDesc'>Player</div>
+                  </v-flex>
+                  <v-flex xs10>
+                    <div class='betExpandValue'>
+                      <!-- <a v-bind:href="'https://etherscan.io/address/'+ props.item.user" target='_blank'>
+                        {{props.item.user}}
+                      </a> -->
+                      <router-link v-bind:to='{path:`/user/${props.item.user}`}'>
+                        {{props.item.user}}
+                      </router-link>
+                    </div>
+                  </v-flex>
+                </v-layout>
+
+                <v-layout row  v-if='props.item.teamName' class='expandedList'>
+                  <v-flex xs2>
+                    <div class='betExpandDesc'>Bet</div>
+                  </v-flex>
+                  <v-flex xs10>
+                    <div class='betExpandValue' >{{props.item.teamName}}</div>
+                  </v-flex>
+                </v-layout>
+                <v-layout row  v-if='props.item.underOver' class='expandedList'>
+                  <v-flex xs2>
+                    <div class='betExpandDesc'>Bet</div>
+                  </v-flex>
+                  <v-flex xs10>
+                    <div class='betExpandValue' >{{props.item.underOver}}</div>
+                  </v-flex>
+                </v-layout>
+                <v-layout row  v-if='props.item.stake' class='expandedList'>
+                  <v-flex xs2>
+                    <div class='betExpandDesc'>Stake</div>
+                  </v-flex>
+                  <v-flex xs10>
+                    <div class='betExpandValue' >{{props.item.stake}}</div>
+                  </v-flex>
+                </v-layout>
+                <v-layout row  v-if='props.item.odd' class='expandedList'>
+                  <v-flex xs2>
+                    <div class='betExpandDesc'>Odd</div>
+                  </v-flex>
+                  <v-flex xs10>
+                    <div class='betExpandValue' >{{props.item.odd}}</div>
+                  </v-flex>
+                </v-layout>
+                <v-layout row  v-if='props.item.market' class='expandedList'>
+                  <v-flex xs2>
+                    <div class='betExpandDesc'>Game</div>
+                  </v-flex>
+                  <v-flex xs10>
+                    <div class='betExpandValue' >{{props.item.market}}</div>
+                  </v-flex>
+                </v-layout>
+
+                <v-layout row  class='expandedList'>
+                  <v-flex xs2>
+                    <div class='betExpandDesc'>Return</div>
+                  </v-flex>
+                  <v-flex xs10>
+                    <div class='betExpandValue'>{{ calReturnETh(props.item.returnEth) }}</div>
+                  </v-flex>
+                </v-layout>
+
+                <v-layout row v-if='props.item.transaction' class='expandedList'>
+                  <v-flex xs2>
+                    <div class='betExpandDesc betExpandLast' >Txhash</div>
+                  </v-flex>
+                  <v-flex xs10>
+                    <div class='betExpandValue betExpandLast' >
+                      <a v-bind:href="'https://etherscan.io/tx/'+ props.item.transaction" target='_blank' class='betExpandTransaction'>
+                        {{props.item.transaction}}
+                      </a>
+                    </div>
+                  </v-flex>
+                </v-layout>
+
+              </template>
+            </v-data-table>
+          </div>
+          <!-- 베팅 history 끝 -->
+
+
+        </v-flex>
+
+
+        <!-- PC 베팅 팝업창 -->
+          <v-flex lg3 class='pcPopBet mx-2' v-if='pcPopBet'>
+            <transition name='fade'>
+              <v-card
+                class="blue darken-4 hidden-md-down"
+                dark
+              >
+                <!-- 베팅중 나타나는 화면연출 -->
+                <div v-html='betMask'></div>
+                <!-- 로그인 부터 하세요 -->
+                <div class='inPlay' v-if='loginWindow'>
+                  <h3 class='mt-4 text-xs-center waitingConfirm'>Please log in to MetaMask</h3>
+                  <v-btn large class='placeBetTxt coinIcon mt-4' color='pink darken-2' v-on:click='loginFirst'>
+
+                    Confirm
+                  </v-btn>
+                </div>
+                <!-- 베팅 취소화면 -->
+                <div class='inPlay' v-if='cancelWindow'>
+                  <h3 class='mt-4 text-xs-center waitingConfirm'>Your bet has been canceled</h3>
+                  <v-btn large class='placeBetTxt coinIcon mt-4' color='pink darken-2' v-on:click='cancelWindow = false'>
+                    Play again
+                  </v-btn>
+                </div>
+                <!-- 계약 최종 성공화면 -->
+                <div class='inPlay' v-if='finalBetInfo.bool'>
+                  <div class='closeBetBtn'>
+                    <v-btn fab small class='blue darken-4' v-on:click='finalBetInfo.bool = false' >
+                      <v-icon >close</v-icon>
+                    </v-btn>
+                  </div>
+                  <h3 class='text-xs-center waitingConfirm' style='margin-top:30px;'>This contract
+                    <a v-bind:href="'https://etherscan.io/address/'+ contract.to" target='_blank'>
+                      <v-icon size='24px' class='iCodeLink' color='yellow'>transit_enterexit</v-icon>
+                    </a>
+                    was concluded.
+                  </h3>
+                  <!-- <v-icon size='80px' class='mt-4 text-xs-center' color='rgba(255,255,0,0.5)' style='z-index:-5;position:absolute;;'>thumb_up</v-icon> -->
+                  <img src="https://whitebetting.s3.amazonaws.com/game/inGame/guarantee.png" alt='This contract is guaranteed' class='guaranteeImg' />
+
+                  <h3 class='mt-3 text-xs-center waitingConfirm yellow--text' style='font-size:20px;'>
+                    <span >{{ finalBetInfo.teamName }}</span>
+                    <span class='white--text font-weight-normal' v-if='finalBetInfo.selectedTeam == 1 || finalBetInfo.selectedTeam == 3'>&nbsp;Win</span>
+                  </h3>
+                  <h4 class='mt-2 text-xs-center' style='font-size:18px;'>
+                    <span class='yellow--text' >{{ betEth }}</span>
+                    <span style='font-size:15px;' >&nbsp;ETH</span>
+                    <span style='font-size:15px;'>&nbsp;&nbsp;x&nbsp;</span>
+                    <span class='yellow--text' >{{ finalBetInfo.teamOdd }}</span>
+                  </h4>
+
+                  <h4 class='text-xs-center' style='font-size:20px;'>
+                    <span style='font-size:15px;' >&nbsp;=&nbsp;</span>
+                    <span class='yellow--text' >{{ finalBetInfo.betResult }}</span>
+                    <span style='font-size:15px;' >&nbsp;ETH</span>
+                  </h4>
+
+                  <h4 class='mt-2 text-xs-center' style='font-size:12px;'>
+                    <span>Payouts will be made within 30 minutes after the match finish.</span>
+                  </h4>
+                </div>
+
+                <!-- 보상금액 초과로 베팅이 불가능한 게임 -->
+                <div class='inPlay' v-if='unableBetWindow'>
+                  <h3 class='mt-4 text-xs-center waitingConfirm'>I'm sorry, but you've bet more than we can pay.</h3>
+                  <h4 class='mt-4 text-xs-center waitingConfirm'>Please try to lower your stake or choose another game of low odds!</h4>
+                  <v-btn large class='placeBetTxt coinIcon mt-4' color='pink darken-2' v-on:click='unableBetWindow = false'>
+                    Play again
+                  </v-btn>
+                </div>
+
+                <!-- Odd가 변경되어 베팅 불가능한 게임 -->
+                <div class='inPlay' v-if='incorrectOddWindow'>
+                  <h3 class='mt-4 text-xs-center waitingConfirm'>Odds have changed.<br/> Please page reload.</h3>
+                  <v-btn large class='placeBetTxt coinIcon mt-4' color='pink darken-2' v-on:click='pageReload();'>
+                    Page reload
+                  </v-btn>
+                </div>
+                <!-- 베팅중 나타나는 화면연출 끝 -->
+
+                <div class='closeBetBtn'>
+                  <v-btn fab small class='blue darken-4 closePopupBtn'  v-on:click='pcPopBet = false' >
+                    <v-icon >close</v-icon>
+                  </v-btn>
+                </div>
+
+                <!-- 베팅창 베팅 정보! -->
+                <v-card-text class="title font-weight-bold yellow--text text-xs-left" >
+                  <span>{{ betInfo.teamName }}</span>
+                  <span class='white--text font-weight-normal' v-if='betInfo.selectedTeam == 1 || betInfo.selectedTeam == 3'> Win</span>
+                </v-card-text>
+                <h4 class='mx-3 mb-2 kindOfGame text-xs-left' v-if='betInfo.selectedTeam == 1 || betInfo.selectedTeam == 2 || betInfo.selectedTeam == 3'> Full Time Result</h4>
+                <h4 class='mx-3 mb-2 kindOfGame text-xs-left' v-if='betInfo.selectedTeam == 4 || betInfo.selectedTeam == 5'> Goals Over/Under</h4>
+                <h4 class='mx-3 mb-2 kindOfGame text-xs-left' v-if='betInfo.selectedTeam == 6 || betInfo.selectedTeam == 7 || betInfo.selectedTeam == 8'> Double Chance</h4>
+                <v-layout row wrap>
+                  <h3 class='mx-3 yellow--text'>
+                    <v-icon class='fab fa-ethereum'></v-icon>
+                    <span> x {{ betInfo.teamOdd }}</span>
+                  </h3>
+                  <h4 class='toReturnTxt'>To Return</h4>
+                  <h2 class='toReturnNum' >{{ betResult }}</h2>
+                  <h4 class='toReturnUnitTxt'>ETH</h4>
+                </v-layout>
+                <!-- PC 팝업 -->
+                <!-- <v-layout row wrap  class='pt-2 ml-2'>
+                  <a class='quickBetBtn' v-on:click='ethSetFuc(1)'>0.05</a>
+                  <a class='quickBetBtn' v-on:click='ethSetFuc(2)'>0.10</a>
+                  <a class='quickBetBtn' v-on:click='ethSetFuc(3)'>1.00</a>
+                  <a class='quickBetBtn ml-3' v-on:click='ethSetFuc(4)'>Max</a>
+                </v-layout> -->
+                <v-layout row wrap  class='pt-2 ml-2'>
+                  <a class='quickBetBtn' v-on:click='ethSetFuc(1)'>0.01</a>
+                  <a class='quickBetBtn' v-on:click='ethSetFuc(2)'>0.05</a>
+                  <a class='quickBetBtn' v-on:click='ethSetFuc(3)'>0.50</a>
+                  <a class='quickBetBtn ml-3' v-on:click='ethSetFuc(4)'>Max</a>
+                </v-layout>
+
+                <v-card-actions>
+                    <v-layout column wrap>
+                      <v-layout row wrap>
+                        <v-flex xs3>
+                          <v-hover>
+                            <a v-on:click='minusFunc' slot-scope="{ hover }">
+                              <v-icon class='quickBetAddBtn' v-bind:class="`${hover ? 'pink--text' : 'white--text'}`" v-on:mousedown="intervalStart(1)" v-on:mouseup="intervalStop(1)" v-on:touchstart="intervalStart(1)" v-on:touchend="intervalStop(1)" v-on:touchcancel="intervalStop(1)">remove</v-icon>
+                            </a>
+                          </v-hover>
+                        </v-flex>
+                        <v-flex xs6>
+                          <v-text-field
+                            class='betEthTxt mb-2 mx-1 '
+                            v-model='betEth'
+                            type='number'
+                            label="ETH"
+                            v-on:click:clear ="clearEth"
+                            v-on:keyup='checkEth'
+                            v-on:keyup.enter.native='placeBet(gameInfo._id, gameInfo.fixture_id, betInfo.selectedTeam, betInfo.teamName, betEth, betInfo.teamOdd)'
+                            v-on:blur='onBlurEthTxt'
+                          ></v-text-field>
+                        </v-flex>
+                        <v-flex xs3>
+                          <v-hover>
+                            <a v-on:click='plusFunc' slot-scope="{ hover }">
+                              <v-icon class='quickBetAddBtn' v-bind:class="`${hover ? 'yellow--text' : 'white--text'}`" v-on:mousedown="intervalStart(2)" v-on:mouseup="intervalStop(2)" v-on:touchstart="intervalStart(2)" v-on:touchend="intervalStop(2)" v-on:touchcancel="intervalStop(2)">add</v-icon>
+                            </a>
+                          </v-hover>
+                        </v-flex>
+                      </v-layout>
+
+                    <v-btn large class='placeBetTxt my-2' color='pink darken-2'
+                      v-on:click='placeBet(gameInfo._id, gameInfo.fixture_id, betInfo.selectedTeam, betInfo.teamName, betEth, betInfo.teamOdd)'
+                      v-bind:loading="loader.placeBet"
+                    >
+                      Place Bet!
+                    </v-btn>
+                    <p v-show=false class='extraInfo text-xs-left'>*1st half, 2nd half (excluding Extra time, P.K.)</p>
+
+                    </v-layout>
+                </v-card-actions>
+              </v-card>
+            </transition>
+          </v-flex>
+
+      </v-layout>
+
+      <!-- 모바일 베팅 팝업창 -->
+        <!-- <v-bottom-sheet v-model="popBet" > -->
+        <v-dialog v-model="popBet" >
+          <v-card
+            class="blue darken-4 hidden-md-down"
+            dark
+          >
+            <!-- 베팅중 나타나는 화면연출 -->
+            <div v-html='betMask'></div>
+            <!-- 로그인 부터 하세요 -->
+            <div class='inPlay' v-if='loginWindow'>
+              <h3 class='mt-4 text-xs-center waitingConfirm'>Please log in to Trust wallet</h3>
+              <v-btn large class='placeBetTxt coinIcon mt-4' color='pink darken-2' v-on:click='loginFirst'>
+                Confirm
+              </v-btn>
+            </div>
+            <!-- 베팅 취소화면 -->
+            <div class='inPlay' v-if='cancelWindow'>
+              <h3 class='mt-4 text-xs-center waitingConfirm'>Your bet has been canceled</h3>
+              <v-btn large class='placeBetTxt coinIcon mt-4' color='pink darken-2' v-on:click='cancelWindow = false'>
+                Play again
+              </v-btn>
+            </div>
+            <!-- 계약 최종 성공화면 -->
+            <div class='inPlay' v-if='finalBetInfo.bool'>
+              <div class='closeBetBtn'>
+                <v-btn fab small class='blue darken-4' v-on:click='finalBetInfo.bool = false' >
+                  <v-icon >close</v-icon>
+                </v-btn>
+              </div>
+              <h3 class='text-xs-center waitingConfirm' style='margin-top:30px;'>This contract
+                <a v-bind:href="'https://etherscan.io/address/'+ contract.to" target='_blank'>
+                  <v-icon size='24px' class='iCodeLink' color='yellow'>transit_enterexit</v-icon>
+                </a>
+                was concluded.
+              </h3>
+              <!-- <v-icon size='80px' class='mt-4 text-xs-center' color='rgba(255,255,0,0.5)' style='z-index:-5;position:absolute;;'>thumb_up</v-icon> -->
+              <img src="https://whitebetting.s3.amazonaws.com/game/inGame/guarantee.png" alt='This contract is guaranteed' class='guaranteeImg' />
+
+              <h3 class='mt-3 text-xs-center waitingConfirm yellow--text' style='font-size:20px;'>
+                <span >{{ finalBetInfo.teamName }}</span>
+                <span class='white--text font-weight-normal' v-if='finalBetInfo.selectedTeam == 1 || finalBetInfo.selectedTeam == 3'>&nbsp;Win</span>
+              </h3>
+              <h4 class='mt-2 text-xs-center' style='font-size:18px;'>
+                <span class='yellow--text' >{{ betEth }}</span>
+                <span style='font-size:15px;' >&nbsp;ETH</span>
+                <span style='font-size:15px;'>&nbsp;&nbsp;x&nbsp;</span>
+                <span class='yellow--text' >{{ finalBetInfo.teamOdd }}</span>
+              </h4>
+
+              <h4 class='text-xs-center' style='font-size:20px;'>
+                <span style='font-size:15px;' >&nbsp;=&nbsp;</span>
+                <span class='yellow--text' >{{ finalBetInfo.betResult }}</span>
+                <span style='font-size:15px;' >&nbsp;ETH</span>
+              </h4>
+
+              <h4 class='mt-2 text-xs-center' style='font-size:12px;'>
+                <span>Payouts will be made within 30 minutes after the match finish.</span>
+              </h4>
+            </div>
+            <!-- 보상금액 초과로 베팅이 불가능한 게임 -->
+            <div class='inPlay' v-if='unableBetWindow'>
+              <h3 class='mt-4 text-xs-center waitingConfirm'>I'm sorry, but you've bet more than we can pay.</h3>
+              <h4 class='mt-4 text-xs-center waitingConfirm'>Please try to lower your stake or choose another game of low odds!</h4>
+              <v-btn large class='placeBetTxt coinIcon mt-4' color='pink darken-2' v-on:click='unableBetWindow = false'>
+                Play again
+              </v-btn>
+            </div>
+            <!-- Odd가 변경되어 베팅 불가능한 게임 -->
+            <div class='inPlay' v-if='incorrectOddWindow'>
+              <h3 class='mt-4 text-xs-center waitingConfirm'>Odds have changed.<br/> Please page reload.</h3>
+              <v-btn large class='placeBetTxt coinIcon mt-4' color='pink darken-2' v-on:click='pageReload();'>
+                Page reload
+              </v-btn>
+            </div>
+            <!-- 베팅중 나타나는 화면연출 끝 -->
+
+            <div class='closeBetBtn'>
+              <v-btn fab small class='blue darken-4 closePopupBtn' v-on:click='popBet = false' >
+                <v-icon  >close</v-icon>
+              </v-btn>
+            </div>
+              <!-- 베팅창 베팅 정보! -->
+              <v-card-text class="title font-weight-bold yellow--text text-xs-left">
+                {{ betInfo.teamName }} <span class='white--text font-weight-normal' v-if='betInfo.selectedTeam == 1 || betInfo.selectedTeam == 3'>Win</span>
+              </v-card-text>
+
+              <h4 class='mx-3 mb-2 kindOfGame text-xs-left' v-if='betInfo.selectedTeam != 4 && betInfo.selectedTeam != 5'> Full Time Result</h4>
+              <h4 class='mx-3 mb-2 kindOfGame text-xs-left' v-if='betInfo.selectedTeam == 4 || betInfo.selectedTeam == 5'> Goals Over/Under</h4>
+
+              <v-layout row wrap>
+                <h3 class='mx-3 yellow--text'>
+                  <v-icon class='fab fa-ethereum'></v-icon>
+                  <span > x {{ betInfo.teamOdd }}</span>
+                </h3>
+                <h4 class='toReturnTxt'>To Return</h4>
+                <h2 class='toReturnNum' >{{ betResult }}</h2>
+                <h4 class='toReturnUnitTxt'>ETH</h4>
+              </v-layout>
+                <!-- Mobile 팝업 -->
+                <v-layout row wrap  class='pt-2 ml-2'>
+                  <a class='quickBetBtn' v-on:click='ethSetFuc(1)'>0.05</a>
+                  <a class='quickBetBtn' v-on:click='ethSetFuc(2)'>0.10</a>
+                  <a class='quickBetBtn' v-on:click='ethSetFuc(3)'>1.00</a>
+                  <a class='quickBetBtn ml-3' v-on:click='ethSetFuc(4)'>Max</a>
+                </v-layout>
+
+              <v-card-actions class='pt-0'>
+                  <v-layout column wrap>
+                    <v-layout row wrap>
+                      <v-flex xs3>
+                        <v-hover>
+                          <a v-on:click='minusFunc' slot-scope="{ hover }">
+                            <v-icon class='quickBetAddBtn' v-bind:class="`${hover ? 'pink--text' : 'white--text'}`" v-on:mousedown="intervalStart(1)" v-on:mouseup="intervalStop(1)" v-on:touchstart="intervalStart(1)" v-on:touchend="intervalStop(1)" v-on:touchcancel="intervalStop(1)">remove</v-icon>
+                          </a>
+                        </v-hover>
+                      </v-flex>
+                      <v-flex xs6>
+                        <v-text-field
+                          class='betEthTxt mb-2 mx-1 '
+                          v-model='betEth'
+                          type='number'
+                          label="ETH"
+                          v-on:click:clear ="clearEth"
+                          v-on:keyup='checkEth'
+                          v-on:keyup.enter.native='placeBet(gameInfo._id, gameInfo.fixture_id, betInfo.selectedTeam, betInfo.teamName, betEth, betInfo.teamOdd)'
+                          v-on:blur='onBlurEthTxt'
+                        ></v-text-field>
+                      </v-flex>
+                      <v-flex xs3>
+                        <v-hover>
+                          <a v-on:click='plusFunc' slot-scope="{ hover }">
+                            <v-icon class='quickBetAddBtn' v-bind:class="`${hover ? 'yellow--text' : 'white--text'}`" v-on:mousedown="intervalStart(2)" v-on:mouseup="intervalStop(2)" v-on:touchstart="intervalStart(2)" v-on:touchend="intervalStop(2)" v-on:touchcancel="intervalStop(2)">add</v-icon>
+                          </a>
+                        </v-hover>
+                      </v-flex>
+                    </v-layout>
+
+                    <v-btn large class='placeBetTxt' color='pink darken-2'
+                      v-on:click='placeBet(gameInfo._id, gameInfo.fixture_id, betInfo.selectedTeam, betInfo.teamName, betEth, betInfo.teamOdd)'
+                      v-bind:loading="loader.placeBet"
+                    >
+                      Place Bet!</v-btn>
+                    <p v-show=false class='mt-1 extraInfo text-xs-left'>*1st half, 2nd half (excluding Extra time, P.K.)</p>
+
+                  </v-layout>
+              </v-card-actions>
+          </v-card>
+        </v-dialog>
+        <!-- </v-bottom-sheet> -->
+
+    </v-layout>
+    <!-- facebook -->
+
+    <!-- preloading -->
+    <img v-show=false src="https://whitebetting.s3.amazonaws.com/game/inGame/guarantee.png" />
+		<!-- adding loading icon -->
+		<Loading v-if='loadingStatus'/>
+
+  </div>
+</template>
+
+<script>
+import * as Contract from '@/web3/web3_contract';
+
+// import web3client from '@/web3/web3_client';
+import gameAPI from '@/commons/gameAPI';
+import util from '@/commons/util';
+// const Web3Client = new web3client();
+const GameAPI    = new gameAPI();
+const Util       = new util();
+
+import Web3  from 'web3';
+import { mapState, mapActions, mapMutations } from 'vuex';
+// import { clearInterval } from 'timers';
+import Loading from '@/components/Loading'
+
+
+const isMobile = (window.innerWidth < 1264) ? true : false;// 모바일에서만 아래에서 팝업으로 뜨기
+// PC팝업. 아래의 방식으로 vuetify의 태그들은 적용이 되지 않는다. 따라서 [2]와 [4]는 v-if로 처리했다 ㅠ
+const htmlEl = [
+  // 0.
+  { tag : `` },
+  // 1.Please confirm your bet
+  { tag : `<div class='inPlay'><h3 class='mt-4 text-xs-center waitingConfirm'>Please confirm your bet</h3><img src="https://whitebetting.s3.amazonaws.com/game/inGame/coinIcon.svg" alt='waiting for your confirm' class='coinIcon'/></div>`},
+  // 2. Your bet has been canceled
+  { tag : `<div class='inPlay'><h3 class='mt-4 text-xs-center waitingConfirm'>Your bet has been canceled</h3><button type="button" class="placeBetTxt coinIcon mt-4 v-btn v-btn--large theme--dark pink darken-2"><div class="v-btn__content">Play again</div></button></div>`},
+  // 3. Bet submitted!
+  { tag : `<div class='inPlay'><h3 class='mt-3 text-xs-center waitingConfirm'>Bet submitted! <a href='https://etherscan.io/tx/###' target='_blank'><i aria-hidden="true" class="v-icon iCodeLink material-icons theme--light yellow--text" style="font-size: 24px;">transit_enterexit</i></a></h3> <img src="https://whitebetting.s3.amazonaws.com/game/inGame/coinIcon_confirm.svg" alt='waiting for your confirm' class='coinIcon'/> <h3 class='text-xs-center waitingConfirm'>Waiting for Ethereum...</h3></div>`},
+  // 4. This contract was concluded.
+  { tag : `<div class='inPlay'><h3 class='mt-4 text-xs-center waitingConfirm'>This contract was concluded.<a href='https://etherscan.io/tx/###' target='_blank'><i aria-hidden="true" class="v-icon iCodeLink material-icons theme--light yellow--text" style="font-size: 24px;">transit_enterexit</i></a></h3><i aria-hidden="true" class="mt-2 v-icon material-icons theme--light white--text" style="font-size: 90px;display:block;text-align:center;">thumb_up</i></div>`},
+  // 5. 날짜가 지난 경기
+  { tag : `<div class='inPlay'><h3 class='mt-5 text-xs-center waitingConfirm'>The betting date is over.</h3><h3 class='mt-2 text-xs-center waitingConfirm'>Please choose another game!</h3></div>`},
+  // 6. Pending 게임. 배당률이 결정되지 않았습니다에서 변경
+  { tag : `<div class='inPlay'><h3 class='mt-5 text-xs-center waitingConfirm'>Pending game.</h3><h3 class='mt-2 text-xs-center waitingConfirm'>Please wait to open this game.</h3></div>`},
+  // { tag : `<div class='inPlay'><h3 class='mt-5 text-xs-center waitingConfirm'>The odd has not been decided yet.</h3><h3 class='mt-2 text-xs-center waitingConfirm'>Please choose another game!</h3></div>`},
+  // 7.경기 10분전
+  { tag : `<div class='inPlay'><h3 class='mt-5 text-xs-center waitingConfirm'>10 minutes before game start.</h3><h3 class='mt-2 text-xs-center waitingConfirm'>Betting closed.</h3></div>`},
+  // 8.경기 중
+  { tag : `<div class='inPlay'><h3 class='mt-5 text-xs-center waitingConfirm'>In-Play!</h3><h3 class='mt-2 text-xs-center waitingConfirm'>Betting closed.</h3></div>`},
+  // 9.경기 종료. 보상 대기중.
+  // { tag : `<div class='inPlay'><h3 class='mt-5 text-xs-center waitingConfirm'>Game over.</h3><h3 class='mt-2 text-xs-center waitingConfirm'>Compensation after about 30 min. according to result.</h3></div>`},
+  { tag : `<div class='inPlay'><h3 class='mt-5 text-xs-center waitingConfirm'>Payouts will be made within about 30 minutes after the match finish.</h3></div>`},
+  // 10.보상 완료.
+  { tag : `<div class='inPlay'><h3 class='mt-5 text-xs-center waitingConfirm'>Winnings were paid completely.</h3><h3 class='mt-2 text-xs-center waitingConfirm'>Game closed.</h3></div>`},
+  // 11. disuse 게임
+  { tag : `<div class='inPlay'><h3 class='mt-5 text-xs-center waitingConfirm'>Not an available game.</h3><h3 class='mt-2 text-xs-center waitingConfirm'>Please choose another game!</h3></div>`},
+  // 12. 보상금액 초과로 베팅이 불가능한 게임
+  // { tag : `<div class='inPlay'><h3 class='mt-5 text-xs-center waitingConfirm'>I'm sorry, but you've bet more than we can pay.</h3><h3 class='mt-2 text-xs-center waitingConfirm'>Please try to lower your stake or choose another game of low odds!</h3><button type="button" class="placeBetTxt coinIcon mt-4 v-btn v-btn--large theme--dark pink darken-2"><div class="v-btn__content">Play again</div></button></div>`},
+]
+
+// const htmlEl_kor = [
+//   { tag : "<div class='inPlay'><h4 class='waitingConfirm'>내기 금액을 확인하세요</h4></div>"},
+//   { tag : "<div class='inPlay'><h4>거래가 취소되었습니다</h4><v-btn>Play again<v-/btn></div>"},
+//   { tag : "<div class='inPlay'><h4>Bet submitted! Waiting for Ethereum...</h4></div>"},
+//   { tag : "<div class='inPlay'><h4>You lost or You win</h4></div>"},
+// ]
+
+export default {
+  name : 'Game',
+  components: { Loading },
+  data () {
+    return {
+      betMask           : '',
+      drawer            : false,
+      loading           : false,
+      sns               : { telegram : '', twitter : '', facebook: { href : '', title : '', description : '',}, },
+      twitterUrl        : '',
+
+      gameInfo          : {},
+      homeStatInfo      : '',
+      awayStatInfo      : '',
+
+      league            : {name : '', country: ''},
+      gameStatusId      : '',
+      gameStatus        : '',
+      gameResult        : {},
+
+      snackbar          : false,
+      result            : '',
+      pcPopBet          : false,
+      popBet            : false,
+      checkInterval     : { minus : false, plus : false},
+
+      // fixtureId         : '',
+      betInfo           : {},
+      prevBetInfo       : {},
+      betEth            : '',
+      betResult         : 0,
+
+      isShowTrustWallet : ''   ,// 지갑설치 문구를 보여줄지 말지는 지갑의 존재여부와 또 다르다.
+      isShowMetaMask    : ''   ,
+      isGetMetamask     : ''   ,
+
+      hashTx            : false,
+      loginWindow       : false,
+      cancelWindow      : false,
+      unableBetWindow   : false,
+      incorrectOddWindow: false,
+      web3js            : '',
+      myWhite           : '',
+      contractInfo      : '',
+
+      finalBetInfo      : {bool : false,  teamName : '', stake : '', odd: '', }   ,
+      contract          : {}   ,
+
+      pagination: {
+        stats :{rowsPerPage : 5, history : {rowsPerPage : 5} }
+      },
+
+      expand            : false,
+      betHeaders : [
+        {text: `Bet`  , align: 'center', sortable: false, value: 'bet'  },
+        {text: 'Count', align: 'center', sortable: false, value: 'count'},
+        {text: 'Stake', align: 'center', sortable: false, value: 'stake'},
+      ],
+      betInfoGames      : [],
+      headers: [
+        { text : 'No.'   , align: 'center', sortable: true , value: 'number'               },
+        { text : 'Player', align: 'center', sortable: true , value: 'user'                 },
+        { text : 'Bet'   , align: 'center', sortable: true , value: 'teamName'             },
+        { text : 'Stake' , align: 'center', sortable: true , value: 'stake'                },
+        { text : 'Odd'   , align: 'center', sortable: false, value: 'odd'                  },
+        { text : 'Market', align: 'center', sortable: false, value: 'market'  , hide: 'xs' },
+        { text : 'Returns', align: 'center', sortable: false, value: 'returnEth'           },
+      ],
+      betHistory   : [],
+      allHistory   : '',
+
+      loader :{ gameBetInfo : false, placeBet : false, gameStat : false, },
+    }
+  },
+  methods: {
+		...mapActions([ // store.js에 있는 changeLoadingStatus함수로 CHANGE_LOADING_STATUS를 바꾸면 loadingStatus가 바뀐다.
+			'changeLoadingStatus', 'vuexWhite',
+		]),
+    ...mapMutations ([
+      'CHANGE_LOADING_STATUS', 'WHITE', // 로딩화면 추가
+		]),
+    // 로그인부터 하세요
+    loginFirst(){
+      this.loginWindow = false;
+      this.pcPopBet    = false;
+      this.popBet      = false;
+      this.clearEth();
+    },
+    intervalStart(what){
+      if(what == 1){
+        if(!this.checkInterval.minus){
+          this.checkInterval.minus = setInterval(this.minusFunc, 300)	;
+        }
+      } else{
+        if(!this.checkInterval.plus){
+          this.checkInterval.plus = setInterval(this.plusFunc, 300)	;
+        }
+      }
+    },
+    intervalStop(what){
+      if(what ==1){
+        clearInterval(this.checkInterval.minus);
+        this.checkInterval.minus = false;
+      } else{
+        clearInterval(this.checkInterval.plus);
+        this.checkInterval.plus = false;
+      }
+    },
+    minusFunc(){
+      const fBetEth = parseFloat(this.betEth);
+      if ( isNaN(fBetEth) ) this.betEth = "0.01";
+      else if(fBetEth <= 0) this.betEth = "0.01";
+      else {
+        if (fBetEth<=0.01) this.betEth = "0.01";
+        else this.betEth = (fBetEth - 0.01).toFixed(2).toString();
+        }
+      // 아래는 0.05가 기본값
+      // if ( isNaN(fBetEth) ) this.betEth = "0.01";
+      // else if(fBetEth <= 0) this.betEth = "0.05";
+      // else {
+      //   if (fBetEth<=0.05) this.betEth = "0.01";
+      //   else this.betEth = (fBetEth - 0.05).toFixed(2).toString();
+      //   }
+      this.checkEth();
+    },
+    plusFunc(){
+      const fBetEth = parseFloat(this.betEth);
+      if ( isNaN(fBetEth) ) this.betEth = "0.01";
+      else if(fBetEth <= 0) this.betEth = "0.01";
+      else if(fBetEth >= 4.95) this.betEth = "5";
+      else {
+        this.betEth = (fBetEth + 0.01).toFixed(2).toString();
+        }
+      // if ( isNaN(fBetEth) ) this.betEth = "0.05";
+      // else if(fBetEth <= 0) this.betEth = "0.05";
+      // else if(fBetEth >= 4.95) this.betEth = "5";
+      // else {
+      //   this.betEth = (fBetEth + 0.05).toFixed(2).toString();
+      //   }
+      this.checkEth();
+    },
+    // ETH 기본 셋 버튼
+    ethSetFuc(howMuch){
+      switch(howMuch){
+        case 1 : this.betEth = "0.01"; break;
+        case 2 : this.betEth = "0.05"; break;
+        case 3 : this.betEth = "0.50"; break;
+        case 4 : this.betEth = "5"; break;
+      }
+      // switch(howMuch){
+      //   case 1 : this.betEth = "0.05"; break;
+      //   case 2 : this.betEth = "0.1"; break;
+      //   case 3 : this.betEth = "1"; break;
+      //   case 4 : this.betEth = "5"; break;
+      // }
+      this.checkEth();
+    },
+    // 내 배팅 history 보기
+    showBetHistory(isWhat){
+      // this.isAllHistory = !this.isAllHistory;
+      if ( isWhat ){
+        this.betHistory = this.allHistory;
+      } else {
+        const user = new Array();
+        this.allHistory.map( d =>{
+          if ( d.user == this.userAccount ){
+            user.push(d);
+          }
+        })
+        this.betHistory = user;
+      }
+    },
+    // returnEth 계산
+    calReturnETh(eth){
+      if (eth == 0 ) return 0;
+      else if (eth == undefined) return 'Not yet';
+      else if (eth == -1) return 'Returned';
+      else return eth;
+    },
+
+    // 팀 선택 팝업
+    async selectTeam(selectedTeam, teamName, teamOdd) {
+
+      this.prevBetInfo = this.betInfo;// 이전 팀 선택 정보를 저장해 놓은 후
+      this.betInfo = {
+        selectedTeam  : selectedTeam, // 1은 homeTeam, 2는 drawTeam, 3은 awayTeam, 4는 over, 5는 under, 6은 homeTeamAndDraw, 7은 homeAndAwayTeam, 8은 awayTeamAndDraw, 0은 항상null
+        teamName      : teamName,     // 선택한 팀이름
+        teamOdd       : teamOdd,      // 선택한 팀의 배팅률
+      }
+      this._returnEth(this.betInfo);
+      this.popBet = isMobile ? true : false;// 모바일에서만 하단 팝업
+
+      // 같은 팀일때는 팝업 on/off, 다른 팀일 경우에는 정보 갱신 후 계속 팝업
+      if ( !isMobile ){
+        this.pcPopBet = (this.prevBetInfo.selectedTeam == this.betInfo.selectedTeam ) ? !this.pcPopBet : true;
+      }
+
+      // 팝업화면 테스트
+      // this.betMask = htmlEl[0].tag;
+      // this.contract.to = 'aaaa'; // contract address
+      // this.finalBetInfo.bool = true;
+    },
+
+    async placeBet( fixtureObjId, fixtureId, selectedTeam, teamName, stake, odd ){
+      if (this.gameInfo.open_status != 3) { // 경기 날짜가 지났을 경우 베팅을 못하게 막는다.
+        return;
+      }
+      FB.AppEvents.logEvent("buttonClicked"); // fb 맞춤이벤트
+
+       // 실수형으로 바꿀 수 없는 stake는 0.01로 바꾼다.
+      if ( !parseFloat(stake) ) {
+        this.betEth = '0.01';
+        stake = 0.01;
+      } else {
+        this.betEth = stake;
+      }
+
+      // 베팅 가능 검토
+      // const isOddCheck = await GameAPI.getOddCheck(fixtureId, selectedTeam, odd);
+      this.loader.placeBet = true;
+      const isAbleBet = await GameAPI.getMaxPot(fixtureId , selectedTeam , stake, odd);
+      this.loader.placeBet = false;
+      // console.log(isAbleBet);
+      if(isAbleBet.oddCheck && isAbleBet.maxPotCheck){ // 현재 베팅하려는 금액이 보상 가능한 금액이라면
+        this.betMask = htmlEl[1].tag; // 메타마스크의 선택을 기다리는 화면
+        let betTransaction;
+        let market;
+        if (selectedTeam == 4 || selectedTeam == 5 ) {
+          market = 'Goals Over/Under';
+        } else if (selectedTeam == 6 || selectedTeam == 7 || selectedTeam == 8 ){
+          market = 'Double Chance';
+        } else { market = 'Full Time Result'; }
+        // const market = (selectedTeam == 4 || selectedTeam == 5 ) ? 'Goals Over/Under' : 'Full Time Result';
+        // this.betMask = htmlEl[0].tag;
+        // this.finalBetInfo.bool = true;
+
+        try{
+          const stakeEth = this.web3js.utils.toWei(stake, 'ether');
+          betTransaction = await this.wbContract.methods.placeBet(fixtureId, selectedTeam, parseInt(odd*1000))
+            .send({
+              from  : this.userAccount,
+              to    : this.contractInfo.address,
+              value : stakeEth,
+
+              // gasLimit: this.web3js.utils.toHex(3000000),
+              // gasPrice: this.web3js.utils.toHex(this.web3js.utils.toWei('20', 'gwei')),
+            })
+            .on('transactionHash', async (hash)=>{ // metamask에서 confirm을 누르면 hash가 나온다.
+              // console.log('트랜잭션!');
+              this.hashTx = hash;
+              GameAPI.setBetInfo( this.userAccount, fixtureObjId, fixtureId, selectedTeam, teamName, stake, odd, market, hash );
+            })
+            .on('confirmation', function(confNumber, receipt){
+              // console.log(confNumber);
+            })
+            .on('receipt', (receipt) => {
+              console.log(receipt);
+              this._getUserWhite();
+            })
+            .on('error', (err)=>{ // 결제를 취소했을 때
+              // console.log(err);
+              // console.log(1);
+              this.betMask = htmlEl[0].tag;
+              return;
+            });
+          // console.log('결제끝');
+
+        } catch(err) { // 지갑에 로그인하지 않았을 때
+          console.log(err);
+            this.betMask = htmlEl[0].tag;
+          // this.loginWindow = false;
+              if(this.isWalletLogin){
+                this.cancelWindow = true;
+              } else{
+                // console.log('지갑에 로그인하지 않았을 때');
+                this.err = err;
+                // this.betMask = htmlEl[0].tag;
+                this.loginWindow = true;
+              }
+          return;
+        }
+
+        // console.log('성공후 여기');
+        // confirm 후 거래가 완료되었다.
+        this.betMask = htmlEl[0].tag;
+        this.finalBetInfo.bool = true;
+        this.finalBetInfo.selectedTeam = selectedTeam;
+        this.finalBetInfo.teamName = teamName;
+        this.finalBetInfo.stake = stake;
+        this.finalBetInfo.odd = odd;
+        this.finalBetInfo.betResult = this.betResult;
+
+        this.contract.to = betTransaction.to; // contract address
+        const newBetInfo = {
+          number: this.betHistory.length+1 ,user: this.userAccount, selectedTeam: parseInt(selectedTeam), teamName: teamName, stake: parseFloat(stake), odd: parseFloat(odd), market: market, returnEth: 'Not yet', transaction: this.hashTx
+        };
+        this.betHistory.unshift(newBetInfo);// 맨앞에 추가
+        this.betInfoGames = this._getGameStat();
+        // 새로 추가된 betHistory 의 색을 2초간 분홍색으로 칠했다가 돌려놓기
+        const a = document.querySelector('.newAppendedBet');
+        if(a) {
+          a.style.backgroundColor = '#f7c8d8';
+          setTimeout(() => {
+            a.style.backgroundColor = '#fff';
+          }, 5000);
+        }
+      } else if(!isAbleBet.oddCheck) { // odd가 변경된 상태라면
+        this.incorrectOddWindow = true;
+      } else {
+        // this.gameStatus = 'Not an available game.';
+        this.unableBetWindow = true;
+      }
+
+    },
+    pageReload(){
+      // this.$router.go();
+      this._fetchData();
+      this.pcPopBet = false;
+      this.popBet = false;
+      this.incorrectOddWindow = false;
+    },
+    onBlurEthTxt(){
+      this._returnEth(this.betInfo);
+    },
+    checkEth() {
+      this._returnEth(this.betInfo);
+    },
+    _returnEth(betInfo) {// 베팅으로 얻게될 ETH보여주기 내부함수
+      const stake = parseFloat(this.betEth);
+      if(stake){ // 입력창 데이터 제한 적용
+        if( parseInt(stake*100) <= 0 ){ // 0보다 작은 0.01의 경우 0.01로 stake 변경
+          this.betEth = 0.01;
+        } else if ( Math.floor(stake*100) != (stake*100) ){ // 10.006일 경우 10.01로 stake 변경
+          this.betEth = stake.toFixed(2);
+          // this.betEth = Math.floor(stake*100)/100
+        }
+        this.betResult = parseFloat((this.betEth * betInfo.teamOdd).toFixed(4))
+      }else{
+        this.betResult = 0;
+      }
+    },
+
+    clearEth() {// 배팅액의 x를 누르면 바로 화면에 동기화 되도록
+      this.betEth = '';
+      this.betResult = 0;
+    },
+    _getGameStat(){
+      const gameStat = new Array();
+      const betInfo = this.betHistory;
+      betInfo.map( stat =>{
+        const index = gameStat.findIndex( el => el.selectedTeam == stat.selectedTeam );
+        if ( index != -1 ) {
+          gameStat[index].count++;
+          // float연산은 소수점 연산에서 정확하지 않다. 따라서 정수로 만든 후 나중에 실수로 바꾼다.
+          gameStat[index].stake += parseInt(stat.stake * 1000);
+        } else {
+          gameStat.push({
+            // sorting       : sorting,
+            selectedTeam  : stat.selectedTeam,
+            bet           : stat.teamName,
+            count         : 1,
+            stake         : parseInt(stat.stake * 1000 ),
+          });
+        }
+      });
+      // 아래와 같이 다시 1000을 나눠 실수형으로 바꿔준다.
+      // https://www.w3schools.com/jsref/jsref_reduce.asp 아래와 같이 sum을 구한다.
+      gameStat.map( ( stat, idx )=> gameStat[idx].stake = stat.stake / 1000 );
+      const betSum = gameStat.reduce( (prev, next)=> prev + next.stake, 0 );
+      this.betHeaders[1].text = `Count (${this.betHistory.length})`;
+      this.betHeaders[2].text = `Stake (${ parseInt(betSum*1000)/1000} Eth)`;
+      return gameStat.sort( (a,b)=> a.selectedTeam - b.selectedTeam );
+    },
+    // 게임상태 알아내기
+    _changeGameStatus (gameInfo){
+    // 2:pending, 3:open, 4:playing, 5:returned, 8: 10 mins before play, 9: waiting to open, 10:disuse, 11: 경기종료. 보상 대기중
+      // 만약 pending 상태라면(db에 게임 정보만 있어도 pending상태가 된다)
+      if (gameInfo.open_status == 2 ) {
+        this.gameStatus = 'Pending game. Please wait to open this game.';
+        this.betMask = htmlEl[6].tag;
+      } else if (gameInfo.open_status == 10) { // 만약 disuse 라면
+        this.gameStatusId = 10;
+        this.gameStatus = 'Not an available game.';
+        this.betMask = htmlEl[11].tag;
+      }
+      else if (gameInfo.open_status == 3 ){ // open상태인데
+        this.gameStatus = 'Betting...';
+      }
+
+      const now          = Date.now();
+      const eventTime    = gameInfo.event_timestamp * 1000;
+      const startTime    = eventTime; // 경기 시작
+      const betCloseTime = eventTime - (1000 * 60 * 10); // 경기 10분 전 베팅을 닫는다.
+      const returnTime   = eventTime + (1000 * 60 * 60 * 2); // 경기 2시간 30분 후 게임결과 가져오기.
+      const closeTime    = eventTime + (1000 * 60 * 60 * 3); // 보상 완료 후 완전 종료.
+      if (betCloseTime <= now && startTime > now ){ // 경기 10분전
+      // console.log(1);
+        this.gameStatusId = 8;
+        this.gameStatus = '10 minutes before game start. Betting closed.';
+        this.betMask = htmlEl[7].tag;
+      } else if (startTime <= now && returnTime > now) { // 경기 중
+      // console.log(2);
+        this.gameStatusId = 4;
+        this.gameStatus = 'In-Play!';
+        this.betMask = htmlEl[8].tag;
+      } else if (returnTime <= now && closeTime > now ) { // 경기 종료. 보상 대기중
+      // console.log(3);
+        this.gameStatusId = 6;
+        this.gameStatus = 'Payouts will be made within about 30 minutes after the match finish.';
+        this.betMask = htmlEl[9].tag;
+      }
+      if ( gameInfo.open_status == 5){ // 보상완료
+      // console.log(4);
+        this.gameStatusId = 5;
+        this.gameStatus = 'Winnings were paid completely. Game closed.';
+        this.betMask = htmlEl[10].tag;
+      }
+
+    },
+    // Score에 맞춰 게임 결과 표시
+    _calGameResult(gameInfo) {
+      const gameResult = new Object();
+      // if (gameInfo.goalsHomeTeam != undefined){
+      if (gameInfo.status != 'Not Started' && gameInfo.status != 'Time to be defined' && gameInfo.status != 'Match Postponed'){
+        if (gameInfo.goalsHomeTeam > gameInfo.goalsAwayTeam) {
+          gameResult.fullTime = 1; // homeTeam이 이겼다면 1
+        } else if (gameInfo.goalsHomeTeam == gameInfo.goalsAwayTeam) {
+          gameResult.fullTime = 2; // 비겼다면 2
+        } else if (gameInfo.goalsHomeTeam < gameInfo.goalsAwayTeam) {
+          gameResult.fullTime = 3; // awayTeam이 이겼다면 3
+        }
+        if ( (gameInfo.goalsHomeTeam + gameInfo.goalsAwayTeam) >= 3 ){
+          gameResult.overUnder = 1;
+        } else {
+          gameResult.overUnder = 2;
+        }
+        this.gameResult = gameResult;
+      }
+    },
+    async _allHistoryFuc(fixtureId){
+      this.loader.gameBetInfo = true;
+      const allHistory = await GameAPI.getBetHistory(fixtureId); // bet history
+      this.allHistory = allHistory;
+      // console.log(allHistory);
+      allHistory.map( (info, idx)=>{
+        allHistory[idx].number = allHistory.length - idx;
+        allHistory[idx].createdAt_moment = this.$moment(info.createdAt).fromNow();
+      })
+
+      this.betHistory = allHistory;
+      this.betInfoGames = this._getGameStat(); // game statistics 
+      this.loader.gameBetInfo = false;
+    },
+
+    // web3를 넣자
+    async _web3Exe(){
+      const contractInfo = await Contract.getContractInfo(); // contract 정보 가져오기
+      this.contractInfo = contractInfo;
+      // const wbContract = await new web3js.eth.Contract(contractInfo.abi, contractInfo.address);
+
+      let web3js;
+      if (this.isWeb3){ // 브라우저에 메타마스크(혹은 미스트)가 있는지 확인
+        web3js = new Web3(web3.currentProvider); // 있다면 메타마스크를 쓰자.
+      }
+      this.web3js = web3js;
+
+      const wbContract = await new web3js.eth.Contract(contractInfo.abi, contractInfo.address);
+      this.wbContract = wbContract;
+    },
+    // game stat 및 prediction
+    async _fetchStat(leagueId, homeTeamId, awayTeamId, fixtureId){
+      try{
+        const statInfo = await GameAPI.getStatInfo(leagueId, homeTeamId, awayTeamId, fixtureId); // 게임 정보
+        if(statInfo){
+          this.homeStatInfo = statInfo[0];
+          this.awayStatInfo = statInfo[1];
+        } 
+      } catch (err) {
+        // console.log(err);
+      }
+    },
+    async _fetchData(fixtureId){
+      try{
+        this.changeLoadingStatus(true);
+        const gameInfo = await GameAPI.getGameInfo(fixtureId); // 게임 정보
+        // if(!gameInfo) this.$router.push('/'); // 나중에 해당 게임이 없을 때 보여줄 페이지
+
+
+        // 같은 리그일때는 리그id만 줘도 되지만 챔피언스나 유로파의 경우 듣보잡팀도 있고 국가별 대항전의 경우도 있다. 이 경우 어떻게 보여주는게 좋을지 고민해보자. 네이버를 보면 리그만 게임정보를 보여준다.=> 그냥 해당 리그의 id를 주는게 좋겠다.
+
+        this._fetchStat(gameInfo.league_id, gameInfo.homeTeam_id, gameInfo.awayTeam_id, fixtureId);// 게임 스탯 가져오기
+
+        this._calGameResult(gameInfo); // 게임 결과 표시
+        this._changeGameStatus(gameInfo); // 게임상태 정보 가져오기
+
+        const now          = Date.now();
+        const eventTime    = gameInfo.event_timestamp * 1000;
+        const startTime    = eventTime; // 경기 시작
+        const after10min   = eventTime + (1000 * 60 * 10 );
+        if (startTime <= now && after10min > now) { // 경기 시작 후 10분 동안
+          gameInfo.status = 'First Half'; // 5분마다 한번씩 게임정보를 가져오기 때문에 처음 5분동안 Not Started로 찍힌다. 이걸 막기위해 처음 10분간 정보는 하드코딩한다.
+        }
+        gameInfo.event_date_local = this.$moment(gameInfo.event_date).format('llll');
+        gameInfo.event_date_mlocal = this.$moment(gameInfo.event_date).fromNow();
+
+        // twitter 처리
+        let twitterText;
+        if (gameInfo.odd) {
+          twitterText = `The way I love football, WhiteBetting! \n ${gameInfo.homeTeam}(${gameInfo.odd.homeTeam}) VS(draw ${gameInfo.odd.drawTeam}) ${gameInfo.awayTeam}(${gameInfo.odd.awayTeam}) \n`;
+        } else {
+          twitterText= `The way I love football, WhiteBetting! \n ${gameInfo.homeTeam} VS ${gameInfo.awayTeam} \n`;
+        }
+        const twitter = `https://twitter.com/intent/tweet?url=${window.location.href}&via=BettingWhite&text=${escape(twitterText)}`;
+        this.sns.twitter = twitter;
+
+        // facebook 처리 (페북의 문구입력은 openGraph로 하기 때문에 어쩔수 없이 social-sharing을 모듈을 사용했다 19.12.10)
+        const fb_href = `https://whitebetting.com/football/${fixtureId}`;
+
+        this.sns.facebook.href = fb_href;
+        this.sns.facebook.title = twitterText;
+        this.sns.facebook.description = twitterText;
+
+        // telegram 처리
+        const telegramText = `https://telegram.me/share/url?url=${window.location.href}&text=${twitterText}`
+        this.sns.telegram = telegramText;
+        if(gameInfo.league){
+          this.league = { name : gameInfo.league.name , country: gameInfo.league.country};// object의 경우 이렇게 빼서 따로 넣어줘야 error가 안난다. 현재 vue의 한계인것 같다.
+
+        }
+
+        this.gameInfo = gameInfo;
+        this.changeLoadingStatus(false);
+
+      } catch (err) {
+        // console.log(err);
+      }
+    },
+    async _getUserWhite(){
+      // 유저의 white가져오기
+      try{
+        let white;
+        if(this.userAccount){
+          const myWhite = await GameAPI.getUserWhite(this.userAccount); // 유저 정보에 따른
+          white =  (myWhite) ? myWhite : 0;
+        } else white = 0;
+
+        this.vuexWhite(white);
+      } catch(err){
+        console.log(err);
+      }
+    },
+    apiFootballImg(e, teamId){
+      e.target.src =`https://www.api-football.com/public/teams/${teamId}.png`;
+      return;
+    },
+  },
+
+  computed : {
+    computedHeaders () {
+      return this.headers.filter(h => !h.hide || !this.$vuetify.breakpoint[h.hide])
+    },
+
+		...mapState([ // state는 computed에 넣는다
+			'isWeb3', 'userAccount', 'myETH', 'white', 'isWalletLogin', 'isShowWallet', 'loadingStatus',
+    ]),
+  },
+  watch : {
+    hashTx(val) { // 좋아. 여기서 hashTx를 받아온다. 이제 여기서 val을 이용해 화면을 바꾸고 해결하자. 죽을 고생했다.
+      this.cancelWindow = false;
+      this.betMask = htmlEl[3].tag.replace('###', val);
+    },
+  },
+  async created(){
+    Util.checkSession(this.$session, this.userAccount); // session 체크
+    window.scrollTo(0,0); // 항상 페이지 최상단으로
+    this._web3Exe();
+
+    const fixtureId = +this.$route.params.fixtureId;
+    // 게임정보 처리. 배당률 변경시 한번더 사용하기에 모듈화함.
+    this._fetchData(fixtureId);
+    this._getUserWhite();// player white 가져오기
+
+    this._allHistoryFuc(fixtureId); // 베팅 히스토리 가져오기
+    // 메타마스크 연결창 띄우기
+    if(ethereum){
+      await ethereum.enable();
+    }
+  },
+  beforeCreate(){ // 세션처리는 Toolbar에서 한다
+    document.getElementById('hello').style.display = 'none';
+    document.getElementById('helloTxt').style.display = 'none';
+  },
+}
+
+</script>
+
+<style >
+.gamePage{overflow:hidden;}
+/* .open{border-left:5px solid #64B5F6;} */
+.open{border-left:5px solid #e0e0e0;}
+.close{border-left:4px solid grey;}
+.ready{border-left:4px solid greenyellow;}
+.gameItem{max-width: 1263px;}
+.gameCard{border-radius:3px;}
+.gameListTxt{color:#C2185B;width: 200px;}
+.scoreNotice{font-size:11px;}
+
+.myEthInfo{color:#666;line-height:80px;}
+.where{font-size:1em;}
+.teamImgBox{height:100px;}
+  /* white-space는 단어를 잘라 넘기기. word-break는 글자단위로 자르기 */
+.teamNameTxt{color:grey;white-space: normal;}
+.teamLogo{max-width:100px;max-height:100px;margin:0 auto;margin-top:5px;}
+.teamLogoH2h{max-width:20px;max-height:20px;}
+.drawBtn{color:#64B5F6;min-height:100px;}
+.betOdd{color:green;font-size:1.4em;}
+.scoreNum {font-size:2em;}
+.gameBtn{border-radius:0px;width:100%;height: auto;min-height:100px; }
+.gameBtn:hover,.gameBtn:active{ color:deeppink;}
+/* .wonBetCell{background-color: #B2DFDB;border-radius:0px;} */
+.underOverBtn{height:auto;min-height:70px;width:100%;color:rgba(0,0,0,0.87);}
+.underOverBtn:hover,.underOverBtn:active{ color:deeppink;}
+.toReturnTxt{line-height: 29px;margin-left:15px;}
+.toReturnUnitTxt{line-height: 29px;margin-left:5px;}
+.toReturnNum{line-height: 29px;margin-left:10px;color:#ffeb3b;}
+.betEthTxt{font-size: 25px;;}
+.placeBetTxt{font-size: 18px;text-transform: none;}
+.myEthNum{color:#C2185B;}
+.myWhiteNum{color:#3674BA; }
+.myEthTxt{color:#444;}
+.metamaskTxt{font-size:18px;color:#444;line-height:-10px;}
+.trustWalletTxt{color:#3674BA;cursor:pointer;margin-right:10px;}
+.walletImg{width:20px;border-radius:2px;margin-right:2px;margin-top:2px;}
+
+.external_link{ text-decoration:normal;animation-duration: 1s;animation-name: shake;animation-iteration-count: 2;animation-timing-function: ease;font-size: 24px;}
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -1px) rotate(-1deg); }
+  20% { transform: translate(-1px, 0px) rotate(1deg); }
+  30% { transform: translate(1px, 1px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 1px) rotate(-1deg); }
+  60% { transform: translate(-1px, 1px) rotate(0deg); }
+  70% { transform: translate(1px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 1px) rotate(0deg); }
+  100% { transform: translate(1px, -1px) rotate(-1deg); }
+}
+
+.v-btn:not(.v-btn--depressed):not(.v-btn--flat){box-shadow: 0px 0;-webkit-box-shadow:0px 0 ;}
+/* .v-input__control{height:50px;background-color:blue;} */
+.v-text-field__slot input{padding:5px;margin:0;}
+/* .v-text-field__details{display:none;} */
+.v-messages{display:none;}
+
+/* 베팅 통계 */
+/* .stat_borderBottomBold{border-bottom:1px solid #e1e1e1;}
+.stat_borderBottom{border-bottom:1px solid #e1e1e1;}
+.stat_borderRight{border-right:1px solid #e1e1e1;}
+.stat_borderLeft{border-left:1px solid #e1e1e1;} */
+.stat_bold{background:#e1e1e1;font-size:1.5em;}
+.stat_TeamName {line-height:35px;height:35px;}
+.stat_rank{line-height:25px;height:25px;}
+.stat_vs{color:grey;font-size:0.8em;}
+.stat_grey{color:#555;}
+.stat_youtube{overflow:hidden;height:70px;width:auto;}
+/* .stat_youtubeWindow{max-width: 700px;min-width:320px;} */
+.v-dialog.v-dialog--active{max-width: 700px;}
+
+
+.last5Icon {padding:1px 6px 0;border-radius:12px;line-height:14px;font-size:14px;text-decoration:none;box-shadow:inset 1px 1px 1px rgba(255,255,255,0.08);vertical-align:middle; margin-left:5px;}
+
+.loseIcon{border:1px solid #EF5350;color:#EF5350;}
+.winIcon{border:1px solid #42A5F5;color:#42A5F5;}
+.drawIcon{border:1px solid grey;color:grey;}
+.lastIcon{font-size:18px;}
+.lastAwayIcon{margin-left:0;}
+
+/* 베팅 히스토리 */
+.theme--light.v-table{background-color:#FAFAFA;}
+.theme--light.v-datatable .v-datatable__actions{background-color:#FAFAFA;}
+.betHistoryTxt{color:#555;font-weight:bold;}
+/* Game statistics 의 페이징을 보이게 할지 결정*/
+/* .gameBetInfo .v-datatable__actions__range-controls{display:none;} */
+/* 아래의 경의 serve와 build 버전이 다르게 나와 .v-datatable__actions>를 적용하니 제대로 보여진다ㅜ */
+.v-datatable__actions>.v-datatable__actions__select{display:none;}
+/* .gameBetInfo .v-datatable__actions{display:none;} */
+
+.betHistoryNum{max-width: 50px;;overflow:hidden;}
+.betHistoryUser{max-width: 100px;overflow:hidden;}
+.betHistoryBet{min-width: 120px;overflow:hidden;}
+.betHistoryGame{max-width: 150px;overflow:hidden;}
+.betHistoryReturns{min-width:120px;;overflow:hidden;}
+
+
+.betExpandDesc{padding-left:24px;padding-top:0px;padding-bottom:10px; overflow:hidden;font-weight:bold;}
+.betExpandValue{padding-left:54px;padding-top:0px;padding-bottom:10px; overflow:hidden}
+
+.betExpandFirst{margin-top:5px;}
+.betExpandLast{margin-bottom:0px;}
+.expandedList{background-color:#eee;}
+
+/* popUp 연출 */
+.title{white-space: normal;}
+.closeBetBtn{position: absolute; right:0px;top:0px;}
+.closePopupBtn{opacity:0.7;}
+.pcPopBet{max-width: 700px;min-width:320px;}
+.kindOfGame{font-size:1.1em;}
+.fade-enter-active, .fade-leave-active {  transition: opacity 2s;}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {  opacity: 0;}
+.iCodeLink{transform: rotate(180deg);}
+.extraInfo{font-size:11px;color:rgb(212, 212, 132);}
+.quickBetBtn{color:#fff;line-height:23px; width:60px;height:30px;display:inline-block;background-color:#0D47A1;border:1px solid white;margin: 3px 5px;padding:2px;cursor:pointer;box-shadow:0 1px 2px rgba(100,100,100,.5),0 1px 2px rgba(100,100,100,.58);;border-radius:14px; }
+a.quickBetBtn:hover, a.quickBetBtn:focus {color:yellow;border:1px solid yellow;box-shadow:none;text-decoration: none;}
+.v-text-field__slot input {padding-left: 10px;margin: 0;}
+/* .quickBetAddBtn{margin-top:17px;padding:3px;border:1px solid white;border-radius:14px;} */
+.quickBetAddBtn{margin-top:17px;padding:3px;border-radius:15px;display:block;}
+
+.VueCarousel-dot-container{margin-top:0px !important;}
+.VueCarousel-dot{margin-top:5px !important;}
+/* placeBet()후 베팅창 mask */
+.inPlay { padding: 5px 5px;  position: absolute;  z-index: 1;  left: 0;  top: 0;  width: 100%;  height: 100%;  box-sizing: border-box;  background-color:rgba(20, 73, 160, 0.9);}
+.coinIcon{display:block;margin:0 auto;}
+.guaranteeImg{top:55px;right:10px;float:right;width: 120px;z-index:-5;position:absolute; animation:showGuarantee 0.7s;}
+@keyframes showGuarantee{
+  0%  {opacity:0.1;width:220px;}
+  80% {opacity:0.8;width:110px;}
+  90% {opacity:0.8;width:125px;}
+  100% {opacity:0.8;width:120px;}
+}
+/* Betting History Padding 제거 */
+table.v-table thead td:not(:nth-child(1)), table.v-table tbody td:not(:nth-child(1)), table.v-table thead th:not(:nth-child(1)), table.v-table tbody th:not(:nth-child(1)), table.v-table thead td:first-child, table.v-table tbody td:first-child, table.v-table thead th:first-child, table.v-table tbody th:first-child {  padding: 0 8px;}
+
+button{border-width:0px !important;}
+
+@media screen and (min-width:0px) and (max-width: 960px){
+  .open{border-left:2px solid #e0e0e0;}
+  .close{border-left:2px solid grey;}
+  .ready{border-left:2px solid greenyellow;}
+  .where{color:grey;}
+  .scoreNotice{margin-top:0px;text-align:right;}
+  /* white-space는 단어를 잘라 넘기기. word-break는 글자단위로 자르기 */
+  .teamNameTxt{ overflow: hidden;word-break:break-all;}
+  .mediaTxt{ white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width:260px;}
+
+  .stat_TeamName {overflow: hidden;word-break:break-all;}
+
+  .betHistoryNum{max-width: 20px;}
+  .betHistoryUser{max-width: 44px;}
+  .betHistoryBet{min-width:50px;}
+  .betHistoryReturns{min-width:50px;}
+
+  .betExpandDesc{width: 100%;padding:0;}
+  .betExpandValue{width: 100%;padding:0;padding-left:5px;}
+  .betExpandLast{margin-bottom:5px;}
+  /* 이유는 모르겠으나 아래와 같이 해야만 transaction 모양이 제대로 나온다 */
+  /* .betExpandTransaction{width: 50px;display:block;} */
+
+.last5Icon {padding:1px 3px 0;border-radius:10px;line-height:14px;font-size:12px;text-decoration:none;box-shadow:inset 1px 1px 1px rgba(255,255,255,0.08);vertical-align:middle; margin-left:5px;}
+.lastIcon{font-size:16px;}
+.lastAwayIcon{margin-left:0;}
+}
+</style>

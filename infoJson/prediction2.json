@@ -1,0 +1,255 @@
+{ // 상대전적, 골평균, 최근경기전적
+  // 1 = home winner, 2 = away winner, 1 N = home winner or draw, N 2 = draw or away winner. "goals_home": "-2.5" : predicts that the team will score less than 2.5 goals or 0, 1 or 2 "last_5_matches": { "forme": "73%", "att": "37%", "def": "84%", }" : Team statistics on their last 5 games, this defines their form according to wins, losses or draws, as well as attacking power or defensive potential according to goals scored and conceded You can find more informations here : https://www.api-football.com/documentation#predictions
+  
+  "api": {
+    "results": 1,
+    "predictions": [
+      {
+        "match_winner": "N 2",
+        "under_over": "+2.5",
+        "goals_home": "-4.5",
+        "goals_away": "-3.5",
+        "advice": "Combo Double chance :  draws or Liverpool and +2.5 goals",
+        "winning_percent": {
+          "home": "10%",
+          "draws": "45%",
+          "away": "45%"
+        },
+        "teams": {
+          "home": {
+            "team_id": 571,
+            "team_name": "Red Bull Salzburg",
+            "last_5_matches": {
+              "forme": "47%",
+              "att": "84%",
+              "def": "42%",
+              "goals": 16,
+              "goals_avg": 3.2,
+              "goals_against": 11,
+              "goals_against_avg": 2.2
+            },
+            "all_last_matches": {
+              "matchs": {
+                "matchsPlayed": {
+                  "home": 2,
+                  "away": 3,
+                  "total": 5
+                },
+                "wins": {
+                  "home": 1,
+                  "away": 1,
+                  "total": 2
+                },
+                "draws": {
+                  "home": 0,
+                  "away": 1,
+                  "total": 1
+                },
+                "loses": {
+                  "home": 1,
+                  "away": 1,
+                  "total": 2
+                }
+              },
+              "goals": {
+                "goalsFor": {
+                  "home": 8,
+                  "away": 8,
+                  "total": 16
+                },
+                "goalsAgainst": {
+                  "home": 5,
+                  "away": 6,
+                  "total": 11
+                }
+              },
+              "goalsAvg": {
+                "goalsFor": {
+                  "home": "4.0",
+                  "away": "2.7",
+                  "total": "3.2"
+                },
+                "goalsAgainst": {
+                  "home": "2.5",
+                  "away": "2.0",
+                  "total": "2.2"
+                }
+              }
+            },
+            "last_h2h": {
+              "played": {
+                "home": 0,
+                "away": 1,
+                "total": 1
+              },
+              "wins": {
+                "home": 0,
+                "away": 0,
+                "total": 0
+              },
+              "draws": {
+                "home": 0,
+                "away": 0,
+                "total": 0
+              },
+              "loses": {
+                "home": 0,
+                "away": 1,
+                "total": 1
+              }
+            }
+          },
+          "away": {
+            "team_id": 40,
+            "team_name": "Liverpool",
+            "last_5_matches": {
+              "forme": "67%",
+              "att": "58%",
+              "def": "58%",
+              "goals": 11,
+              "goals_avg": 2.2,
+              "goals_against": 8,
+              "goals_against_avg": 1.6
+            },
+            "all_last_matches": {
+              "matchs": {
+                "matchsPlayed": {
+                  "home": 3,
+                  "away": 2,
+                  "total": 5
+                },
+                "wins": {
+                  "home": 2,
+                  "away": 1,
+                  "total": 3
+                },
+                "draws": {
+                  "home": 1,
+                  "away": 0,
+                  "total": 1
+                },
+                "loses": {
+                  "home": 0,
+                  "away": 1,
+                  "total": 1
+                }
+              },
+              "goals": {
+                "goalsFor": {
+                  "home": 7,
+                  "away": 4,
+                  "total": 11
+                },
+                "goalsAgainst": {
+                  "home": 5,
+                  "away": 3,
+                  "total": 8
+                }
+              },
+              "goalsAvg": {
+                "goalsFor": {
+                  "home": "2.3",
+                  "away": "2.0",
+                  "total": "2.2"
+                },
+                "goalsAgainst": {
+                  "home": "1.7",
+                  "away": "1.5",
+                  "total": "1.6"
+                }
+              }
+            },
+            "last_h2h": {
+              "played": {
+                "home": 1,
+                "away": 0,
+                "total": 1
+              },
+              "wins": {
+                "home": 1,
+                "away": 0,
+                "total": 1
+              },
+              "draws": {
+                "home": 0,
+                "away": 0,
+                "total": 0
+              },
+              "loses": {
+                "home": 0,
+                "away": 0,
+                "total": 0
+              }
+            }
+          }
+        },
+        "h2h": [
+          {
+            "fixture_id": 240539,
+            "league_id": 530,
+            "league": {
+              "name": "Champions League",
+              "country": "World",
+              "logo": "https://media.api-football.com/leagues/132.png",
+              "flag": null
+            },
+            "event_date": "2019-10-02T19:00:00+00:00",
+            "event_timestamp": 1570042800,
+            "firstHalfStart": 1570042800,
+            "secondHalfStart": 1570046400,
+            "round": "Group Stage - 2",
+            "status": "Match Finished",
+            "statusShort": "FT",
+            "elapsed": 90,
+            "venue": "Anfield (Liverpool)",
+            "referee": "Andreas Ekberg, Sweden",
+            "homeTeam": {
+              "team_id": 40,
+              "team_name": "Liverpool",
+              "logo": "https://media.api-football.com/teams/40.png"
+            },
+            "awayTeam": {
+              "team_id": 571,
+              "team_name": "Red Bull Salzburg",
+              "logo": "https://media.api-football.com/teams/571.png"
+            },
+            "goalsHomeTeam": 4,
+            "goalsAwayTeam": 3,
+            "score": {
+              "halftime": "3-1",
+              "fulltime": "4-3",
+              "extratime": null,
+              "penalty": null
+            }
+          }
+        ],
+        "comparison": {
+          "forme": {
+            "home": "41%",
+            "away": "59%"
+          },
+          "att": {
+            "home": "59%",
+            "away": "41%"
+          },
+          "def": {
+            "home": "42%",
+            "away": "58%"
+          },
+          "fish_law": {
+            "home": "50%",
+            "away": "50%"
+          },
+          "h2h": {
+            "home": "0%",
+            "away": "100%"
+          },
+          "goals_h2h": {
+            "home": "43%",
+            "away": "57%"
+          }
+        }
+      }
+    ]
+  }
+}

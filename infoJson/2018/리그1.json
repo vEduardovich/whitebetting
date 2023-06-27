@@ -1,0 +1,149 @@
+// https://api-football-v1.p.rapidapi.com/teams/league/4
+
+{
+  "api": {
+    "results": 20,
+    "teams": {
+      "77": {
+        "team_id": "77",
+        "name": "Angers",
+        "name_kr": "앙제",
+        "code": "ANG",
+        "logo": "https://www.api-football.com/public/teams/77.png"
+      },
+      "78": {
+        "team_id": "78",
+        "name": "지롱댕 드 보르도",
+        "name_kr": "",
+        "code": "BOR",
+        "logo": "https://www.api-football.com/public/teams/78.svg"
+      },
+      "79": {
+        "team_id": "79",
+        "name": "Lille",
+        "name_kr": "릴",
+        "code": "LIL",
+        "logo": "https://www.api-football.com/public/teams/79.svg"
+      },
+      "80": {
+        "team_id": "80",
+        "name": "Lyon",
+        "name_kr": "올림피크 리옹",
+        "code": "LYO",
+        "logo": "https://www.api-football.com/public/teams/80.png"
+      },
+      "81": {
+        "team_id": "81",
+        "name": "Marseille",
+        "name_kr": "올림피크 드 마르세유",
+        "code": "OLM",
+        "logo": "https://www.api-football.com/public/teams/81.svg"
+      },
+      "82": {
+        "team_id": "82",
+        "name": "Montpellier",
+        "name_kr": "몽펠리에",
+        "code": "MPL",
+        "logo": "https://www.api-football.com/public/teams/82.png"
+      },
+      "83": {
+        "team_id": "83",
+        "name": "Nantes",
+        "name_kr": "낭트",
+        "code": "NAN",
+        "logo": "https://www.api-football.com/public/teams/83.png"
+      },
+      "84": {
+        "team_id": "84",
+        "name": "Nice",
+        "name_kr": "니스",
+        "code": "NCE",
+        "logo": "https://www.api-football.com/public/teams/84.png"
+      },
+      "85": {
+        "team_id": "85",
+        "name": "Paris Saint Germain",
+        "name_kr": "파리 생제르맹",
+        "code": "PSG",
+        "logo": "https://www.api-football.com/public/teams/85.png"
+      },
+      "87": {
+        "team_id": "87",
+        "name": "Amiens",
+        "name_kr": "아미앵",
+        "code": "AMI",
+        "logo": "https://www.api-football.com/public/teams/87.png"
+      },
+      "88": {
+        "team_id": "88",
+        "name": "Caen",
+        "name_kr": "SM 캉",
+        "code": "CAE",
+        "logo": "https://www.api-football.com/public/teams/88.png"
+      },
+      "89": {
+        "team_id": "89",
+        "name": "Dijon",
+        "name_kr": "디종",
+        "code": "DIJ",
+        "logo": "https://www.api-football.com/public/teams/89.png"
+      },
+      "90": {
+        "team_id": "90",
+        "name": "Guingamp",
+        "name_kr": "앙나방 갱강",
+        "code": "GUI",
+        "logo": "https://www.api-football.com/public/teams/90.png"
+      },
+      "91": {
+        "team_id": "91",
+        "name": "Monaco",
+        "name_kr": "모나코",
+        "code": "AMO",
+        "logo": "https://www.api-football.com/public/teams/91.png"
+      },
+      "92": {
+        "team_id": "92",
+        "name": "Nimes",
+        "name_kr": "님 올랭피크",
+        "code": "NIM",
+        "logo": "https://www.api-football.com/public/teams/92.png"
+      },
+      "93": {
+        "team_id": "93",
+        "name": "Reims",
+        "name_kr": "스타드 랭스",
+        "code": "REI",
+        "logo": "https://www.api-football.com/public/teams/93.svg"
+      },
+      "94": {
+        "team_id": "94",
+        "name": "Rennes",
+        "name_kr": "스타드 렌",
+        "code": "REN",
+        "logo": "https://www.api-football.com/public/teams/94.svg"
+      },
+      "95": {
+        "team_id": "95",
+        "name": "Strasbourg",
+        "name_kr": "스트라스부르",
+        "code": "STR",
+        "logo": "https://www.api-football.com/public/teams/95.png"
+      },
+      "96": {
+        "team_id": "96",
+        "name": "Toulouse",
+        "name_kr": "툴루즈",
+        "code": "TOU",
+        "logo": "https://www.api-football.com/public/teams/96.png"
+      },
+      "1063": {
+        "team_id": "1063",
+        "name": "Saint Etienne",
+        "name_kr": "AS 생테티엔",
+        "code": "STE",
+        "logo": "https://www.api-football.com/public/teams/1063.png"
+      }
+    }
+  }
+}
