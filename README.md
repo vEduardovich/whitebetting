@@ -50,7 +50,7 @@ cd client
 npm i
 ```
 ### MongoDB 준비
-`sudo mongod --dbpath "몽고db 저장위치" --port "포트번호"`
+`sudo mongod --dbpath "몽고db 저장위치" --port "db 포트번호"`
 ```bash
 sudo mongod --dbpath /database/WhiteBetting --port 28882
 ```
@@ -67,8 +67,11 @@ npm run serve
 ```bash
 cd client
 npm run build
+cd ..
+
+npm run start
 ```
-실행
+이미 빌드가 되어 있다면
 ```bash
 npm run start
 ```
