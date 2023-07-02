@@ -37,7 +37,7 @@ On top of that, the cost of Ethereum gas fluctuated daily. One day it was 2 cent
 
 I barely slept during the six months I was running the service. My parents were always worried. My red eyes and puffy dark circles were so deeply imprinted that it seemed like they would never go away. And then the coronavirus canceled all football leagues.
 
-Services were suspended. 100 million in the red. That was probably the most incredible year of my life, building something in the world. Too bad it was just a gambling site. I will never risk my life on something like that again. That's why I'm making this service fully public.
+Services were suspended. 100K dollars in the red. That was probably the most incredible year of my life, building something in the world. Too bad it was just a gambling site. I will never risk my life on something like that again. That's why I'm making this service fully public.
 
 
 ## Libraries
